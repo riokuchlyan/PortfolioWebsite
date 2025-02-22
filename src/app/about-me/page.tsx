@@ -9,7 +9,7 @@ import ThemeSwitcher from "../../components/ThemeSwitcher";
 export default function AboutMe() {
     useKeyboardNavigation({ key: 'h', href: '/' });
     return (
-        <div className="fade-in grid items-center justify-items-center min-h-screen p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <div className="fade-in grid items-center justify-items-center min-h-screen sm:p-20 font-[family-name:var(--font-geist-sans)]">
 
         <ThemeSwitcher/>
 

@@ -16,22 +16,24 @@ export default function Home() {
       
       <ThemeSwitcher/>
 
-      <main className="flex flex-col gap-8 row-start-2 items-center">
+      <div className="flex flex-col gap-4 row-start-2 items-center text-center max-w-[70%]">
         <Image
+          className="animate-bounce"
           src="/bird.svg"
           alt="bird"
           width={50}
           height={50}
         />
         <h1>RIO KUCHLYAN</h1>
-      </main>
-      
-      <div className="flex flex-col sm:flex-row gap-8 justify-center w-full row-start-3 items-center mb-96 mt-24">
+        <div className="flex flex-col sm:flex-row gap-8 justify-center w-full mt-5 row-start-3 items-center">
           <Link href="/about-me"><code>[1] About Me</code></Link>
           <Link href="/projects"><code>[2] Projects</code></Link>
           <Link href="/experience"><code>[3] Experience</code></Link>
           <Link href="/beyond-work"><code>[4] Beyond Work</code></Link>
       </div>
+      </div>
+      
+      
 
     </div>
   );
