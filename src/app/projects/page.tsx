@@ -33,13 +33,13 @@ export default function Projects() {
               <br></br>
               <div className="flex flex-wrap">
                   
-                    <Link href={`https://github.com/riokuchlyan/passwordManager`} target="_blank" className="w-24 h-24 bg-gray-800 m-2 flex items-center justify-center">
+                    <Link href={`https://github.com/riokuchlyan/passwordManager`} target="_blank" className="w-24 h-24 bg-gray-500 m-2 flex items-center justify-center">
                       Password Manager
                     </Link>
-                    <Link href={`https://replit.com/@riokuchlyan/Battleship`} target="_blank" className="w-24 h-24 bg-gray-800 m-2 flex items-center justify-center">
+                    <Link href={`https://replit.com/@riokuchlyan/Battleship`} target="_blank" className="w-24 h-24 bg-gray-500 m-2 flex items-center justify-center">
                       Battleship
                     </Link>
-                    <Link href={`https://github.com/riokuchlyan/clipboardManager`} target="_blank" className="w-24 h-24 bg-gray-800 m-2 flex items-center justify-center">
+                    <Link href={`https://github.com/riokuchlyan/clipboardManager`} target="_blank" className="w-24 h-24 bg-gray-500 m-2 flex items-center justify-center">
                       Clipboard Manager
                     </Link>
               </div>
