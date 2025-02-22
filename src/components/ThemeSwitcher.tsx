@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 
-var color_scheme = "dark";
+let color_scheme = "dark";
 const ThemeSwitcher: React.FC = () => {
   const changeTheme = () => {
     if (color_scheme == "dark") {
