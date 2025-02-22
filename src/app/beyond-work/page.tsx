@@ -33,7 +33,6 @@ export default function BeyondWork() {
             </video>
         </div>
  
-        
     </div>
 );
 }

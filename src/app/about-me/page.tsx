@@ -11,7 +11,7 @@ export default function AboutMe() {
     return (
         <div className="fade-in grid items-center justify-items-center min-h-screen sm:p-20 font-[family-name:var(--font-geist-sans)]">
 
-        <ThemeSwitcher/>
+        <ThemeSwitcher/> 
 
             <div className="flex gap-2 fixed top-10 left-10">
                 <Link href="/">

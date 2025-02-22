@@ -32,7 +32,7 @@ export default function Experience() {
             </Link>
             <br></br>
             <details>
-                <summary><strong>University of North Carolina at Chapel Hill</strong></summary>
+                <summary><strong>University of North Carolina at Chapel Hill</strong></summary> 
                 <p>Freshman majoring in Computer Science and Business.</p>
             </details>
             <details>
