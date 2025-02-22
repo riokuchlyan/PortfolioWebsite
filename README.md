@@ -2,7 +2,7 @@
 
 This is my personal portfolio website, built with Next.JS, Typescript, and Tailwind CSS. The website is hosted on GitHub Pages.
 
-## Demo
+## riokuchlyan.com
 
 You can view the live version of my portfolio website [here](https://riokuchlyan.com).
 
