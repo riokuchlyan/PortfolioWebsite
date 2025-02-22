@@ -1,10 +1,10 @@
 'use client';
-
 import Image from "next/image";
 import Link from "next/link";
 import React from 'react';
 import './/animations.css'; 
-import { useKeyboardNavigation } from './keyPressNavigation';
+import { useKeyboardNavigation } from '../components/KeyPressNavigation';
+import ThemeSwitcher from "../components/ThemeSwitcher";
 
 export default function Home() {
   useKeyboardNavigation({ key: '1', href: '/about-me' });
@@ -12,27 +12,9 @@ export default function Home() {
   useKeyboardNavigation({ key: '3', href: '/experience' });
   useKeyboardNavigation({ key: '4', href: '/beyond-work' });
   return (
-    
     <div className="fade-in grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <div className="flex gap-2 fixed top-10 right-10">
-          <Link href="/about-me">
-              <Image
-              src="/sun.max.png"
-              alt="Sun"
-              width={20}
-              height={20}
-          />
-          </Link>
-          <Link className="hidden" href="/about-me">
-              <Image
-              src="/moon.png"
-              alt="Moon"
-              width={20}
-              height={20}
-          />
-          </Link>
-          <p>[A]</p>
-        </div>
+      
+      <ThemeSwitcher/>
 
       <main className="flex flex-col gap-8 row-start-2 items-center">
         <Image
@@ -43,7 +25,7 @@ export default function Home() {
         />
         <h1>RIO KUCHLYAN</h1>
       </main>
-
+      
       <div className="flex flex-col sm:flex-row gap-8 justify-center w-full row-start-3 items-center mb-96 mt-24">
           <Link href="/about-me"><code>[1] About Me</code></Link>
           <Link href="/projects"><code>[2] Projects</code></Link>

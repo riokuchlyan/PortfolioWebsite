@@ -1,34 +1,17 @@
 'use client';
-
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import '../animations.css'; 
-import { useKeyboardNavigation } from '../keyPressNavigation';
+import { useKeyboardNavigation } from '../../components/KeyPressNavigation';
+import ThemeSwitcher from "../../components/ThemeSwitcher";
 
 export default function AboutMe() {
     useKeyboardNavigation({ key: 'h', href: '/' });
     return (
         <div className="fade-in grid items-center justify-items-center min-h-screen p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-            <div className="flex gap-2 fixed top-10 right-10">
-                <Link href="/about-me">
-                    <Image
-                    src="/sun.max.png"
-                    alt="Sun"
-                    width={20}
-                    height={20}
-                />
-                </Link>
-                <Link className="hidden" href="/about-me">
-                    <Image
-                    src="/moon.png"
-                    alt="Moon"
-                    width={20}
-                    height={20}
-                />
-                </Link>
-                <p>[A]</p>
-            </div>
+
+        <ThemeSwitcher/>
 
             <div className="flex gap-2 fixed top-10 left-10">
                 <Link href="/">
@@ -56,7 +39,6 @@ export default function AboutMe() {
                             height={40}
                             />
                         </Link>
-
                         <Link href="mailto:rio.kuchlyan@unc.edu">
                             <Image
                             src="/mail_logo.png"
@@ -65,7 +47,6 @@ export default function AboutMe() {
                             height={40}
                             />
                         </Link>
-
                         <Link href="https://www.instagram.com/rio.kuchlyan/">
                             <Image
                             src="/instagram_logo.png"
@@ -76,7 +57,7 @@ export default function AboutMe() {
                         </Link>
                     </div>
             </div>
+            
         </div>
-   
 );
 }
