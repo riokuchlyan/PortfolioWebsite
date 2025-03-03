@@ -36,6 +36,9 @@ export default function Projects() {
                     <Link href={`https://github.com/riokuchlyan/passwordManager`} target="_blank" className="w-24 h-24 bg-gray-500 m-2 flex items-center justify-center">
                       Password Manager
                     </Link>
+                    <Link href={`https://github.com/riokuchlyan/rios-portfolio`} target="_blank" className="w-24 h-24 bg-gray-500 m-2 flex items-center justify-center">
+                      My Portfolio
+                    </Link>
                     <Link href={`https://replit.com/@riokuchlyan/Battleship`} target="_blank" className="w-24 h-24 bg-gray-500 m-2 flex items-center justify-center">
                       Battleship
                     </Link>
