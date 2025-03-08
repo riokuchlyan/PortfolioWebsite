@@ -44,10 +44,6 @@ export default function Experience() {
                 <p>Learning technical finance skills and leadership principles to develop strong ethical finance leaders.</p>
             </details>
             <details>
-                <summary><strong>iOS Bootcamp - App Team Carolina</strong></summary>
-                <p>Gaining hands-on experience with Swift, SwiftUI, and Xcode while building multiple mobile applications.</p>
-            </details>
-            <details>
                 <summary><strong>Educational Consulting - Hillsborough Township Board of Education</strong></summary>
                 <p>Represented 7,200 students and advised on funding allocations, including security improvements in schools.</p>
             </details>
