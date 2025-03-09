@@ -23,8 +23,9 @@ export default function AboutMe() {
             <div className="flex flex-col gap-4 row-start-2 items-center text-center max-w-[70%]">
                 <h1 className='mt-64'>ABOUT ME</h1>
                 <p className="mb-8">Hello! My name is Rio Kuchlyan and I am an aspiring developer who intends to work in the technology and banking industries. I am a student at the University of North Carolina at Chapel Hill pursuing a double major in computer science and business. Feel free to contact me through any of my socials in this page!</p>
-                    <div className="flex gap-4">
-                        <Link href="https://www.linkedin.com/in/riokuchlyan">
+                    
+                    <div className="flex gap-4 mb-8">
+                        <Link href="https://www.linkedin.com/in/riokuchlyan" target="_blank">
                             <Image
                             src="/linkedin_logo.png"
                             alt="LinkedIn"
@@ -32,7 +33,7 @@ export default function AboutMe() {
                             height={40}
                             />
                         </Link>
-                        <Link href="mailto:rio.kuchlyan@unc.edu">
+                        <Link href="mailto:rio.kuchlyan@unc.edu" target="_blank">
                             <Image
                             src="/mail_logo.png"
                             alt="Email"
@@ -40,7 +41,7 @@ export default function AboutMe() {
                             height={40}
                             />
                         </Link>
-                        <Link href="https://www.instagram.com/rio.kuchlyan/">
+                        <Link href="https://www.instagram.com/rio.kuchlyan/" target="_blank">
                             <Image
                             src="/instagram_logo.png"
                             alt="Instagram"
@@ -49,18 +50,38 @@ export default function AboutMe() {
                             />
                         </Link>
                     </div>
-                    <Image
-                            src="/instagram_logo.png"
-                            alt="Instagram"
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center max-w-[90%] mt-5 row-start-3 items-center">
+                        <Image
+                            className="rounded-lg"
+                            src="/family_photo.jpeg"
+                            alt="Family"
                             width={400}
-                            height={400}
-                            />
-                            <Image
-                            src="/instagram_logo.png"
-                            alt="Instagram"
+                            height={300}
+                        />
+                        <Image
+                            className="rounded-lg"
+                            src="/greece-photo.png"
+                            alt="Greece"
                             width={400}
-                            height={400}
-                            />
+                            height={300}
+                        />
+                        <Image
+                            className="rounded-lg"
+                            src="/tower-photo.png"
+                            alt="Tower"
+                            width={400}
+                            height={300}
+                        />
+                        <Image
+                            className="rounded-lg"
+                            src="/stadium-photo.jpeg"
+                            alt="Stadium"
+                            width={400}
+                            height={300}
+                        />
+                    </div>
+                    
             </div>
             
         </div>
