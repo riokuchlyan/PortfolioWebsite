@@ -20,7 +20,7 @@ export default function Experience() {
         <HomeButton/>
 
         <div className="flex flex-col gap-4 row-start-2 items-center text-center max-w-[70%]">
-            <h1>EXPERIENCE</h1>
+            <h1 className='mt-64'>EXPERIENCE</h1>
             <Link className="bg-gray-800 text-white py-2 px-4 rounded-md mb-8" target="_blank" href="/rio_kuchlyan_resume.pdf">
                 View My Resume
             </Link>
