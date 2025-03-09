@@ -21,8 +21,8 @@ export default function AboutMe() {
         <HomeButton/>
 
             <div className="flex flex-col gap-4 row-start-2 items-center text-center max-w-[70%]">
-                <h1>ABOUT ME</h1>
-                <p className="mb-12">Hello! My name is Rio Kuchlyan and I am an aspiring developer who intends to work in the technology and banking industries. I am a student at the University of North Carolina at Chapel Hill pursuing a double major in computer science and business. Feel free to contact me through any of my socials in this page!</p>
+                <h1 className='mt-64'>ABOUT ME</h1>
+                <p className="mb-8">Hello! My name is Rio Kuchlyan and I am an aspiring developer who intends to work in the technology and banking industries. I am a student at the University of North Carolina at Chapel Hill pursuing a double major in computer science and business. Feel free to contact me through any of my socials in this page!</p>
                     <div className="flex gap-4">
                         <Link href="https://www.linkedin.com/in/riokuchlyan">
                             <Image
@@ -49,6 +49,18 @@ export default function AboutMe() {
                             />
                         </Link>
                     </div>
+                    <Image
+                            src="/instagram_logo.png"
+                            alt="Instagram"
+                            width={400}
+                            height={400}
+                            />
+                            <Image
+                            src="/instagram_logo.png"
+                            alt="Instagram"
+                            width={400}
+                            height={400}
+                            />
             </div>
             
         </div>

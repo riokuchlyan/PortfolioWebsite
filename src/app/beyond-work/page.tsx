@@ -1,7 +1,5 @@
 'use client';
 import React from 'react';
-import Image from "next/image";
-import Link from "next/link";
 import '../animations.css'; 
 import { useKeyboardNavigation } from '../../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../../components/ThemeSwitcher";

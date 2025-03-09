@@ -2,7 +2,6 @@
 
 import React from 'react';
 import '../animations.css'; 
-import Image from "next/image";
 import Link from "next/link";
 import { useKeyboardNavigation } from '../../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../../components/ThemeSwitcher";
