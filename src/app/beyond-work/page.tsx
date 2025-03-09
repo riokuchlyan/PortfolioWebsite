@@ -5,6 +5,7 @@ import Link from "next/link";
 import '../animations.css'; 
 import { useKeyboardNavigation } from '../../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../../components/ThemeSwitcher";
+import HomeButton from '@/components/HomeButton';
 
 export default function BeyondWork() {
     useKeyboardNavigation({ key: 'h', href: '/' });
@@ -17,17 +18,7 @@ export default function BeyondWork() {
 
         <ThemeSwitcher/>
 
-        <div className="flex gap-2 fixed top-10 left-10">
-            <Link href="/">
-                <Image
-                src="/house.svg"
-                alt="Home"
-                width={20}
-                height={20}
-                />
-            </Link>
-            <p>[H]</p>
-        </div>
+        <HomeButton/>
 
         <div className="flex flex-col gap-4 row-start-2 items-center text-center max-w-[70%]">
             <h1>BEYOND WORK</h1>

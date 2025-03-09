@@ -29,7 +29,8 @@ const ThemeSwitcher: React.FC = () => {
   return (
     <div className="flex gap-2 fixed top-10 right-10">
           <button onClick={changeTheme}>
-              <Image
+              <Image 
+              id='sun'
               src="/sun.max.png"
               alt="Sun"
               width={20}

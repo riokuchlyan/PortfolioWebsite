@@ -18,6 +18,7 @@ export default function Home() {
 
       <div className="flex flex-col gap-4 row-start-2 items-center text-center max-w-[70%]">
         <Image
+          id='bird'
           className="animate-bounce"
           src="/bird.svg"
           alt="bird"

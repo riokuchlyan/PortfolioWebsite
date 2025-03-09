@@ -5,6 +5,7 @@ import Link from "next/link";
 import '../animations.css'; 
 import { useKeyboardNavigation } from '../../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../../components/ThemeSwitcher";
+import HomeButton from '../../components/HomeButton';
 
 export default function AboutMe() {
     useKeyboardNavigation({ key: 'h', href: '/' });
@@ -17,23 +18,11 @@ export default function AboutMe() {
 
         <ThemeSwitcher/> 
 
-            <div className="flex gap-2 fixed top-10 left-10">
-                <Link href="/">
-                    <Image
-                    src="/house.svg"
-                    alt="Home"
-                    width={20}
-                    height={20}
-                    />
-                </Link>
-                <p>[H]</p>
-            </div>
+        <HomeButton/>
 
             <div className="flex flex-col gap-4 row-start-2 items-center text-center max-w-[70%]">
                 <h1>ABOUT ME</h1>
-                <p>Hello! My name is Rio Kuchlyan and I am an aspiring developer who intends to work in the technology and banking industries. I am a student at the University of North Carolina at Chapel Hill pursuing a double major in computer science and business. Feel free to contact me through any of my socials in this page!</p>
-                    <br></br>
-                    <br></br>
+                <p className="mb-12">Hello! My name is Rio Kuchlyan and I am an aspiring developer who intends to work in the technology and banking industries. I am a student at the University of North Carolina at Chapel Hill pursuing a double major in computer science and business. Feel free to contact me through any of my socials in this page!</p>
                     <div className="flex gap-4">
                         <Link href="https://www.linkedin.com/in/riokuchlyan">
                             <Image
