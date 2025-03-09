@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from 'react';
 import './/animations.css'; 
-import { useKeyboardNavigation } from '../components/KeyPressNavigation';
+import { useKeyboardNavigation } from '../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../components/ThemeSwitcher";
 
 export default function Home() {

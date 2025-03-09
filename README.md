@@ -18,8 +18,3 @@ You can view the live version of my portfolio website [here](https://riokuchlyan
 1. **Projects:** In the Projects section, click on any project card to view more details or to go to the GitHub repository link (if available).
 2. **Experience:** Check out my technical skills and tools in the Experience section, where my resume is also included.
 3. **Beyond Work:** I have also included a section to showcase facts about me beyond academics and work.
-
-## License
-
-This project is licensed under the **GNU General Public License v3.0**.  
-For more details, please refer to the [LICENSE](./LICENSE) file.

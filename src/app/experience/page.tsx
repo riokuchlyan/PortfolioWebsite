@@ -3,11 +3,15 @@ import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import '../animations.css'; 
-import { useKeyboardNavigation } from '../../components/KeyPressNavigation';
+import { useKeyboardNavigation } from '../../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../../components/ThemeSwitcher";
 
 export default function Experience() {
     useKeyboardNavigation({ key: 'h', href: '/' });
+    useKeyboardNavigation({ key: '1', href: '/about-me' });
+    useKeyboardNavigation({ key: '2', href: '/projects' });
+    useKeyboardNavigation({ key: '3', href: '/experience' });
+    useKeyboardNavigation({ key: '4', href: '/beyond-work' });
     return (
         <div className="fade-in grid items-center justify-items-center min-h-screen p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 
@@ -31,22 +35,17 @@ export default function Experience() {
                 View My Resume
             </Link>
             <br></br>
-            <details>
-                <summary><strong>University of North Carolina at Chapel Hill</strong></summary> 
-                <p>Freshman majoring in Computer Science and Business.</p>
-            </details>
-            <details>
-                <summary><strong>CARVR - AR/VR Development Team</strong></summary>
-                <p>Working on the development of a VR meditation app and a VR music band app.</p>
-            </details>
-            <details>
-                <summary><strong>Scholars of Finance - Leadership Development Program</strong></summary>
-                <p>Learning technical finance skills and leadership principles to develop strong ethical finance leaders.</p>
-            </details>
-            <details>
-                <summary><strong>Educational Consulting - Hillsborough Township Board of Education</strong></summary>
-                <p>Represented 7,200 students and advised on funding allocations, including security improvements in schools.</p>
-            </details>
+            <strong>University of North Carolina at Chapel Hill</strong>
+            <p>Freshman majoring in Computer Science and Business.</p>
+
+            <strong>CARVR - AR/VR Development Team</strong>
+            <p>Working on the development of a VR meditation app and a VR music band app.</p>
+
+            <strong>Scholars of Finance - Leadership Development Program</strong>
+            <p>Learning technical finance skills and leadership principles to develop strong ethical finance leaders.</p>
+
+            <strong>Educational Consulting - Hillsborough Township Board of Education</strong>
+            <p>Represented 7,200 students and advised on funding allocations, including security improvements in schools.</p>
         </div>
         
     </div>
