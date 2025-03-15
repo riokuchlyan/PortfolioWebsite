@@ -37,6 +37,9 @@ export default function Projects() {
                     <Link href={`https://github.com/riokuchlyan/clipboardManager`} target="_blank" className="w-24 h-24 bg-gray-500 m-2 flex items-center justify-center">
                       Clipboard Manager
                     </Link>
+                    <Link href={`https://github.com/riokuchlyan/dog-adoption`} target="_blank" className="w-24 h-24 bg-gray-500 m-2 flex items-center justify-center">
+                      Dog Adoption Website
+                    </Link>
               </div>
 
       </div>
