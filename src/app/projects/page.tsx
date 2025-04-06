@@ -25,6 +25,9 @@ export default function Projects() {
               
               <div className="flex flex-wrap mb-12">
                   
+                    <Link href={`https://visualize-navy.vercel.app`} target="_blank" className="w-24 h-24 bg-gray-500 m-2 flex items-center justify-center">
+                      VisuAlize
+                      </Link>
                     <Link href={`https://github.com/riokuchlyan/passwordManager`} target="_blank" className="w-24 h-24 bg-gray-500 m-2 flex items-center justify-center">
                       Password Manager
                     </Link>
