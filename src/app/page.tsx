@@ -1,16 +1,22 @@
 'use client';
 import Image from "next/image";
 import Link from "next/link";
-import React from 'react';
+import React, { useEffect } from 'react';
 import './/animations.css'; 
 import { useKeyboardNavigation } from '../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../components/ThemeSwitcher";
+import { validateTheme } from "@/utils/validateTheme";
 
 export default function Home() {
   useKeyboardNavigation({ key: '1', href: '/about-me' });
   useKeyboardNavigation({ key: '2', href: '/projects' });
   useKeyboardNavigation({ key: '3', href: '/experience' });
   useKeyboardNavigation({ key: '4', href: '/beyond-work' });
+
+  useEffect(() => {
+    validateTheme();
+  }, []);
+  
   return (
     <div className="fade-in grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       

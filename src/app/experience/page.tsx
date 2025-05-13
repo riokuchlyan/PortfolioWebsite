@@ -1,10 +1,11 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from "next/link";
 import '../animations.css'; 
 import { useKeyboardNavigation } from '../../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../../components/ThemeSwitcher";
 import HomeButton from '../../components/HomeButton';
+import { validateTheme } from '../../utils/validateTheme';
 
 export default function Experience() {
     useKeyboardNavigation({ key: 'h', href: '/' });
@@ -12,6 +13,11 @@ export default function Experience() {
     useKeyboardNavigation({ key: '2', href: '/projects' });
     useKeyboardNavigation({ key: '3', href: '/experience' });
     useKeyboardNavigation({ key: '4', href: '/beyond-work' });
+
+    useEffect(() => {
+        validateTheme();
+      }, []);
+
     return (
         <div className="fade-in grid items-center justify-items-center min-h-screen p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 

@@ -1,10 +1,11 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../animations.css'; 
 import Image from 'next/image';
 import { useKeyboardNavigation } from '../../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../../components/ThemeSwitcher";
 import HomeButton from '../../components/HomeButton';
+import { validateTheme } from '../../utils/validateTheme';
 
 export default function BeyondWork() {
     useKeyboardNavigation({ key: 'h', href: '/' });
@@ -12,6 +13,11 @@ export default function BeyondWork() {
     useKeyboardNavigation({ key: '2', href: '/projects' });
     useKeyboardNavigation({ key: '3', href: '/experience' });
     useKeyboardNavigation({ key: '4', href: '/beyond-work' });
+
+    useEffect(() => {
+        validateTheme();
+    }, []);
+
     return (
         <div className="fade-in grid items-center justify-items-center min-h-screen p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 

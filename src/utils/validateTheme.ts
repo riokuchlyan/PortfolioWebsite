@@ -1,11 +1,7 @@
-import React from 'react';
-import Image from "next/image";
-import { getColorScheme, setColorScheme } from '../utils/theme';
+import { getColorScheme } from '../utils/theme';
 
-const ThemeSwitcher: React.FC = () => {
-  const changeTheme = () => {
-    if (getColorScheme() == "dark") {
-        setColorScheme("light");
+export function validateTheme() {
+    if (getColorScheme() == "light") {
         const root = document.documentElement;
         root.style.setProperty('--background', 'rgb(199, 199, 199)');
         root.style.setProperty('--foreground', '#1a1a1a');
@@ -23,7 +19,6 @@ const ThemeSwitcher: React.FC = () => {
         }
     }
     else {
-        setColorScheme("dark");
         const root = document.documentElement;
         root.style.setProperty('--background', '#1a1a1a');
         root.style.setProperty('--foreground', 'rgb(199, 199, 199)');
@@ -41,20 +36,3 @@ const ThemeSwitcher: React.FC = () => {
         }
     }
   };
-
-  return (
-    <div className="flex gap-2 fixed top-10 right-10">
-          <button onClick={changeTheme}>
-              <Image 
-              id='sun'
-              src="/sun.max.png"
-              alt="Sun"
-              width={20}
-              height={20}
-          />
-          </button>
-        </div>
-  );
-};
-
-export default ThemeSwitcher; 
