@@ -31,7 +31,11 @@ export default function Home() {
           width={50}
           height={50}
         />
-        <h1>RIO KUCHLYAN</h1>
+
+        <div className="flex flex-col gap-2 items-center">
+          <h1 className="mb-0 pb-0">RIO KUCHLYAN</h1>
+          <h2 className="mt-0 pt-0 text-gray-500">&#128205; New York City Metropolitan Area & Chapel Hill, NC</h2>
+        </div>
 
         <div className="flex flex-col sm:flex-row gap-8 justify-center w-full mt-5 row-start-3 items-center">
           <Link href="/about-me"><code>[1] About Me</code></Link>

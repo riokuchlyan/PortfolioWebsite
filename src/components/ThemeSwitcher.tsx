@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import { getColorScheme, setColorScheme } from '../utils/theme';
+import { validateTheme } from "@/utils/validateTheme";
 
 const ThemeSwitcher: React.FC = () => {
   const changeTheme = () => {
@@ -25,7 +26,7 @@ const ThemeSwitcher: React.FC = () => {
     else {
         setColorScheme("dark");
         const root = document.documentElement;
-        root.style.setProperty('--background', '#1a1a1a');
+        root.style.setProperty('--background', '#111111');
         root.style.setProperty('--foreground', 'rgb(199, 199, 199)');
         const sun = document.getElementById('sun');
         if (sun) {

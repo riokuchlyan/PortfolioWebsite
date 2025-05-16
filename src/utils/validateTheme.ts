@@ -1,4 +1,4 @@
-import { getColorScheme } from '../utils/theme';
+import { getColorScheme } from './theme';
 
 export function validateTheme() {
     if (getColorScheme() == "light") {
@@ -20,7 +20,7 @@ export function validateTheme() {
     }
     else {
         const root = document.documentElement;
-        root.style.setProperty('--background', '#1a1a1a');
+        root.style.setProperty('--background', '#111111');
         root.style.setProperty('--foreground', 'rgb(199, 199, 199)');
         const sun = document.getElementById('sun');
         if (sun) {
