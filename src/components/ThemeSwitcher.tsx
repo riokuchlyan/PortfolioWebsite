@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from "next/image";
 import { getColorScheme, setColorScheme } from '../utils/theme';
-import { validateTheme } from "@/utils/validateTheme";
 
 const ThemeSwitcher: React.FC = () => {
   const changeTheme = () => {
