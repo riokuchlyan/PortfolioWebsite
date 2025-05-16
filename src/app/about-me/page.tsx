@@ -59,32 +59,32 @@ export default function AboutMe() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center max-w-[90%] mt-5 row-start-3 items-center">
                         <Image
-                            className="rounded-lg"
+                            className="rounded-lg object-cover w-[200px] h-[150px]"
                             src="/family_photo.jpeg"
                             alt="Family"
-                            width={400}
-                            height={300}
+                            width={200}
+                            height={150}
                         />
                         <Image
-                            className="rounded-lg"
+                            className="rounded-lg object-cover w-[200px] h-[150px]"
                             src="/greece-photo.png"
                             alt="Greece"
-                            width={400}
-                            height={300}
+                            width={200}
+                            height={150}
                         />
                         <Image
-                            className="rounded-lg"
+                            className="rounded-lg object-cover w-[200px] h-[150px]"
                             src="/tower-photo.png"
                             alt="Tower"
-                            width={400}
-                            height={300}
+                            width={200}
+                            height={150}
                         />
                         <Image
-                            className="rounded-lg"
+                            className="rounded-lg object-cover w-[200px] h-[150px]"
                             src="/stadium-photo.jpeg"
                             alt="Stadium"
-                            width={400}
-                            height={300}
+                            width={200}
+                            height={150}
                         />
                     </div>
                     

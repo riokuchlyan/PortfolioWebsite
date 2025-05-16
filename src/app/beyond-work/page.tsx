@@ -27,13 +27,14 @@ export default function BeyondWork() {
 
         <div className="flex flex-col gap-4 row-start-2 items-center text-center max-w-[70%] mb-8">
             <h1 className='mt-64'>BEYOND WORK</h1>
-            <p>Here are some of the places I have visited in the past few years.</p>
+            <h2 className='text-2xl'>Countries Visited</h2>
             <video controls preload="auto">
                 <source src="/visited_places.mp4" type="video/mp4"/>
             </video>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center max-w-[90%] mt-5 row-start-3 items-center">
+            <h2 className='text-2xl mt-10'>Photos</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center max-w-[90%] mt-5 row-start-3 items-center">
+            
             <Image
                 className="rounded-lg"
                 src="/beyond_work1.jpeg"
@@ -62,6 +63,7 @@ export default function BeyondWork() {
                 width={400}
                 height={300}
             />
+        </div>
         </div>
         
     </div>

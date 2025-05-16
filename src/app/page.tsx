@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './/animations.css'; 
 import { useKeyboardNavigation } from '../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../components/ThemeSwitcher";
@@ -17,20 +17,28 @@ export default function Home() {
     validateTheme();
   }, []);
   
+  const [hovered, setHovered] = useState(false);
+
   return (
     <div className="fade-in grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       
       <ThemeSwitcher/>
 
       <div className="flex flex-col gap-4 row-start-2 items-center text-center max-w-[70%]">
-        <Image
-          id='bird'
-          className="animate-bounce"
-          src="/bird.svg"
-          alt="bird"
-          width={50}
-          height={50}
-        />
+        <div
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          style={{ transition: 'filter 0.3s' }}
+        >
+          <Image
+            id='memoji'
+            className={`rounded-full transition-all duration-300 ${hovered ? 'scale-105' : ''}`}
+            src={hovered ? "/headshot.jpg" : "/memoji.png"}
+            alt="picture of me"
+            width={90}
+            height={90}
+          />
+        </div>
 
         <div className="flex flex-col gap-2 items-center">
           <h1 className="mb-0 pb-0">RIO KUCHLYAN</h1>

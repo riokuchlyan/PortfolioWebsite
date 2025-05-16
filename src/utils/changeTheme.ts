@@ -1,7 +1,8 @@
-import { getColorScheme } from './theme';
+import { getColorScheme, setColorScheme } from '../utils/theme';
 
-export function validateTheme() {
-    if (getColorScheme() == "light") {
+export function changeTheme() {
+    if (getColorScheme() == "dark") {
+        setColorScheme("light");
         const root = document.documentElement;
         root.style.setProperty('--background', '#f5f5f5');
         root.style.setProperty('--foreground', '#1a1a1a');
@@ -15,6 +16,7 @@ export function validateTheme() {
         }
     }
     else {
+        setColorScheme("dark");
         const root = document.documentElement;
         root.style.setProperty('--background', '#111111');
         root.style.setProperty('--foreground', 'rgb(199, 199, 199)');
@@ -27,4 +29,4 @@ export function validateTheme() {
           house.style.filter = "brightness(100%)";
         }
     }
-  };
+}
