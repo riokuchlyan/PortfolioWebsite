@@ -6,6 +6,7 @@ import './/animations.css';
 import { useKeyboardNavigation } from '../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../components/ThemeSwitcher";
 import { validateTheme } from "@/utils/validateTheme";
+import ChatBot from '../components/ChatBot';
 
 export default function Home() {
   useKeyboardNavigation({ key: '1', href: '/about-me' });
@@ -51,7 +52,7 @@ export default function Home() {
           <Link href="/experience"><code>[3] Experience</code></Link>
           <Link href="/beyond-work"><code>[4] Beyond Work</code></Link>
         </div>
-        
+        <ChatBot/>
       </div>
       
     </div>
