@@ -16,7 +16,7 @@ export default function ChatBot() {
     try {
       const response = await getOpenAIResponse(userInput);
       setAiResponse(response);
-    } catch (err) {
+    } catch {
       setAiResponse('Error fetching response.');
     }
     setLoading(false);
@@ -43,7 +43,7 @@ export default function ChatBot() {
         transform transition-all duration-300 origin-bottom
         ${isExpanded ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 h-0'}
       `}>
-        <h2 className="text-xl font-bold mb-3">Chat with Rio's AI</h2>
+        <h2 className="text-xl font-bold mb-3">Chat with Rio&apos;s AI</h2>
         <form onSubmit={handleSubmit} className="mb-3 flex">
           <input
             type="text"
