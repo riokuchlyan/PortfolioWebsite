@@ -16,7 +16,6 @@ export const metadata: Metadata = {
   title: "Rio Kuchlyan",
   description: "Rio Kuchlyan's personal website",
   icons: {
-    icon: '/bird.svg',
   },
 };
 
