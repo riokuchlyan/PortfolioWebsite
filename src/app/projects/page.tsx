@@ -43,7 +43,7 @@ export default function Projects() {
                     <Image
                       alt="Card background"
                       className="object-cover rounded-xl"
-                      src="visualize.png"
+                      src="/visualize.png"
                       width={270}
                       height={177}
                     />
@@ -63,7 +63,7 @@ export default function Projects() {
                     <Image
                       alt="Card background"
                       className="object-cover rounded-xl"
-                      src="password_manager.png"
+                      src="/password_manager.png"
                       width={270}
                       height={177}
                     />
@@ -83,7 +83,7 @@ export default function Projects() {
                     <Image
                       alt="Card background"
                       className="object-cover rounded-xl"
-                      src="portfolio.png"
+                      src="/portfolio.png"
                       width={270}
                       height={177}
                     />
@@ -103,7 +103,7 @@ export default function Projects() {
                     <Image
                       alt="Card background"
                       className="object-cover rounded-xl"
-                      src="battleship.png"
+                      src="/battleship.png"
                       width={270}
                       height={177}
                     />
@@ -123,7 +123,7 @@ export default function Projects() {
                     <Image
                       alt="Card background"
                       className="object-cover rounded-xl"
-                      src="clipboard_manager.png"
+                      src="/clipboard_manager.png"
                       width={270}
                       height={177}
                     />
@@ -143,7 +143,7 @@ export default function Projects() {
                     <Image
                       alt="Card background"
                       className="object-cover rounded-xl"
-                      src="dog-adoption.png"
+                      src="/dog-adoption.png"
                       width={270}
                       height={177}
                     />
