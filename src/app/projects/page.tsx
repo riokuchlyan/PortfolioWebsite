@@ -2,11 +2,12 @@
 import React, { useEffect } from 'react';
 import '../animations.css'; 
 import Link from "next/link";
+import Image from "next/image";
 import { useKeyboardNavigation } from '../../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../../components/ThemeSwitcher";
 import HomeButton from '../../components/HomeButton';
 import { validateTheme } from '../../utils/validateTheme';
-import {Card, CardHeader, CardBody, Image} from "@heroui/react";
+import {Card, CardHeader, CardBody} from "@heroui/react";
 
 export default function Projects() {
     useKeyboardNavigation({ key: 'h', href: '/' });
@@ -41,11 +42,12 @@ export default function Projects() {
                   </CardHeader>
                   <CardBody className="overflow-visible py-2">
                     <Image
-                      alt="Card background"
+                      alt="VisuAlize project screenshot"
                       className="object-cover rounded-xl"
                       src="/visualize.png"
                       width={270}
                       height={177}
+                      priority
                     />
                   </CardBody>
                 </Card>
@@ -61,7 +63,7 @@ export default function Projects() {
                   </CardHeader>
                   <CardBody className="overflow-visible py-2">
                     <Image
-                      alt="Card background"
+                      alt="Password Manager project screenshot"
                       className="object-cover rounded-xl"
                       src="/password_manager.png"
                       width={270}
@@ -81,7 +83,7 @@ export default function Projects() {
                   </CardHeader>
                   <CardBody className="overflow-visible py-2">
                     <Image
-                      alt="Card background"
+                      alt="Portfolio project screenshot"
                       className="object-cover rounded-xl"
                       src="/portfolio.png"
                       width={270}
@@ -101,7 +103,7 @@ export default function Projects() {
                   </CardHeader>
                   <CardBody className="overflow-visible py-2">
                     <Image
-                      alt="Card background"
+                      alt="Battleship game screenshot"
                       className="object-cover rounded-xl"
                       src="/battleship.png"
                       width={270}
@@ -121,7 +123,7 @@ export default function Projects() {
                   </CardHeader>
                   <CardBody className="overflow-visible py-2">
                     <Image
-                      alt="Card background"
+                      alt="Clipboard Manager project screenshot"
                       className="object-cover rounded-xl"
                       src="/clipboard_manager.png"
                       width={270}
@@ -141,7 +143,7 @@ export default function Projects() {
                   </CardHeader>
                   <CardBody className="overflow-visible py-2">
                     <Image
-                      alt="Card background"
+                      alt="Dog Adoption Website screenshot"
                       className="object-cover rounded-xl"
                       src="/dog-adoption.png"
                       width={270}
