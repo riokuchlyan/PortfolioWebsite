@@ -7,7 +7,6 @@ import { useKeyboardNavigation } from '../../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../../components/ThemeSwitcher";
 import HomeButton from '../../components/HomeButton';
 import { validateTheme } from '../../utils/validateTheme';
-import {Card, CardHeader, CardBody} from "@heroui/react";
 
 export default function Projects() {
     useKeyboardNavigation({ key: 'h', href: '/' });
@@ -20,142 +19,100 @@ export default function Projects() {
         validateTheme();
     }, []);
     
+    const projects = [
+        {
+            title: "VisuAlize",
+            description: "React, FastAPI, Supabase",
+            image: "/visualize.png",
+            link: "https://visualize-navy.vercel.app",
+            type: "external"
+        },
+        {
+            title: "Password Manager",
+            description: "React, FastAPI, Supabase",
+            image: "/password_manager.png",
+            link: "https://github.com/riokuchlyan/passwordManager",
+            type: "external"
+        },
+        {
+            title: "Portfolio",
+            description: "Next.js, TypeScript, Tailwind CSS",
+            image: "/portfolio.png",
+            link: "https://github.com/riokuchlyan/rios-portfolio",
+            type: "external"
+        },
+        {
+            title: "Battleship",
+            description: "Python Game Implementation",
+            image: "/battleship.png",
+            link: "https://replit.com/@riokuchlyan/Battleship",
+            type: "external"
+        },
+        {
+            title: "Clipboard Manager",
+            description: "Desktop Utility Application",
+            image: "/clipboard_manager.png",
+            link: "https://github.com/riokuchlyan/clipboardManager",
+            type: "external"
+        },
+        {
+            title: "Dog Adoption Website",
+            description: "React, Node.js, Database Integration",
+            image: "/dog-adoption.png",
+            link: "https://github.com/riokuchlyan/dog-adoption",
+            type: "external"
+        }
+    ];
+    
     return (
-      <div className="fade-in grid items-center justify-items-center min-h-screen p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <div className="fade-in min-h-screen p-8 sm:p-20 font-sans">
+            <ThemeSwitcher/>
+            <HomeButton/>
 
-      <ThemeSwitcher/>
+            <main className="max-w-7xl mx-auto pt-24">
+                <header className="text-center mb-16 fade-in-delayed">
+                    <h1 className="mb-4 mt-32">PROJECTS</h1>
+                    <p className="text-muted text-lg max-w-2xl mx-auto">
+                        A collection of projects I've built, ranging from web applications to mobile apps and utilities.
+                    </p>
+                </header>
 
-      <HomeButton/>
-
-      <div className="flex flex-col row-start-2 items-center text-center max-w-[70%] mt-64">
-          <h1>PROJECTS</h1>
-
-              <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 mb-12 mt-8">
-
-              <div className='bg-gray-800 rounded-lg p-4 mb-4'>
-                <Card className="py-4">
-                  <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                  <Link id="pConstantColor" href="https://visualize-navy.vercel.app" target="_blank" className="text-tiny font-bold"> 
-                  VisuAlize
-                </Link>
-                    <small id="pConstantColor" className="text-default-500">React, FastAPI, Supabase</small>
-                  </CardHeader>
-                  <CardBody className="overflow-visible py-2">
-                    <Image
-                      alt="VisuAlize project screenshot"
-                      className="object-cover rounded-xl"
-                      src="/visualize.png"
-                      width={270}
-                      height={177}
-                      priority
-                    />
-                  </CardBody>
-                </Card>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in-delayed-2">
+                    {projects.map((project, index) => (
+                        <Link
+                            key={project.title}
+                            href={project.link}
+                            target={project.type === 'external' ? '_blank' : '_self'}
+                            rel={project.type === 'external' ? 'noopener noreferrer' : ''}
+                            className="group block"
+                            style={{ animationDelay: `${index * 0.1}s` }}
+                        >
+                            <article className="bg-card border border-border rounded-2xl overflow-hidden card-hover glow-on-hover h-full flex flex-col">
+                                <div className="aspect-video relative overflow-hidden">
+                                    <Image
+                                        src={project.image}
+                                        alt={`${project.title} project screenshot`}
+                                        fill
+                                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                                <div className="p-6 flex-1 flex flex-col">
+                                    <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-white transition-colors">
+                                        {project.title}
+                                    </h3>
+                                    <p className="text-muted text-sm flex-1">
+                                        {project.description}
+                                    </p>
+                                    <div className="mt-4 flex items-center text-accent text-sm font-medium">
+                                        View Project
+                                        <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </Link>
+                    ))}
                 </div>
-
-                <div className='bg-gray-800 rounded-lg p-4 mb-4'>
-                <Card className="py-4">
-                  <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                  <Link id="pConstantColor" href="https://github.com/riokuchlyan/passwordManager" target="_blank" className="text-tiny font-bold"> 
-                  Password Manager
-                </Link>
-                    <small id="pConstantColor" className="text-default-500">React, FastAPI, Supabase</small>
-                  </CardHeader>
-                  <CardBody className="overflow-visible py-2">
-                    <Image
-                      alt="Password Manager project screenshot"
-                      className="object-cover rounded-xl"
-                      src="/password_manager.png"
-                      width={270}
-                      height={177}
-                    />
-                  </CardBody>
-                </Card>
-                </div>
-
-                <div className='bg-gray-800 rounded-lg p-4 mb-4'>
-                <Card className="py-4">
-                  <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                  <Link id="pConstantColor" href="https://github.com/riokuchlyan/rios-portfolio" target="_blank" className="text-tiny font-bold"> 
-                  Portfolio
-                </Link>
-                    <small id="pConstantColor" className="text-default-500">React, FastAPI, Supabase</small>
-                  </CardHeader>
-                  <CardBody className="overflow-visible py-2">
-                    <Image
-                      alt="Portfolio project screenshot"
-                      className="object-cover rounded-xl"
-                      src="/portfolio.png"
-                      width={270}
-                      height={177}
-                    />
-                  </CardBody>
-                </Card>
-                </div>
-
-                <div className='bg-gray-800 rounded-lg p-4 mb-4'>
-                <Card className="py-4">
-                  <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                  <Link id="pConstantColor" href="https://replit.com/@riokuchlyan/Battleship" target="_blank" className="text-tiny font-bold"> 
-                  Battleship
-                </Link>
-                    <small id="pConstantColor" className="text-default-500">React, FastAPI, Supabase</small>
-                  </CardHeader>
-                  <CardBody className="overflow-visible py-2">
-                    <Image
-                      alt="Battleship game screenshot"
-                      className="object-cover rounded-xl"
-                      src="/battleship.png"
-                      width={270}
-                      height={177}
-                    />
-                  </CardBody>
-                </Card>
-                </div>
-
-                <div className='bg-gray-800 rounded-lg p-4 mb-4'>
-                <Card className="py-4">
-                  <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                  <Link id="pConstantColor" href="https://github.com/riokuchlyan/clipboardManager" target="_blank" className="text-tiny font-bold"> 
-                  Clipboard Manager
-                </Link>
-                    <small id="pConstantColor" className="text-default-500">React, FastAPI, Supabase</small>
-                  </CardHeader>
-                  <CardBody className="overflow-visible py-2">
-                    <Image
-                      alt="Clipboard Manager project screenshot"
-                      className="object-cover rounded-xl"
-                      src="/clipboard_manager.png"
-                      width={270}
-                      height={177}
-                    />
-                  </CardBody>
-                </Card>
-                </div>
-
-                <div className='bg-gray-800 rounded-lg p-4 mb-4'>
-                <Card className="py-4">
-                  <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                  <Link id="pConstantColor" href="https://github.com/riokuchlyan/dog-adoption" target="_blank" className="text-tiny font-bold"> 
-                  Dog Adoption Website
-                </Link>
-                    <small id="pConstantColor" className="text-default-500">React, FastAPI, Supabase</small>
-                  </CardHeader>
-                  <CardBody className="overflow-visible py-2">
-                    <Image
-                      alt="Dog Adoption Website screenshot"
-                      className="object-cover rounded-xl"
-                      src="/dog-adoption.png"
-                      width={270}
-                      height={177}
-                    />
-                  </CardBody>
-                </Card>
-                </div>
-              </div>
-              
-      </div>
-      
-  </div>
-);
+            </main>
+        </div>
+    );
 }

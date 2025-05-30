@@ -27,48 +27,53 @@ export default function ChatBot() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 flex flex-col items-end z-50">
+    <div className="flex flex-col items-center">
       <button 
         onClick={() => setIsExpanded(!isExpanded)}
-        className="bg-gray-900 border border-gray-700 hover:bg-gray-800 transition-colors rounded-full p-2 mb-2 shadow-none focus:outline-none"
+        className="bg-card border border-border hover:border-accent transition-all duration-200 rounded-xl px-4 py-2 mb-4 shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50 group"
         aria-label={isExpanded ? 'Close chat' : 'Open chat'}
       >
-        <svg 
-          className={`w-6 h-6 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
-          fill="none" 
-          stroke="currentColor" 
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-        </svg>
+        <div className="flex items-center gap-3">
+          <span className="text-sm font-mono text-muted group-hover:text-accent transition-colors">
+            Chat with Rio's AI
+          </span>
+          <svg 
+            className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''} text-muted group-hover:text-accent`}
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
       </button>
       
       <div className={`
-        bg-gray-900 border border-gray-700 rounded-xl p-4 w-80
-        transition-all duration-300 origin-bottom shadow-lg
-        ${isExpanded ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 h-0 pointer-events-none'}
+        bg-card border border-border rounded-xl p-6 w-full max-w-md
+        transition-all duration-300 origin-top shadow-lg
+        ${isExpanded ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 h-0 pointer-events-none overflow-hidden'}
       `}>
-        <h2 className="text-lg font-semibold mb-2 text-gray-200 tracking-tight">Chat with Rio&apos;s AI</h2>
-        <form onSubmit={handleSubmit} className="mb-2 flex gap-2">
+        <h3 className="text-lg font-semibold mb-4 tracking-tight">Ask me anything</h3>
+        <form onSubmit={handleSubmit} className="mb-4 flex gap-2">
           <input
             type="text"
             value={userInput}
             onChange={e => setUserInput(e.target.value)}
-            className="flex-1 rounded bg-gray-800 border border-gray-700 px-3 py-1 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 transition min-w-0"
+            className="flex-1 rounded-lg bg-background border border-border px-3 py-2 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition min-w-0"
             placeholder="Ask a question..."
             disabled={loading}
             autoComplete="off"
           />
           <button
             type="submit"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-1 rounded transition disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0 w-20"
+            className="bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0"
             disabled={loading || !userInput.trim()}
           >
-            Send
+            {loading ? '...' : 'Send'}
           </button>
         </form>
-        <div className="text-gray-300 text-sm min-h-[2rem] whitespace-pre-line">
-          {loading ? 'Loading...' : aiResponse}
+        <div className="text-muted text-sm min-h-[3rem] whitespace-pre-line border-t border-border pt-4">
+          {loading ? 'Thinking...' : aiResponse || 'Ask me about Rio, his projects, or anything else!'}
         </div>
       </div>
     </div>
