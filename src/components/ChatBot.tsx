@@ -35,7 +35,7 @@ export default function ChatBot() {
       >
         <div className="flex items-center gap-3">
           <span className="text-sm font-mono text-muted group-hover:text-accent transition-colors">
-            Chat with Rio's AI
+            Chat with Rio&apos;s AI
           </span>
           <svg 
             className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''} text-muted group-hover:text-accent`}

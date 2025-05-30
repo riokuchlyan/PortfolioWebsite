@@ -73,7 +73,7 @@ export default function Projects() {
                 <header className="text-center mb-16 fade-in-delayed">
                     <h1 className="mb-4 mt-32">PROJECTS</h1>
                     <p className="text-muted text-lg max-w-2xl mx-auto">
-                        A collection of projects I've built, ranging from web applications to mobile apps and utilities.
+                        A collection of projects I&apos;ve built, ranging from web applications to mobile apps and utilities.
                     </p>
                 </header>
 
