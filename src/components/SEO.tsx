@@ -14,7 +14,7 @@ export default function SEO({
   title = "Rio Kuchlyan - Computer Science Student & Developer",
   description = "Rio Kuchlyan is a Computer Science student at UNC Chapel Hill specializing in technology and finance. Backend developer with experience in trading software, VR development, and financial modeling.",
   canonical = "https://www.riokuchlyan.com",
-  ogImage = "/og-image.png",
+  ogImage = "/opengraph-image",
   ogType = "website",
   structuredData,
   noindex = false,

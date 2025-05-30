@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     description: "Rio Kuchlyan is a Computer Science student at UNC Chapel Hill specializing in technology and finance. Backend developer with experience in trading software, VR development, and financial modeling.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Rio Kuchlyan Portfolio",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Rio Kuchlyan - Computer Science Student & Developer",
     description: "Rio Kuchlyan is a Computer Science student at UNC Chapel Hill specializing in technology and finance. Backend developer with experience in trading software, VR development, and financial modeling.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
   },
   verification: {
     google: "your-google-verification-code",
@@ -76,8 +76,6 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
 };
