@@ -69,15 +69,15 @@ export default function Projects() {
             <ThemeSwitcher/>
             <HomeButton/>
 
-            <main className="max-w-7xl mx-auto pt-24">
+            <main className="max-w-5xl mx-auto pt-24">
                 <header className="text-center mb-16 fade-in-delayed">
                     <h1 className="mb-4 mt-32">PROJECTS</h1>
                     <p className="text-muted text-lg max-w-2xl mx-auto">
-                        A collection of projects I&apos;ve built, ranging from web applications to mobile apps and utilities.
+                        A collection of projects I&apos;ve built, ranging from web applications to mobile apps and utilities
                     </p>
                 </header>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in-delayed-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in-delayed-2">
                     {projects.map((project, index) => (
                         <Link
                             key={project.title}

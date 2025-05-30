@@ -16,86 +16,96 @@ export default function Experience() {
 
     useEffect(() => {
         validateTheme();
-      }, []);
+    }, []);
+
+    const timelineItems = [
+        {
+            id: 1,
+            date: "Apr. 2025 - Present",
+            title: "Backend Developer - Equities/Capital Markets Intern",
+            organization: "Swing Phi",
+            type: "work"
+        },
+        {
+            id: 2,
+            date: "Apr. 2025 - Present",
+            title: "Private Equity Intern",
+            organization: "Star Course Holdings",
+            type: "work"
+        },
+        {
+            id: 3,
+            date: "Feb. 2025 - Present",
+            title: "Extended Reality Developer",
+            organization: "Carolina AR/VR",
+            type: "academic"
+        },
+        {
+            id: 4,
+            date: "Aug. 2024 - Present",
+            title: "Instructor",
+            organization: "Prep Expert",
+            type: "work"
+        },
+        {
+            id: 5,
+            date: "Aug. 2024 - May 2028",
+            title: "Bachelor of Science in Computer Science",
+            organization: "University of North Carolina at Chapel Hill",
+            type: "education"
+        }
+    ];
 
     return (
-        <div className="fade-in grid items-center justify-items-center min-h-screen p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <div className="fade-in min-h-screen p-8 sm:p-20 font-sans">
+            <ThemeSwitcher/>
+            <HomeButton/>
 
-        <ThemeSwitcher/>
+            <main className="max-w-6xl mx-auto pt-24">
+                <header className="text-center mb-16 fade-in-delayed">
+                    <h1 className="mb-4 mt-32">EXPERIENCE</h1>
+                    <p className="text-muted text-lg max-w-2xl mx-auto mb-8">
+                        My journey through education, work, and academic experiences
+                    </p>
+                    <Link 
+                        className="bg-accent text-white py-2 px-4 rounded-md hover:bg-accent/90 transition-colors inline-block" 
+                        target="_blank" 
+                        href="/rio_kuchlyan_resume.pdf"
+                    >
+                        View My Resume
+                    </Link>
+                </header>
 
-        <HomeButton/>
-
-        <div className="flex flex-col gap-4 row-start-2 items-center text-center max-w-[70%]">
-            <h1 className='mt-64'>EXPERIENCE</h1>
-            <Link className="bg-accent text-white py-2 px-4 rounded-md mb-8 hover:bg-accent/90 transition-colors" target="_blank" href="/rio_kuchlyan_resume.pdf">
-                View My Resume
-            </Link>
-
-            <div className="w-full mb-4 text-left">
-              <h2 className="text-2xl font-bold mb-2 text-foreground">Education</h2>
-              <div className="bg-card border border-border rounded-lg p-4 mb-4">
-                <p className="font-semibold text-card-foreground">University of North Carolina at Chapel Hill</p>
-                <p className="text-card-foreground">Bachelor of Science in Computer Science, Pre-Business Studies</p>
-                <p className="text-card-foreground">Major GPA: 4.0</p>
-                <p className="text-sm text-muted">Visual Computing and AI Lab, Scholars of Finance, TechX</p>
-                <p className="text-sm text-muted">Chapel Hill, NC | Aug. 2024 – May 2028</p>
-              </div>
-            </div>
-
-            <div className="w-full mb-4 text-left">
-              <h2 className="text-2xl font-bold mb-2 text-foreground">Work Experience</h2>
-
-              <div className="bg-card border border-border rounded-lg p-4 mb-4">
-                <p className="font-semibold text-card-foreground">Backend Developer - Equities/Capital Markets Intern</p>
-                <p className="text-sm text-muted">Swing Phi (Remote) | Apr. 2025 – Present</p>
-                <ul className="list-disc ml-6 text-left">
-                  <li className="text-card-foreground">Building trading infrastructure leveraging proprietary algorithms for real-time equity analysis and execution</li>
-                  <li className="text-card-foreground">Engineering equities data backend with scalable models using modern frameworks and data storage systems</li>
-                  <li className="text-card-foreground">Designing APIs for real-time ingestion and transformation of equities market data for internal systems</li>
-                  <li className="text-card-foreground">Optimizing trading data services by refining performance, reliability, and modular backend architecture</li>
-                </ul>
-              </div>
-              
-              <div className="bg-card border border-border rounded-lg p-4 mb-4">
-                <p className="font-semibold text-card-foreground">Instructor</p>
-                <p className="text-sm text-muted">Prep Expert (Remote) | Aug. 2024 – Present</p>
-                <ul className="list-disc ml-6 text-left">
-                  <li className="text-card-foreground">Top 1% SAT tutor specializing in coaching students for the SAT and multiple AP exams including AP Physics C</li>
-                  <li className="text-card-foreground">Providing individual and class tutoring to groups of 15-50 high school students throughout the United States</li>
-                  <li className="text-card-foreground">Advising on tutoring operations and strategy at a Shark Tank-funded edtech firm backed by Mark Cuban</li>
-                </ul>
-              </div>
-              
-            </div>
-
-            <div className="w-full mb-4 text-left">
-              <h2 className="text-2xl font-bold mb-2 text-foreground">Academic Experience</h2>
-
-              <div className="bg-card border border-border rounded-lg p-4 mb-4">
-                <p className="font-semibold text-card-foreground">Extended Reality Developer</p>
-                <p className="text-sm text-muted">Carolina AR/VR, Chapel Hill, NC | Feb. 2025 – Present</p>
-                <ul className="list-disc ml-6 text-left">
-                  <li className="text-card-foreground">Building a VR music collaboration tool enabling interactive audio feedback in shared spatial environments</li>
-                  <li className="text-card-foreground">Streamlining UI components and code execution in Unity to enhance immersion and reduce visual latency</li>
-                  <li className="text-card-foreground">Implemented music import features in VR apps using Unity, MIDI Toolkit, and Koreographer</li>
-                </ul>
-              </div>
-
-              <div className="bg-card border border-border rounded-lg p-4 mb-4">
-                <p className="font-semibold text-card-foreground">Representative</p>
-                <p className="text-sm text-muted">Hillsborough Township Board of Education (BOE), Hillsborough, NJ | Aug. 2023 – Aug. 2024</p>
-                <ul className="list-disc ml-6 text-left">
-                  <li className="text-card-foreground">Acted as liaison between student councils and Board to communicate and resolve key student concerns</li>
-                  <li className="text-card-foreground">Delivered concerns regarding student welfare, contributing to the BOE voting on 10+ policies bi-weekly</li>
-                  <li className="text-card-foreground">Consulted the BOE on questions regarding funding for alarms compared to faculty for bathroom monitoring</li>
-                  <li className="text-card-foreground">Facilitated the implementation of alarm systems and computer sign-ins to reduce bathroom vandalism by over 20%</li>
-                </ul>
-              </div>
-
-            </div>
-
+                <div className="relative fade-in-delayed-2 max-w-2xl mx-auto">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-px bg-border h-full"></div>
+                    
+                    {timelineItems.map((item, index) => (
+                        <div 
+                            key={item.id} 
+                            className={`relative flex items-center mb-8 ${
+                                index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'
+                            }`}
+                            style={{ animationDelay: `${index * 0.1}s` }}
+                        >
+                            <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+                                <div className="w-2 h-2 rounded-full bg-muted border-2 border-background"></div>
+                            </div>
+                            
+                            <div className={`w-5/12 ${index % 2 === 0 ? 'pr-6 text-right' : 'pl-6 text-left'}`}>
+                                <div className="py-2">
+                                    <h3 className="text-sm font-medium mb-1 text-foreground">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-xs text-muted mb-1">{item.organization}</p>
+                                    <p className="text-xs text-muted font-mono">{item.date}</p>
+                                </div>
+                            </div>
+                            
+                            <div className="w-5/12"></div>
+                        </div>
+                    ))}
+                </div>
+            </main>
         </div>
-        
-    </div>
-);
+    );
 }
