@@ -3,10 +3,9 @@ import { changeTheme } from '@/utils/changeTheme';
 import { getColorScheme } from '@/utils/theme';
 
 const ThemeSwitcher: React.FC = () => {
-  const [currentTheme, setCurrentTheme] = useState<string>('system');
+  const [currentTheme, setCurrentTheme] = useState<string>('dark');
   
   useEffect(() => {
-    // Update current theme state
     const updateTheme = () => {
       setCurrentTheme(getColorScheme());
     };
@@ -37,15 +36,11 @@ const ThemeSwitcher: React.FC = () => {
   };
   
   const getThemeIcon = () => {
-    switch (currentTheme) {
-      case 'light':
-        return '☀️';
-      case 'dark':
-        return '🌙';
-      case 'system':
-      default:
-        return '💻';
-    }
+    return currentTheme === 'light' ? '☀️' : '🌙';
+  };
+
+  const getThemeLabel = () => {
+    return currentTheme === 'light' ? 'Light' : 'Dark';
   };
   
   return (
@@ -63,8 +58,8 @@ const ThemeSwitcher: React.FC = () => {
         <button 
           onClick={handleThemeChange}
           className="flex items-center justify-center w-8 h-8 rounded-xl bg-background/50 border border-border hover:border-accent transition-all duration-300 hover:scale-110 hover:shadow-md active:scale-95 hover:bg-accent/10 group-hover:border-accent"
-          aria-label={`Toggle theme (current: ${currentTheme})`}
-          title={`Current theme: ${currentTheme}`}
+          aria-label={`Switch to ${currentTheme === 'light' ? 'dark' : 'light'} theme`}
+          title={`Current: ${getThemeLabel()} • Click to switch`}
         >
           <span className="text-base group-hover:scale-110 transition-transform duration-300">
             {getThemeIcon()}
