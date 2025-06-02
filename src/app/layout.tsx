@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.riokuchlyan.com",
     siteName: "Rio Kuchlyan Portfolio",
-    title: "Rio Kuchlyan - Computer Science Student & Developer",
+    title: "Rio Kuchlyan",
     description: "Rio Kuchlyan is a Computer Science student at UNC Chapel Hill specializing in technology and finance. Backend developer with experience in trading software, VR development, and financial modeling.",
     images: [
       {
