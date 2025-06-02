@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     canonical: "https://www.riokuchlyan.com",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/bird.svg",
   },
   manifest: "/site.webmanifest",
 };
