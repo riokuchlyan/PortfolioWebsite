@@ -97,7 +97,7 @@ export default function Projects() {
                                     />
                                 </div>
                                 <div className="p-6 flex-1 flex flex-col">
-                                    <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-white transition-colors">
+                                    <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-accent transition-colors">
                                         {project.title}
                                     </h3>
                                     <p className="text-muted text-sm flex-1">

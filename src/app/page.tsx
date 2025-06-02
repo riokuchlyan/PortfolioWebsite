@@ -95,7 +95,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row gap-8 md:gap-6 justify-center items-center max-w-4xl mx-auto">
               <Link 
                 href="/about-me" 
-                className="group inline-block w-full md:w-auto text-center"
+                className="group inline-block"
               >
                 <code className="inline-block px-4 py-2 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105">
                   [1] About Me
@@ -104,7 +104,7 @@ export default function Home() {
               
               <Link 
                 href="/projects" 
-                className="group inline-block w-full md:w-auto text-center"
+                className="group inline-block"
               >
                 <code className="inline-block px-4 py-2 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105">
                   [2] Projects
@@ -113,7 +113,7 @@ export default function Home() {
               
               <Link 
                 href="/experience" 
-                className="group inline-block w-full md:w-auto text-center"
+                className="group inline-block"
               >
                 <code className="inline-block px-4 py-2 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105">
                   [3] Experience
@@ -122,7 +122,7 @@ export default function Home() {
               
               <Link 
                 href="/beyond-work" 
-                className="group inline-block w-full md:w-auto text-center"
+                className="group inline-block"
               >
                 <code className="inline-block px-4 py-2 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105">
                   [4] Beyond Work

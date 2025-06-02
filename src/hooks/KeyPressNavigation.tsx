@@ -13,7 +13,14 @@ export function useKeyboardNavigation({ key, href }: KeyboardNavigationOptions) 
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.key === key) {
+      const target = event.target as HTMLElement;
+      const isTyping = target.tagName === 'INPUT' || 
+                      target.tagName === 'TEXTAREA' || 
+                      target.isContentEditable ||
+                      target.closest('input') ||
+                      target.closest('textarea');
+      
+      if (event.key === key && !isTyping) {
         router.push(href);
       }
     };
