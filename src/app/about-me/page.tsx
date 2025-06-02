@@ -91,7 +91,7 @@ export default function AboutMe() {
 
                     <section className="fade-in-delayed">
                         <div className="text-center mb-12">
-                            <h2 className="text-2xl font-semibold mb-4 text-foreground">Let's Connect</h2>
+                            <h2 className="text-2xl font-semibold mb-4 text-foreground">Let&apos;s Connect</h2>
                             <p className="text-muted text-lg leading-relaxed font-normal">
                                 Reach out to me on any of these platforms
                             </p>
