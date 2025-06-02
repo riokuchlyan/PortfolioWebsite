@@ -70,20 +70,20 @@ export default function AboutMe() {
 
             <main className="max-w-6xl mx-auto pt-20 sm:pt-24">
                 <header className="text-center mb-16 sm:mb-20 fade-in-delayed">
-                    <h1 className="mb-4 sm:mb-6 mt-24 sm:mt-32">ABOUT ME</h1>
+                    <h1 className="mb-4 sm:mb-6 mt-24 sm:mt-32 font-bold">ABOUT ME</h1>
                 </header>
 
                 <div className="space-y-16 sm:space-y-20">
 
                     <section className="fade-in-delayed">
                         <div className="bg-card/80 border border-border rounded-3xl p-6 sm:p-8 md:p-10 card-hover backdrop-blur-sm">
-                            <p className="text-base sm:text-lg leading-relaxed text-card-foreground mb-4 sm:mb-6">
+                            <p className="text-base sm:text-lg leading-relaxed text-card-foreground mb-4 sm:mb-6 font-normal">
                                 Hello! My name is <span className="text-accent font-semibold">Rio Kuchlyan</span> and I am a developer focusing on the technology and finance industries.
                             </p>
-                            <p className="text-base sm:text-lg leading-relaxed text-card-foreground mb-4 sm:mb-6">
+                            <p className="text-base sm:text-lg leading-relaxed text-card-foreground mb-4 sm:mb-6 font-normal">
                                 I am a student at the <span className="text-accent font-semibold">University of North Carolina at Chapel Hill</span> pursuing a double major in computer science and business.
                             </p>
-                            <p className="text-base sm:text-lg leading-relaxed text-card-foreground">
+                            <p className="text-base sm:text-lg leading-relaxed text-card-foreground font-normal">
                                 Feel free to connect with me through any of the platforms below!
                             </p>
                         </div>
@@ -91,8 +91,8 @@ export default function AboutMe() {
 
                     <section className="fade-in-delayed">
                         <div className="text-center mb-12">
-                            <h2 className="text-2xl font-semibold mb-4 text-foreground">Let&apos;s Connect</h2>
-                            <p className="text-muted text-lg leading-relaxed">
+                            <h2 className="text-2xl font-semibold mb-4 text-foreground">Let's Connect</h2>
+                            <p className="text-muted text-lg leading-relaxed font-normal">
                                 Reach out to me on any of these platforms
                             </p>
                         </div>
@@ -128,7 +128,7 @@ export default function AboutMe() {
                     <section className="fade-in-delayed-2">
                         <div className="text-center mb-16">
                             <h2 className="text-2xl font-semibold mb-4 text-foreground">Life Moments</h2>
-                            <p className="text-muted text-lg leading-relaxed">
+                            <p className="text-muted text-lg leading-relaxed font-normal">
                                 A glimpse into my world beyond code
                             </p>
                         </div>

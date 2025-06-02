@@ -77,8 +77,8 @@ export default function Home() {
             </div>
 
             <div className="space-y-6">
-              <h1 className="tracking-tight text-foreground">RIO KUCHLYAN</h1>
-              <h2 className="text-muted flex items-center justify-center gap-3 max-w-lg mx-auto">
+              <h1 className="tracking-tight text-foreground font-bold">RIO KUCHLYAN</h1>
+              <h2 className="text-muted flex items-center justify-center gap-3 max-w-lg mx-auto font-medium">
                 <span className="text-xl">📍</span>
                 <span className="leading-relaxed">New York City Metropolitan Area & Chapel Hill, NC</span>
               </h2>
@@ -92,7 +92,7 @@ export default function Home() {
                 className="group inline-block slide-in-left"
                 style={{ animationDelay: '0.1s' }}
               >
-                <code className="inline-block w-full px-6 py-4 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105 text-center">
+                <code className="inline-block w-full px-6 py-4 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105 text-center font-mono text-sm font-medium shadow-lg hover:shadow-2xl hover:shadow-accent/25">
                   [1] About Me
                 </code>
               </Link>
@@ -102,7 +102,7 @@ export default function Home() {
                 className="group inline-block slide-in-left"
                 style={{ animationDelay: '0.2s' }}
               >
-                <code className="inline-block w-full px-6 py-4 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105 text-center">
+                <code className="inline-block w-full px-6 py-4 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105 text-center font-mono text-sm font-medium shadow-lg hover:shadow-2xl hover:shadow-accent/25">
                   [2] Projects
                 </code>
               </Link>
@@ -112,7 +112,7 @@ export default function Home() {
                 className="group inline-block slide-in-right"
                 style={{ animationDelay: '0.3s' }}
               >
-                <code className="inline-block w-full px-6 py-4 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105 text-center">
+                <code className="inline-block w-full px-6 py-4 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105 text-center font-mono text-sm font-medium shadow-lg hover:shadow-2xl hover:shadow-accent/25">
                   [3] Experience
                 </code>
               </Link>
@@ -122,7 +122,7 @@ export default function Home() {
                 className="group inline-block slide-in-right"
                 style={{ animationDelay: '0.4s' }}
               >
-                <code className="inline-block w-full px-6 py-4 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105 text-center">
+                <code className="inline-block w-full px-6 py-4 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105 text-center font-mono text-sm font-medium shadow-lg hover:shadow-2xl hover:shadow-accent/25">
                   [4] Beyond Work
                 </code>
               </Link>

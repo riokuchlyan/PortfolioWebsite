@@ -71,9 +71,9 @@ export default function Projects() {
 
             <main className="max-w-6xl mx-auto pt-20 sm:pt-24">
                 <header className="text-center mb-16 sm:mb-20 fade-in-delayed">
-                    <h1 className="mb-4 sm:mb-6 mt-24 sm:mt-32">PROJECTS</h1>
-                    <p className="text-foreground/80 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-                        A collection of projects I&apos;ve built, ranging from web applications to mobile apps and utilities
+                    <h1 className="mb-4 sm:mb-6 mt-24 sm:mt-32 font-bold">PROJECTS</h1>
+                    <p className="text-foreground/80 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-normal">
+                        A collection of projects I've built, ranging from web applications to mobile apps and utilities
                     </p>
                 </header>
 
@@ -101,7 +101,7 @@ export default function Projects() {
                                     <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-foreground group-hover:text-accent transition-colors leading-tight">
                                         {project.title}
                                     </h3>
-                                    <p className="text-foreground/70 text-sm sm:text-base flex-1 leading-relaxed mb-3 sm:mb-4">
+                                    <p className="text-foreground/70 text-sm sm:text-base flex-1 leading-relaxed mb-3 sm:mb-4 font-normal">
                                         {project.description}
                                     </p>
                                     <div className="flex items-center text-accent text-sm font-medium group-hover:gap-3 transition-all duration-300">
