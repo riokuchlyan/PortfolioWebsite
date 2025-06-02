@@ -21,23 +21,19 @@ export default function BeyondWork() {
     const photos = [
         {
             src: "/beyond_work1.jpeg",
-            alt: "Travel memory 1",
-            caption: "Adventure"
+            alt: "Travel memory 1"
         },
         {
             src: "/beyond_work2.jpeg",
-            alt: "Travel memory 2",
-            caption: "Exploration"
+            alt: "Travel memory 2"
         },
         {
             src: "/beyond_work3.jpeg",
-            alt: "Travel memory 3",
-            caption: "Discovery"
+            alt: "Travel memory 3"
         },
         {
             src: "/beyond_work4.jpeg",
-            alt: "Travel memory 4",
-            caption: "Journey"
+            alt: "Travel memory 4"
         }
     ];
 
@@ -100,10 +96,6 @@ export default function BeyondWork() {
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                     />
-                                </div>
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <div className="absolute bottom-6 left-6 text-white font-semibold text-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                    {photo.caption}
                                 </div>
                             </div>
                         ))}

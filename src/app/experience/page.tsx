@@ -22,7 +22,7 @@ export default function Experience() {
         {
             id: 1,
             date: "Apr. 2025 - Present",
-            title: "Backend Developer - Equities/Capital Markets Intern",
+            title: "Software Engineer",
             organization: "Swing Phi",
             type: "work",
             icon: "💼"
@@ -99,37 +99,37 @@ export default function Experience() {
                 </header>
 
                 <div className="relative fade-in-delayed-2 max-w-4xl mx-auto">
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-gradient-to-b from-accent/50 via-border to-accent/50 h-full"></div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-2 bg-gradient-to-b from-border via-muted/50 to-border rounded-full h-full shadow-lg"></div>
                     
                     {timelineItems.map((item, index) => (
                         <div 
                             key={item.id} 
-                            className={`relative flex items-center mb-8 sm:mb-12 ${
+                            className={`relative flex items-center mb-4 sm:mb-6 ${
                                 index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'
                             }`}
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
-                                <div className={`w-4 h-4 rounded-full ${getTypeColor(item.type)} border-4 border-background shadow-lg flex items-center justify-center`}>
-                                    <span className="text-xs">{item.icon}</span>
+                                <div className={`w-6 h-6 rounded-full ${getTypeColor(item.type)} border-4 border-background shadow-xl flex items-center justify-center ring-2 ring-border/50`}>
+                                    <span className="text-sm font-bold">{item.icon}</span>
                                 </div>
                             </div>
                             
                             <div className={`w-5/12 ${index % 2 === 0 ? 'pr-6 sm:pr-8' : 'pl-6 sm:pl-8'}`}>
-                                <div className={`bg-card/80 border border-border rounded-2xl p-4 sm:p-6 card-hover backdrop-blur-sm hover:bg-card/90 transition-all duration-300 ${
+                                <div className={`bg-card border-2 border-accent/20 rounded-2xl p-5 sm:p-7 card-hover backdrop-blur-sm hover:bg-card hover:border-accent/40 hover:shadow-xl transition-all duration-300 shadow-lg ${
                                     index % 2 === 0 ? 'text-right' : 'text-left'
                                 }`}>
                                     <div className={`flex items-center gap-2 mb-3 ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
-                                        <div className={`w-2 h-2 rounded-full ${getTypeColor(item.type)} ${index % 2 === 0 ? 'order-2' : 'order-1'}`}></div>
-                                        <span className={`text-xs font-mono text-muted uppercase tracking-wide ${index % 2 === 0 ? 'order-1' : 'order-2'}`}>
+                                        <div className={`w-3 h-3 rounded-full ${getTypeColor(item.type)} ${index % 2 === 0 ? 'order-2' : 'order-1'} shadow-md`}></div>
+                                        <span className={`text-xs font-bold font-mono text-accent uppercase tracking-wide ${index % 2 === 0 ? 'order-1' : 'order-2'}`}>
                                             {item.type}
                                         </span>
                                     </div>
-                                    <h3 className="text-base sm:text-lg font-semibold mb-2 text-foreground leading-tight">
+                                    <h3 className="text-lg sm:text-xl font-bold mb-3 text-foreground leading-tight">
                                         {item.title}
                                     </h3>
-                                    <p className="text-sm text-accent font-medium mb-2">{item.organization}</p>
-                                    <p className="text-xs sm:text-sm text-muted font-mono">{item.date}</p>
+                                    <p className="text-base text-accent font-semibold mb-2">{item.organization}</p>
+                                    <p className="text-sm sm:text-base text-muted font-mono font-medium">{item.date}</p>
                                 </div>
                             </div>
                             

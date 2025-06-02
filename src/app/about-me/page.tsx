@@ -43,23 +43,19 @@ export default function AboutMe() {
     const photos = [
         {
             src: "/family_photo.jpeg",
-            alt: "Family moments",
-            caption: "Family"
+            alt: "Family moments"
         },
         {
             src: "/greece-photo.png",
-            alt: "Greece travel",
-            caption: "Greece"
+            alt: "Greece travel"
         },
         {
             src: "/tower-photo.png",
-            alt: "Tower visit",
-            caption: "Architecture"
+            alt: "Tower visit"
         },
         {
             src: "/stadium-photo.jpeg",
-            alt: "Stadium experience",
-            caption: "Sports"
+            alt: "Stadium experience"
         }
     ];
 
@@ -148,10 +144,6 @@ export default function AboutMe() {
                                             className="object-cover group-hover:scale-105 transition-transform duration-500"
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />
-                                    </div>
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                    <div className="absolute bottom-6 left-6 text-white font-semibold text-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                        {photo.caption}
                                     </div>
                                 </div>
                             ))}
