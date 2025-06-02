@@ -18,17 +18,19 @@ export function useKeyboardNavigation({ key, href }: KeyboardNavigationOptions) 
                       target.tagName === 'TEXTAREA' || 
                       target.isContentEditable ||
                       target.closest('input') ||
-                      target.closest('textarea');
-      
-      if (event.key === key && !isTyping) {
+                      target.closest('textarea') ||
+                      target.getAttribute('contenteditable') === 'true';
+
+      if (event.key === key && !isTyping && !event.ctrlKey && !event.metaKey && !event.altKey) {
+        event.preventDefault();
         router.push(href);
       }
     };
 
-    window.addEventListener('keypress', handleKeyPress);
+    window.addEventListener('keydown', handleKeyPress);
 
     return () => {
-      window.removeEventListener('keypress', handleKeyPress);
+      window.removeEventListener('keydown', handleKeyPress);
     };
   }, [key, href, router]);
 }

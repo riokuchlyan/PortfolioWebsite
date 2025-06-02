@@ -65,19 +65,19 @@ export default function Projects() {
     ];
     
     return (
-        <div className="fade-in min-h-screen p-8 sm:p-20 font-sans">
+        <div className="fade-in min-h-screen p-6 sm:p-8 lg:p-20 font-sans bg-gradient-to-br from-background via-background to-card/20">
             <ThemeSwitcher/>
             <HomeButton/>
 
-            <main className="max-w-5xl mx-auto pt-24">
-                <header className="text-center mb-16 fade-in-delayed">
-                    <h1 className="mb-4 mt-32">PROJECTS</h1>
-                    <p className="text-muted text-lg max-w-2xl mx-auto">
+            <main className="max-w-6xl mx-auto pt-20 sm:pt-24">
+                <header className="text-center mb-16 sm:mb-20 fade-in-delayed">
+                    <h1 className="mb-4 sm:mb-6 mt-24 sm:mt-32">PROJECTS</h1>
+                    <p className="text-foreground/80 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
                         A collection of projects I&apos;ve built, ranging from web applications to mobile apps and utilities
                     </p>
                 </header>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in-delayed-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 fade-in-delayed-2">
                     {projects.map((project, index) => (
                         <Link
                             key={project.title}
@@ -87,7 +87,7 @@ export default function Projects() {
                             className="group block"
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
-                            <article className="bg-card border border-border rounded-2xl overflow-hidden card-hover glow-on-hover h-full flex flex-col">
+                            <article className="bg-card/90 border border-border rounded-2xl overflow-hidden card-hover glow-on-hover h-full flex flex-col backdrop-blur-sm hover:bg-card transition-all duration-300">
                                 <div className="aspect-video relative overflow-hidden">
                                     <Image
                                         src={project.image}
@@ -95,17 +95,25 @@ export default function Projects() {
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
-                                <div className="p-6 flex-1 flex flex-col">
-                                    <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-accent transition-colors">
+                                <div className="p-5 sm:p-6 flex-1 flex flex-col">
+                                    <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-foreground group-hover:text-accent transition-colors leading-tight">
                                         {project.title}
                                     </h3>
-                                    <p className="text-muted text-sm flex-1">
+                                    <p className="text-foreground/70 text-sm sm:text-base flex-1 leading-relaxed mb-3 sm:mb-4">
                                         {project.description}
                                     </p>
-                                    <div className="mt-4 flex items-center text-accent text-sm font-medium">
-                                        View Project
-                                        <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                                    <div className="flex items-center text-accent text-sm font-medium group-hover:gap-3 transition-all duration-300">
+                                        <span>View Project</span>
+                                        <svg 
+                                            className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" 
+                                            fill="none" 
+                                            stroke="currentColor" 
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                        </svg>
                                     </div>
                                 </div>
                             </article>

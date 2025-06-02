@@ -23,10 +23,17 @@ export default {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-geist-mono)", "monospace"],
       },
+      boxShadow: {
+        'light': 'var(--shadow-light)',
+        'medium': 'var(--shadow-medium)',
+        'large': 'var(--shadow-large)',
+        'xl': 'var(--shadow-xl)',
+      },
       animation: {
         "fade-in": "fadeIn 0.8s ease-out forwards",
         "slide-up": "slideUp 0.6s ease-out forwards",
         "scale-in": "scaleIn 0.4s ease-out forwards",
+        "bounce-subtle": "bounceSubtle 2s infinite",
       },
       keyframes: {
         fadeIn: {
@@ -41,6 +48,18 @@ export default {
           "0%": { opacity: "0", transform: "scale(0.95)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
+        bounceSubtle: {
+          "0%, 20%, 50%, 80%, 100%": { transform: "translateY(0)" },
+          "40%": { transform: "translateY(-4px)" },
+          "60%": { transform: "translateY(-2px)" },
+        },
+      },
+      backdropBlur: {
+        'xs': '2px',
+      },
+      borderRadius: {
+        '2xl': '1rem',
+        '3xl': '1.5rem',
       },
     },
   },

@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import './/animations.css'; 
 import { useKeyboardNavigation } from '../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../components/ThemeSwitcher";
+import HomeButton from "../components/HomeButton";
 import { validateTheme } from "@/utils/validateTheme";
 import ChatBot from '../components/ChatBot';
 
@@ -60,71 +61,77 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="fade-in min-h-screen flex flex-col font-sans relative">
+      <div className="fade-in min-h-screen flex flex-col font-sans relative bg-gradient-to-br from-background via-background to-card/30">
       
         <ThemeSwitcher/>
+        <HomeButton/>
 
-        <main className="flex-1 flex flex-col items-center justify-center text-center max-w-4xl mx-auto px-8 pt-32 pb-8">
-          <div className="fade-in-delayed flex flex-col items-center space-y-8 mb-8">
+        <main className="flex-1 flex flex-col items-center justify-center text-center max-w-6xl mx-auto px-6 sm:px-8 lg:px-20 pt-32 md:pt-48 pb-12">
+          <div className="fade-in-delayed flex flex-col items-center space-y-10 mb-12">
             <div
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
-              className="hover-lift cursor-pointer"
+              className="hover-lift cursor-pointer relative"
             >
+              <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-accent/10 rounded-full blur-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
               <Image
                 id='memoji'
-                className={`rounded-full transition-all duration-500 ${hovered ? 'scale-110 shadow-2xl' : 'shadow-lg'}`}
+                className={`rounded-full transition-all duration-500 relative z-10 ${hovered ? 'scale-110 shadow-2xl ring-4 ring-accent/20' : 'shadow-lg'}`}
                 src={hovered ? "/headshot.jpg" : "/memoji.png"}
                 alt="picture of me"
-                width={120}
-                height={120}
+                width={140}
+                height={140}
                 priority
               />
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
               <h1 className="tracking-tight text-foreground">RIO KUCHLYAN</h1>
-              <h2 className="text-muted flex items-center justify-center gap-2">
-                <span className="text-lg">📍</span>
-                New York City Metropolitan Area & Chapel Hill, NC
+              <h2 className="text-muted flex items-center justify-center gap-3 max-w-lg mx-auto">
+                <span className="text-xl">📍</span>
+                <span className="leading-relaxed">New York City Metropolitan Area & Chapel Hill, NC</span>
               </h2>
             </div>
           </div>
 
           <nav className="fade-in-delayed-2 w-full">
-            <div className="flex flex-col md:flex-row gap-8 md:gap-6 justify-center items-center max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 justify-center items-center max-w-4xl mx-auto">
               <Link 
                 href="/about-me" 
-                className="group inline-block"
+                className="group inline-block slide-in-left"
+                style={{ animationDelay: '0.1s' }}
               >
-                <code className="inline-block px-4 py-2 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105">
+                <code className="inline-block w-full px-6 py-4 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105 text-center">
                   [1] About Me
                 </code>
               </Link>
               
               <Link 
                 href="/projects" 
-                className="group inline-block"
+                className="group inline-block slide-in-left"
+                style={{ animationDelay: '0.2s' }}
               >
-                <code className="inline-block px-4 py-2 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105">
+                <code className="inline-block w-full px-6 py-4 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105 text-center">
                   [2] Projects
                 </code>
               </Link>
               
               <Link 
                 href="/experience" 
-                className="group inline-block"
+                className="group inline-block slide-in-right"
+                style={{ animationDelay: '0.3s' }}
               >
-                <code className="inline-block px-4 py-2 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105">
+                <code className="inline-block w-full px-6 py-4 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105 text-center">
                   [3] Experience
                 </code>
               </Link>
               
               <Link 
                 href="/beyond-work" 
-                className="group inline-block"
+                className="group inline-block slide-in-right"
+                style={{ animationDelay: '0.4s' }}
               >
-                <code className="inline-block px-4 py-2 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105">
+                <code className="inline-block w-full px-6 py-4 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105 text-center">
                   [4] Beyond Work
                 </code>
               </Link>
@@ -132,7 +139,7 @@ export default function Home() {
           </nav>
         </main>
 
-        <div className="fade-in-delayed-2 pb-8 px-8 flex justify-center">
+        <div className="fade-in-delayed-2 pb-12 px-6 sm:px-8 lg:px-20 flex justify-center">
           <ChatBot/>
         </div>
       </div>
