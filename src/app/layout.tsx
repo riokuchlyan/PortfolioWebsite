@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import ParticleWrapper from "@/components/ParticleWrapper";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -89,6 +90,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased`}
       >
+        <ParticleWrapper />
         {children}
         <SpeedInsights />
       </body>
