@@ -28,10 +28,10 @@ export default function Projects() {
             type: "external"
         },
         {
-            title: "Password Manager",
-            description: "React, FastAPI, Supabase",
+            title: "DIY News",
+            description: "Next.js, Supabase, Resend API",
             image: "/password_manager.png",
-            link: "https://github.com/riokuchlyan/passwordManager",
+            link: "https://www.diynews.xyz",
             type: "external"
         },
         {
@@ -39,6 +39,13 @@ export default function Projects() {
             description: "Next.js, TypeScript, Tailwind CSS",
             image: "/portfolio.png",
             link: "https://github.com/riokuchlyan/rios-portfolio",
+            type: "external"
+        },
+        {
+            title: "Password Manager",
+            description: "Python, Tkinter, Cryptography",
+            image: "/password_manager.png",
+            link: "https://github.com/riokuchlyan/passwordManager",
             type: "external"
         },
         {
