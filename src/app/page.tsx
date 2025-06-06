@@ -58,14 +58,14 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="fade-in min-h-screen flex flex-col font-sans relative bg-gradient-to-br from-background via-background to-card/30">
+      <div className="fade-in min-h-screen flex flex-col font-sans relative">
       
         <ThemeSwitcher/>
 
         <main className="flex-1 flex flex-col items-center justify-center text-center max-w-6xl mx-auto px-6 sm:px-8 lg:px-20 pt-32 md:pt-48 pb-12">
           <div className="fade-in-delayed flex flex-col items-center space-y-10 mb-12">
             <div className="hover-lift cursor-pointer relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-accent/10 rounded-full blur-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0"></div>
               <Image
                 className="rounded-full transition-all duration-500 relative z-10 hover:scale-110 shadow-lg hover:shadow-2xl hover:ring-4 hover:ring-accent/20"
                 src="/headshot.jpg"

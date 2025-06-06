@@ -77,7 +77,7 @@ export default function ParticleBackground() {
             color: isDarkMode ? "#000000" : "#ffffff",
             distance: 150,
             enable: true,
-            opacity: 1,
+            opacity: 0.5,
             width: 1,
           },
           move: {
@@ -87,7 +87,7 @@ export default function ParticleBackground() {
               default: "bounce",
             },
             random: false,
-            speed: 0.5,
+            speed: 0.2,
             straight: false,
           },
           number: {
@@ -98,7 +98,7 @@ export default function ParticleBackground() {
             value: 80,
           },
           opacity: {
-            value: 0.5,
+            value: 0.1,
           },
           shape: {
             type: "circle",

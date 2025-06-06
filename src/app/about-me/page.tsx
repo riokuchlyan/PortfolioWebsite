@@ -60,7 +60,7 @@ export default function AboutMe() {
     ];
 
     return (
-        <div className="fade-in min-h-screen p-6 sm:p-8 lg:p-20 font-sans bg-gradient-to-br from-background via-background to-card/20">
+        <div className="fade-in min-h-screen p-6 sm:p-8 lg:p-20 font-sans bg-black">
             <ThemeSwitcher/> 
             <HomeButton/>
 
