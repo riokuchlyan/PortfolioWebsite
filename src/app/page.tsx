@@ -61,7 +61,7 @@ export default function Home() {
       
         <ThemeSwitcher/>
 
-        <main className="flex-1 flex flex-col items-center justify-center text-center max-w-6xl mx-auto px-6 sm:px-8 lg:px-20 pt-32 md:pt-48 pb-12">
+        <main className="flex-1 flex flex-col items-center justify-center text-center max-w-6xl mx-auto px-6 sm:px-8 lg:px-20 pt-32 md:pt-48 pb-32">
           <div className="fade-in-delayed flex flex-col items-center space-y-10 mb-12">
             <div className="hover-lift cursor-pointer relative">
               <div className="absolute inset-0"></div>
