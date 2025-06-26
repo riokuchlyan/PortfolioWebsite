@@ -6,7 +6,6 @@ import './/animations.css';
 import { useKeyboardNavigation } from '../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../components/ThemeSwitcher";
 import { validateTheme } from "@/utils/validateTheme";
-import ChatBot from '../components/ChatBot';
 
 export default function Home() {
   useKeyboardNavigation({ key: '1', href: '/about-me' });
@@ -131,7 +130,6 @@ export default function Home() {
         </main>
 
         <div className="fade-in-delayed-2 pb-12 px-6 sm:px-8 lg:px-20 flex justify-center">
-          <ChatBot/>
         </div>
       </div>
     </>
