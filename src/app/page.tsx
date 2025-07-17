@@ -6,6 +6,7 @@ import './/animations.css';
 import { useKeyboardNavigation } from '../hooks/KeyPressNavigation';
 import ThemeSwitcher from "../components/ThemeSwitcher";
 import { validateTheme } from "@/utils/validateTheme";
+import ResumeButton from "../components/ResumeButton";
 
 export default function Home() {
   useKeyboardNavigation({ key: '1', href: '/about-me' });
@@ -58,7 +59,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="fade-in min-h-screen flex flex-col font-sans relative">
-      
+        <ResumeButton/>
         <ThemeSwitcher/>
 
         <main className="flex-1 flex flex-col items-center justify-center text-center max-w-6xl mx-auto px-6 sm:px-8 lg:px-20 pt-32 md:pt-48 pb-32">
@@ -66,7 +67,7 @@ export default function Home() {
             <div className="hover-lift cursor-pointer relative">
               <div className="absolute inset-0"></div>
               <Image
-                className="rounded-full transition-all duration-500 relative z-10 hover:scale-110 shadow-lg hover:shadow-2xl hover:ring-4 hover:ring-accent/20"
+                className="rounded-full transition-all duration-500 relative z-10 shadow-lg hover:shadow-2xl hover:ring-4 hover:ring-accent/20"
                 src="/headshot.jpg"
                 alt="Rio Kuchlyan"
                 width={140}
@@ -78,8 +79,7 @@ export default function Home() {
             <div className="space-y-6">
               <h1 className="tracking-tight text-foreground font-bold">RIO KUCHLYAN</h1>
               <h2 className="text-muted flex items-center justify-center gap-3 max-w-lg mx-auto font-medium">
-                <span className="text-xl">📍</span>
-                <span className="leading-relaxed">New York City Metropolitan Area & Chapel Hill, NC</span>
+                <span className="leading-relaxed">Software Engineer in NYC & Chapel Hill, NC</span>
               </h2>
             </div>
           </div>

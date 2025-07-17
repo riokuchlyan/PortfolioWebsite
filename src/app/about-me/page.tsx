@@ -88,9 +88,6 @@ export default function AboutMe() {
                     <section className="fade-in-delayed">
                         <div className="text-center mb-12">
                             <h2 className="text-2xl font-semibold mb-4 text-foreground">Let&apos;s Connect</h2>
-                            <p className="text-muted text-lg leading-relaxed font-normal">
-                                Reach out to me on any of these platforms
-                            </p>
                         </div>
                         
                         <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
@@ -124,9 +121,6 @@ export default function AboutMe() {
                     <section className="fade-in-delayed-2">
                         <div className="text-center mb-16">
                             <h2 className="text-2xl font-semibold mb-4 text-foreground">Life Moments</h2>
-                            <p className="text-muted text-lg leading-relaxed font-normal">
-                                A glimpse into my world beyond code
-                            </p>
                         </div>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
