@@ -92,7 +92,7 @@ export default function Experience() {
                     <Link 
                         className="bg-accent text-white py-3 px-6 rounded-xl hover:bg-accent/90 transition-all duration-300 inline-block font-medium hover:scale-105 shadow-md hover:shadow-lg" 
                         target="_blank" 
-                        href="/Rio_Kuchlyan_resume.pdf"
+                        href="/rio_kuchlyan_resume.pdf"
                     >
                         View My Resume
                     </Link>
