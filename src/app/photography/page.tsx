@@ -20,20 +20,40 @@ export default function Photography() {
 
     const photos = [
         {
-            src: "/beyond_work1.jpeg",
-            alt: "Travel memory 1"
+            src: "/photography/colosseum.jpeg",
+            alt: "Colosseum"
         },
         {
-            src: "/beyond_work2.jpeg",
-            alt: "Travel memory 2"
+            src: "/photography/philly.jpeg",
+            alt: "Philadelphia"
         },
         {
-            src: "/beyond_work3.jpeg",
-            alt: "Travel memory 3"
+            src: "/photography/paris.jpeg",
+            alt: "Paris"
         },
         {
-            src: "/beyond_work4.jpeg",
-            alt: "Travel memory 4"
+            src: "/photography/acropolis.jpeg",
+            alt: "Acropolis"
+        },
+        {
+            src: "/photography/greece.jpeg",
+            alt: "Greece"
+        },
+        {
+            src: "/photography/vatican.jpeg",
+            alt: "Vatican"
+        },
+        {
+            src: "/photography/unc.jpeg",
+            alt: "UNC"
+        },
+        {
+            src: "/photography/scotland.jpeg",
+            alt: "Scotland"
+        },
+        {
+            src: "/photography/london.jpeg",
+            alt: "London"
         }
     ];
 

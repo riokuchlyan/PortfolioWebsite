@@ -119,7 +119,7 @@ export default function Home() {
               </Link>
               
               <Link 
-                href="/beyond-work" 
+                href="/photography" 
                 className="group inline-block slide-in-right"
                 style={{ animationDelay: '0.4s' }}
               >
