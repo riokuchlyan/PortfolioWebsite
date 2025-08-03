@@ -58,13 +58,13 @@ export default function Photography() {
     ];
 
     return (
-        <div className="fade-in min-h-screen font-sans bg-gradient-to-br from-background via-background to-card/20">
+        <div className="fade-in min-h-screen p-6 sm:p-8 lg:p-20 font-sans bg-gradient-to-br from-background via-background to-card/20">
             <NavBar/>
             <HomeButton/>
 
             <main className="max-w-6xl mx-auto pt-20 sm:pt-24">
                 <header className="text-center mb-16 sm:mb-20 fade-in-delayed">
-                    <h1 className="mt-64 mb-4 sm:mb-6 font-bold">PHOTOGRAPHY</h1>
+                    <h1 className="mb-4 sm:mb-6 mt-24 sm:mt-32 font-bold">PHOTOGRAPHY</h1>
                 </header>
 
                 {/* Photo Portfolio Section */}
