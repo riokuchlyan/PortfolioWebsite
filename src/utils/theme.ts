@@ -1,14 +1,14 @@
 export type Theme = "dark" | "light";
 
 export function getColorScheme(): Theme {
-  if (typeof window === 'undefined') return 'dark';
+  if (typeof window === 'undefined') return 'light';
   
   const stored = localStorage.getItem('theme') as Theme;
   if (stored && ['dark', 'light'].includes(stored)) {
     return stored;
   }
   
-  return 'dark';
+  return 'light';
 }
 
 export function setColorScheme(theme: Theme) {
@@ -18,7 +18,7 @@ export function setColorScheme(theme: Theme) {
 }
 
 export function getEffectiveTheme(): 'dark' | 'light' {
-  if (typeof window === 'undefined') return 'dark';
+  if (typeof window === 'undefined') return 'light';
   
   const theme = getColorScheme();
   return theme;
