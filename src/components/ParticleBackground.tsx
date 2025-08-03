@@ -31,16 +31,11 @@ export default function ParticleBackground() {
     await loadSlim(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    // Particles loaded successfully
-  }, []);
-
   return (
     <Particles
       key={isDarkMode ? 'dark' : 'light'}
       id="tsparticles"
       init={particlesInit}
-      loaded={particlesLoaded}
       options={{
         background: {
           color: {
@@ -78,7 +73,7 @@ export default function ParticleBackground() {
             color: isDarkMode ? "#ffffff" : "#000000",
             distance: 150,
             enable: true,
-            opacity: isDarkMode ? 0.7 : 0.5,
+            opacity: isDarkMode ? 0.6 : 0.5,
             width: 1,
           },
           move: {
