@@ -64,22 +64,26 @@ export default function Home() {
 
         <main className="flex-1 flex flex-col items-center justify-center text-center max-w-6xl mx-auto px-6 sm:px-8 lg:px-20 pt-32 md:pt-48 pb-32">
           <div className="fade-in-delayed flex flex-col items-center space-y-10 mb-12">
-            <div className="hover-lift cursor-pointer relative">
+            <div className="cursor-pointer relative">
               <div className="absolute inset-0"></div>
-              <Image
-                className="rounded-full transition-all duration-500 relative z-10 shadow-lg hover:shadow-2xl hover:ring-4 hover:ring-accent/20"
-                src="/headshot.jpg"
-                alt="Rio Kuchlyan"
-                width={140}
-                height={140}
-                priority
-              />
+                  <Image className="rounded-[32%] aspect-square transition-all duration-500 relative z-10 shadow-lg hover:shadow-2xl hover:ring-4 hover:ring-accent/20"
+                  style={{ 
+                    backgroundColor: 'var(--image-bg)',
+                    objectFit: 'cover',
+                    objectPosition: 'center center'
+                  }}
+                  src="/headshot.png"
+                  alt="Rio Kuchlyan"
+                  width={140}
+                  height={140}
+                  priority
+                />
             </div>
 
             <div className="space-y-6">
               <h1 className="tracking-tight text-foreground font-bold">RIO KUCHLYAN</h1>
               <h2 className="text-muted flex items-center justify-center gap-3 max-w-lg mx-auto font-medium">
-                <span className="leading-relaxed">Software Engineer in NYC & Chapel Hill, NC</span>
+                <span className="leading-relaxed">Computer Science & Business Student at UNC-Chapel Hill</span>
               </h2>
             </div>
           </div>

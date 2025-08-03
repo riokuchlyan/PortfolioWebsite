@@ -71,13 +71,13 @@ export default function ParticleBackground() {
         },
         particles: {
           color: {
-            value: isDarkMode ? "#000000" : "#ffffff",
+            value: isDarkMode ? "#ffffff" : "#000000",
           },
           links: {
-            color: isDarkMode ? "#000000" : "#ffffff",
+            color: isDarkMode ? "#ffffff" : "#000000",
             distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: isDarkMode ? 0.7 : 0.5,
             width: 1,
           },
           move: {
@@ -98,7 +98,7 @@ export default function ParticleBackground() {
             value: 80,
           },
           opacity: {
-            value: 0.1,
+            value: isDarkMode ? 0.3 : 0.1,
           },
           shape: {
             type: "circle",
