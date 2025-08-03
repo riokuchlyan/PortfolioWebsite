@@ -40,15 +40,7 @@ const ThemeSwitcher: React.FC = () => {
   };
   
   return (
-    <div 
-      className="fixed top-6 right-6 z-[9999]" 
-      style={{ 
-        position: 'fixed',
-        top: '1.5rem',
-        right: '1.5rem',
-        zIndex: 9999
-      }}
-    >
+    <div>
       <div className="flex items-center gap-3 bg-card/90 border border-border rounded-2xl px-4 py-3 shadow-lg backdrop-blur-md hover:shadow-xl transition-all duration-300 hover:scale-105 group hover:bg-card">
         <button 
           onClick={handleThemeChange}

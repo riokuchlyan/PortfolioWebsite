@@ -4,9 +4,8 @@ import Link from "next/link";
 import React, { useEffect } from 'react';
 import './/animations.css'; 
 import { useKeyboardNavigation } from '../hooks/KeyPressNavigation';
-import ThemeSwitcher from "../components/ThemeSwitcher";
 import { validateTheme } from "@/utils/validateTheme";
-import ResumeButton from "../components/ResumeButton";
+import NavBar from "../components/NavBar";
 
 export default function Home() {
   useKeyboardNavigation({ key: '1', href: '/about-me' });
@@ -59,8 +58,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="fade-in min-h-screen flex flex-col font-sans relative">
-        <ResumeButton/>
-        <ThemeSwitcher/>
+        <NavBar/>
 
         <main className="flex-1 flex flex-col items-center justify-center text-center max-w-6xl mx-auto px-6 sm:px-8 lg:px-20 pt-32 md:pt-48 pb-32">
           <div className="fade-in-delayed flex flex-col items-center space-y-10 mb-12">

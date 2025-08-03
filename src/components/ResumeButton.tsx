@@ -1,15 +1,7 @@
 import Link from "next/link";
 
 const ResumeButton = () => (
-  <div
-    className="fixed top-6 right-24 z-[9999]"
-    style={{
-      position: "fixed",
-      top: "1.5rem",
-      right: "6rem",
-      zIndex: 9999,
-    }}
-  >
+  <div>
     <Link
       href="/rio_kuchlyan_resume.pdf"
       target="_blank"

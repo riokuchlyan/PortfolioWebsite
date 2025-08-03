@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import Link from "next/link";
 import '../animations.css'; 
 import { useKeyboardNavigation } from '../../hooks/KeyPressNavigation';
-import ThemeSwitcher from "../../components/ThemeSwitcher";
+import NavBar from '../../components/NavBar';
 import HomeButton from '../../components/HomeButton';
 import { validateTheme } from '../../utils/validateTheme';
 
@@ -80,7 +80,7 @@ export default function Experience() {
 
     return (
         <div className="fade-in min-h-screen p-6 sm:p-8 lg:p-20 font-sans bg-gradient-to-br from-background via-background to-card/20">
-            <ThemeSwitcher/>
+            <NavBar/>
             <HomeButton/>
 
             <main className="max-w-6xl mx-auto pt-20 sm:pt-24">
