@@ -10,7 +10,6 @@ export default function ParticleBackground() {
     const checkTheme = () => {
       const dataTheme = document.documentElement.getAttribute('data-theme');
       const isDark = dataTheme === 'dark';
-      console.log('Theme check:', { isDark, dataTheme });
       setIsDarkMode(isDark);
     };
 
@@ -33,8 +32,8 @@ export default function ParticleBackground() {
   }, []);
 
   const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    console.log('Particles loaded:', { container, isDarkMode });
-  }, [isDarkMode]);
+    // Particles loaded successfully
+  }, []);
 
   return (
     <Particles
