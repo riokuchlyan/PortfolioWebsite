@@ -50,7 +50,14 @@ export const metadata: Metadata = {
     canonical: "https://www.riokuchlyan.com",
   },
   icons: {
-    icon: "/headshot.png",
+    icon: [
+      { url: "/headshot.png", sizes: "32x32", type: "image/png" },
+      { url: "/headshot.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/headshot.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/headshot.png",
   },
   manifest: "/site.webmanifest",
 };
@@ -64,6 +71,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="canonical" href="https://www.riokuchlyan.com" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/headshot.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/headshot.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/headshot.png" />
+        <link rel="shortcut icon" href="/headshot.png" />
       </head>
       <body
         className={`${inter.variable} antialiased`}
