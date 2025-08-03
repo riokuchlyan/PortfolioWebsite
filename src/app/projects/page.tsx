@@ -13,7 +13,7 @@ export default function Projects() {
     useKeyboardNavigation({ key: '1', href: '/about-me' });
     useKeyboardNavigation({ key: '2', href: '/projects' });
     useKeyboardNavigation({ key: '3', href: '/experience' });
-    useKeyboardNavigation({ key: '4', href: '/beyond-work' });
+    useKeyboardNavigation({ key: '4', href: '/photography' });
 
     useEffect(() => {
         validateTheme();

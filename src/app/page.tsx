@@ -11,7 +11,7 @@ export default function Home() {
   useKeyboardNavigation({ key: '1', href: '/about-me' });
   useKeyboardNavigation({ key: '2', href: '/projects' });
   useKeyboardNavigation({ key: '3', href: '/experience' });
-  useKeyboardNavigation({ key: '4', href: '/beyond-work' });
+  useKeyboardNavigation({ key: '4', href: '/photography' });
 
   useEffect(() => {
     validateTheme();
@@ -124,7 +124,7 @@ export default function Home() {
                 style={{ animationDelay: '0.4s' }}
               >
                 <code className="inline-block w-full px-6 py-4 group-hover:bg-accent group-hover:text-white group-hover:border-accent transition-all duration-300 hover:scale-105 text-center font-mono text-sm font-semibold shadow-lg hover:shadow-2xl hover:shadow-accent/25">
-                  [4] Beyond Work
+                  [4] Photography
                 </code>
               </Link>
             </div>
