@@ -8,7 +8,9 @@ export default function ParticleBackground() {
 
   useEffect(() => {
     const checkTheme = () => {
-      const isDark = document.documentElement.classList.contains('dark');
+      const dataTheme = document.documentElement.getAttribute('data-theme');
+      const isDark = dataTheme === 'dark';
+      console.log('Theme check:', { isDark, dataTheme });
       setIsDarkMode(isDark);
     };
 
@@ -20,7 +22,7 @@ export default function ParticleBackground() {
 
     observer.observe(document.documentElement, {
       attributes: true,
-      attributeFilter: ['class']
+      attributeFilter: ['data-theme']
     });
 
     return () => observer.disconnect();
@@ -31,8 +33,8 @@ export default function ParticleBackground() {
   }, []);
 
   const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    console.log(container);
-  }, []);
+    console.log('Particles loaded:', { container, isDarkMode });
+  }, [isDarkMode]);
 
   return (
     <Particles
@@ -109,14 +111,7 @@ export default function ParticleBackground() {
         },
         detectRetina: true,
       }}
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        zIndex: -1,
-      }}
+      className="particles-container"
     />
   );
 }

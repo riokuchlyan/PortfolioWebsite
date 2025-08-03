@@ -24,6 +24,8 @@ export function applyTheme() {
     
     if (effectiveTheme === 'dark') {
         root.setAttribute('data-theme', 'dark');
+    } else {
+        root.setAttribute('data-theme', 'light');
     }
     
 }
