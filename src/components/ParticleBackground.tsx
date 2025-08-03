@@ -85,7 +85,7 @@ export default function ParticleBackground() {
             enable: true,
             outModes: {
               default: "bounce",
-            },
+            }, 
             random: false,
             speed: 0.2,
             straight: false,
