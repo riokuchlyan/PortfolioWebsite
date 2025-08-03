@@ -80,7 +80,7 @@ export default function Photography() {
                     <div className="max-w-4xl mx-auto">
                         <div className="text-center mb-8">
                             <h2 className="text-2xl sm:text-3xl font-semibold text-foreground mb-2">Countries Visited</h2>
-                            <p className="text-muted">A visual journey through the places I've explored</p>
+                            <p className="text-muted">A visual journey through the places I&apos;ve explored</p>
                         </div>
                         
                         <div className="bg-card/80 border border-border rounded-3xl overflow-hidden card-hover backdrop-blur-sm hover:bg-card/90 transition-all duration-300 p-2">

@@ -4,7 +4,6 @@ interface SEOProps {
   title?: string;
   description?: string;
   canonical?: string;
-  ogImage?: string;
   ogType?: string;
   structuredData?: object;
   noindex?: boolean;
@@ -14,7 +13,6 @@ export default function SEO({
   title = "Rio Kuchlyan - Computer Science Student & Developer",
   description = "Rio Kuchlyan is a Computer Science student at UNC Chapel Hill specializing in technology and finance. Backend developer with experience in trading software, VR development, and financial modeling.",
   canonical = "https://www.riokuchlyan.com",
-  ogImage = "",
   ogType = "website",
   structuredData,
   noindex = false,
