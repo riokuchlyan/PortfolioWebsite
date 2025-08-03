@@ -85,9 +85,9 @@ export default function Photography() {
                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                         priority={index < 3}
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-2 group-hover:translate-y-0">
-                                        <p className="text-sm font-medium">{photo.alt}</p>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                        <p className="text-sm font-bold">{photo.alt}</p>
                                     </div>
                                 </div>
                             ))}
