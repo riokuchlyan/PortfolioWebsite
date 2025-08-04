@@ -12,15 +12,7 @@ const HomeButton: React.FC = () => {
   }
 
   return (
-    <div 
-      className="fixed top-6 left-6 z-[9999]" 
-      style={{ 
-        position: 'fixed',
-        top: '1.5rem',
-        left: '1.5rem',
-        zIndex: 9999
-      }}
-    >
+    <div className="fixed top-6 left-6 z-[9999] scale-75 sm:scale-100 origin-top-left">
       <Link 
         href="/" 
         className="flex items-center gap-3 bg-card/90 border border-border rounded-2xl px-4 py-3 shadow-lg backdrop-blur-md hover:shadow-xl transition-all duration-300 hover:scale-105 group hover:bg-card"
