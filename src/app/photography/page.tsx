@@ -94,28 +94,7 @@ export default function Photography() {
                         </div>
                     </div>
                 </section>
-
-                {/* Video Section */}
-                <section className="mt-16 sm:mt-20 px-4 sm:px-6 lg:px-8 fade-in-delayed-3">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="text-center mb-8">
-                            <h2 className="text-2xl sm:text-3xl font-semibold text-foreground mb-2">Countries Visited</h2>
-                            <p className="text-muted">A visual journey through the places I&apos;ve explored</p>
-                        </div>
-                        
-                        <div className="bg-card/80 border border-border rounded-3xl overflow-hidden card-hover backdrop-blur-sm hover:bg-card/90 transition-all duration-300 p-2">
-                            <video 
-                                controls 
-                                preload="auto"
-                                className="w-full h-auto rounded-2xl"
-                                style={{ maxHeight: '500px' }}
-                            >
-                                <source src="/visited_places.mp4" type="video/mp4"/>
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </section>
+                
             </main>
         </div>
     );
