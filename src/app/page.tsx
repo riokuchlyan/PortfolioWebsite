@@ -81,7 +81,7 @@ export default function Home() {
             <div className="space-y-6">
               <h1 className="tracking-tight text-foreground font-bold">RIO KUCHLYAN</h1>
               <h2 className="text-muted flex items-center justify-center gap-3 max-w-lg mx-auto font-medium">
-                <span className="leading-relaxed">Computer Science & Pre-Business Student at UNC–Chapel Hill</span>
+                <span className="leading-relaxed">Computer Science & Business Student at UNC–Chapel Hill</span>
               </h2>
             </div>
           </div>
