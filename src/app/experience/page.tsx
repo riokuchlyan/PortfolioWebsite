@@ -21,9 +21,9 @@ export default function Experience() {
     const timelineItems = [
         {
             id: 1,
-            date: "Apr. 2025 - Present",
-            title: "Software Engineer",
-            organization: "Swing Phi",
+            date: "Jun. 2026 - Aug. 2026",
+            title: "Incoming Summer Business Analyst",
+            organization: "Capital One",
             type: "work",
             icon: "💼"
         },
@@ -37,30 +37,22 @@ export default function Experience() {
         },
         {
             id: 3,
-            date: "Feb. 2025 - Present",
-            title: "Extended Reality Developer",
-            organization: "Carolina AR/VR",
-            type: "academic",
-            icon: "🔬"
+            date: "Apr. 2025 - Aug. 2025",
+            title: "Software Engineer Intern",
+            organization: "Swing Phi",
+            type: "work",
+            icon: "💼"
         },
         {
             id: 4,
-            date: "Aug. 2024 - Present",
-            title: "Instructor",
-            organization: "Prep Expert",
-            type: "work",
-            icon: "📚"
-        },
-        {
-            id: 5,
             date: "Aug. 2024 - May 2028",
-            title: "Bachelor of Science in Computer Science",
-            organization: "University of North Carolina at Chapel Hill",
+            title: "B.S. Business Administration & B.S. Computer Science",
+            organization: "University of North Carolina at Chapel Hill | Kenan-Flagler Business School",
             type: "education",
             icon: "🎓"
         },
         {
-            id: 6,
+            id: 5,
             date: "Aug. 2023 - Aug. 2024",
             title: "Student Representative",
             organization: "Hillsborough Township Board of Education",
