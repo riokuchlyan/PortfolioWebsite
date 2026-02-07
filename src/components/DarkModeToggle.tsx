@@ -12,36 +12,16 @@ export default function DarkModeToggle() {
   }, [isDark]);
 
   useEffect(() => {
-    // Check initial theme
     const theme = document.documentElement.getAttribute('data-theme');
     setIsDark(theme === 'dark');
   }, []);
-
-  useEffect(() => {
-    // Keyboard shortcut
-    const handleKeyPress = (e: KeyboardEvent) => {
-      const target = e.target as HTMLElement;
-      const isTyping = target.tagName === 'INPUT' || 
-                      target.tagName === 'TEXTAREA' || 
-                      target.isContentEditable;
-      
-      if (isTyping) return;
-
-      if (e.key.toLowerCase() === 's') {
-        toggleTheme();
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [toggleTheme]);
 
   return (
     <button
       onClick={toggleTheme}
       className="p-1.5 sm:p-2.5 rounded-lg bg-background/60 backdrop-blur-md border border-border/50 hover:border-foreground/30 text-foreground hover:text-foreground transition-all duration-200"
       aria-label="Toggle dark mode"
-      title="Toggle theme [S]"
+      title="Toggle theme"
     >
       {isDark ? (
         <svg className="w-4 h-4 sm:w-[22px] sm:h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

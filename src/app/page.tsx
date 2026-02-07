@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState, useMemo, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
 import Link from "next/link";
 import { validateTheme } from "@/utils/validateTheme";
@@ -22,27 +22,6 @@ export default function Home() {
     validateTheme();
   }, []);
 
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      const target = e.target as HTMLElement;
-      const isTyping = target.tagName === 'INPUT' || 
-                      target.tagName === 'TEXTAREA' || 
-                      target.isContentEditable;
-      
-      if (isTyping) return;
-
-      switch(e.key.toLowerCase()) {
-        case 'h': setActiveSection('home'); break;
-        case '1': setActiveSection('projects'); break;
-        case '2': setActiveSection('experience'); break;
-        case '3': setActiveSection('photography'); break;
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, []);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -474,21 +453,29 @@ export default function Home() {
             </div>
 
             <nav className="flex flex-col gap-3">
-              <button onClick={() => setActiveSection('home')} className={`flex items-center gap-3 text-xl transition-colors group text-left ${activeSection === 'home' ? 'text-accent' : 'text-foreground hover:text-accent'}`}>
-                <span className="text-xs font-mono text-muted group-hover:text-accent px-2 py-1 border border-border rounded">[H]</span>
-                <span>Home</span>
+              <button 
+                onClick={() => setActiveSection('home')} 
+                className={`text-2xl text-left transition-colors ${activeSection === 'home' ? 'text-accent font-semibold' : 'text-foreground'}`}
+              >
+                Home
               </button>
-              <button onClick={() => setActiveSection('projects')} className={`flex items-center gap-3 text-xl transition-colors group text-left ${activeSection === 'projects' ? 'text-accent' : 'text-foreground hover:text-accent'}`}>
-                <span className="text-xs font-mono text-muted group-hover:text-accent px-2 py-1 border border-border rounded">[1]</span>
-                <span>Projects</span>
+              <button 
+                onClick={() => setActiveSection('projects')} 
+                className={`text-2xl text-left transition-colors ${activeSection === 'projects' ? 'text-accent font-semibold' : 'text-foreground'}`}
+              >
+                Projects
               </button>
-              <button onClick={() => setActiveSection('experience')} className={`flex items-center gap-3 text-xl transition-colors group text-left ${activeSection === 'experience' ? 'text-accent' : 'text-foreground hover:text-accent'}`}>
-                <span className="text-xs font-mono text-muted group-hover:text-accent px-2 py-1 border border-border rounded">[2]</span>
-                <span>Experience</span>
+              <button 
+                onClick={() => setActiveSection('experience')} 
+                className={`text-2xl text-left transition-colors ${activeSection === 'experience' ? 'text-accent font-semibold' : 'text-foreground'}`}
+              >
+                Experience
               </button>
-              <button onClick={() => setActiveSection('photography')} className={`flex items-center gap-3 text-xl transition-colors group text-left ${activeSection === 'photography' ? 'text-accent' : 'text-foreground hover:text-accent'}`}>
-                <span className="text-xs font-mono text-muted group-hover:text-accent px-2 py-1 border border-border rounded">[3]</span>
-                <span>Photography</span>
+              <button 
+                onClick={() => setActiveSection('photography')} 
+                className={`text-2xl text-left transition-colors ${activeSection === 'photography' ? 'text-accent font-semibold' : 'text-foreground'}`}
+              >
+                Photography
               </button>
             </nav>
           </div>
