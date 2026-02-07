@@ -196,7 +196,7 @@ export default function Home() {
                   Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will continue to focus on building scalable, data-driven solutions for the financial sector.
                 </p>
               </div>
-              <div className="flex flex-col items-center mt-12 animate-bounce">
+              <div className="flex flex-col items-center mt-6 animate-bounce">
                 <span className="text-sm text-muted mb-2">My Thoughts</span>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted">
                   <line x1="12" y1="5" x2="12" y2="19"/>
