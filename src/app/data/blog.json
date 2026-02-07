@@ -1,0 +1,46 @@
+{
+  "title": "My Thoughts",
+  "description": "Ideas, reflections, and insights on technology, business, and life",
+  "posts": [
+    {
+      "id": 1,
+      "title": "Why I'm Studying Both CS and Business",
+      "excerpt": "The intersection of technology and business is where the most impactful solutions are built. Here's why I chose this path.",
+      "date": "February 2026",
+      "content": "In today's world, understanding both the technical and business sides of innovation is crucial. The best products are built by those who can bridge these two worlds.",
+      "color": "#FEF3C7"
+    },
+    {
+      "id": 2,
+      "title": "Lessons from Private Equity",
+      "excerpt": "What I've learned about value creation, due diligence, and strategic thinking from my time at Star Course Holdings.",
+      "date": "January 2026",
+      "content": "Working in PE has taught me to think critically about businesses, evaluate opportunities, and understand what truly drives value in the long term.",
+      "color": "#DBEAFE"
+    },
+    {
+      "id": 3,
+      "title": "Building Scalable Systems",
+      "excerpt": "Key principles I've learned about designing software that can grow with user demand and maintain performance.",
+      "date": "December 2025",
+      "content": "Scalability isn't just about handling more users—it's about architecting systems that remain maintainable and cost-effective as they grow.",
+      "color": "#FCE7F3"
+    },
+    {
+      "id": 4,
+      "title": "The Power of Data Visualization",
+      "excerpt": "How visual representations of data can drive better decision-making and reveal patterns that numbers alone can't show.",
+      "date": "November 2025",
+      "content": "Through building VisuAlize, I learned that the right visualization can transform complex datasets into actionable insights.",
+      "color": "#D1FAE5"
+    },
+    {
+      "id": 5,
+      "title": "Continuous Learning in Tech",
+      "excerpt": "Why staying curious and always learning new technologies is essential in the fast-paced world of software development.",
+      "date": "October 2025",
+      "content": "Technology evolves rapidly. The most valuable skill isn't knowing everything—it's knowing how to learn and adapt quickly.",
+      "color": "#E9D5FF"
+    }
+  ]
+}

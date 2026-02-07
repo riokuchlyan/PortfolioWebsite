@@ -7,6 +7,7 @@ import DarkModeToggle from "@/components/DarkModeToggle";
 import projectsData from './data/projects/projects.json';
 import experienceData from './data/experience.json';
 import photographyData from './data/photography/photography.json';
+import blogData from './data/blog.json';
 
 type Section = 'home' | 'projects' | 'experience' | 'photography';
 
@@ -192,10 +193,56 @@ export default function Home() {
 
       default:
         return (
-          <div className="max-w-3xl w-full">
-            <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-foreground">
-            Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I continue to focus on building scalable, data-driven solutions for the financial sector.
-            </p>
+          <div className="w-full">
+            {/* Intro Section */}
+            <div className="max-w-3xl mx-auto mb-20">
+              <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-foreground">
+                Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I continue to focus on building scalable, data-driven solutions for the financial sector.
+              </p>
+              
+              {/* Scroll Indicator */}
+              <div className="flex flex-col items-center mt-16 animate-bounce">
+                <span className="text-sm text-muted mb-2">My Thoughts</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted">
+                  <line x1="12" y1="5" x2="12" y2="19"/>
+                  <polyline points="19 12 12 19 5 12"/>
+                </svg>
+              </div>
+            </div>
+
+            {/* Blog Section */}
+            <div className="max-w-5xl mx-auto mt-[60vh] pb-20">
+              <h2 className="text-3xl font-bold text-foreground mb-4 text-center">{blogData.title}</h2>
+              <p className="text-muted text-center mb-16">{blogData.description}</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                {blogData.posts.map((post, index) => (
+                  <div 
+                    key={post.id}
+                    className="sticky-note group cursor-pointer"
+                    style={{
+                      backgroundColor: post.color,
+                      transform: `rotate(${index % 2 === 0 ? '2deg' : '-2deg'})`,
+                    }}
+                  >
+                    {/* Pin */}
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full shadow-lg flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="p-6 pt-8">
+                      <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">{post.title}</h3>
+                      <p className="text-sm text-gray-700 mb-4 line-clamp-3">{post.excerpt}</p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs text-gray-600 font-medium">{post.date}</span>
+                        <span className="text-xs text-gray-500 group-hover:text-gray-700 transition-colors">Read →</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         );
     }
@@ -450,7 +497,7 @@ export default function Home() {
         </aside>
 
         {/* Desktop Content */}
-        <main className="hidden lg:flex flex-1 ml-64 p-12 items-center justify-center relative z-10 overflow-y-auto content-transition">
+        <main className={`hidden lg:flex flex-1 ml-64 p-12 ${activeSection === 'home' ? 'items-start pt-20' : 'items-center'} justify-center relative z-10 overflow-y-auto content-transition min-h-screen`}>
           {renderContent()}
         </main>
       </div>
