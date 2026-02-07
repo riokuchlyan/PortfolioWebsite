@@ -49,14 +49,6 @@
       "image": "/data/projects/clipboard_manager.png",
       "link": "https://github.com/riokuchlyan/clipboardManager",
       "type": "external"
-    },
-    {
-      "title": "Dog Adoption Website",
-      "description": "Web platform connecting potential adopters with rescue dogs, featuring search and filtering",
-      "technologies": "React, Node.js, MongoDB",
-      "image": "/data/projects/dog-adoption.png",
-      "link": "https://github.com/riokuchlyan/dog-adoption",
-      "type": "external"
     }
   ]
 }
