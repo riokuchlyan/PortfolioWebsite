@@ -195,7 +195,7 @@ export default function Home() {
         return (
           <div className="w-full">
             {/* Intro Section - Full viewport, paragraph centered, arrow at bottom */}
-            <div className="lg:min-h-screen flex flex-col lg:items-center lg:justify-center relative">
+            <div className="min-h-[calc(100vh-28rem)] lg:min-h-screen flex flex-col lg:items-center lg:justify-center relative">
               <div className="max-w-3xl mx-auto px-4">
                 <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-foreground">
                   Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I continue to focus on building scalable, data-driven solutions for the financial sector.
@@ -203,7 +203,7 @@ export default function Home() {
               </div>
               
               {/* Scroll Indicator - Centered on full viewport on desktop, pushed to bottom on mobile */}
-              <div className="flex flex-col items-center mt-16 pb-4 lg:mt-0 lg:pb-0 lg:absolute lg:bottom-16 lg:left-[calc(50vw-19rem)] lg:-translate-x-1/2 animate-bounce">
+              <div className="flex flex-col items-center mt-auto pb-6 lg:mt-0 lg:pb-0 lg:absolute lg:bottom-16 lg:left-[calc(50vw-19rem)] lg:-translate-x-1/2 animate-bounce">
                 <span className="text-sm text-muted mb-2">My Thoughts</span>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted">
                   <line x1="12" y1="5" x2="12" y2="19"/>
