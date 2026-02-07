@@ -198,7 +198,7 @@ export default function Home() {
             <div className="min-h-[calc(100vh-28rem)] lg:min-h-screen flex flex-col lg:items-center lg:justify-center relative">
               <div className="max-w-3xl mx-auto px-4">
                 <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-foreground">
-                  Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I continue to focus on building scalable, data-driven solutions for the financial sector.
+                  Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will continue to focus on building scalable, data-driven solutions for the financial sector.
                 </p>
               </div>
               
@@ -489,7 +489,7 @@ export default function Home() {
               </svg>
               GitHub
             </Link>
-            <Link href="mailto:rio.kuchlyan@unc.edu" className="flex items-center gap-2 text-muted hover:text-foreground transition-colors text-sm">
+            <Link href="mailto:rio_kuchlyan@kenan-flagler.unc.edu" className="flex items-center gap-2 text-muted hover:text-foreground transition-colors text-sm">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
               </svg>
