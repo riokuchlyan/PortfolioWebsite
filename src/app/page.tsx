@@ -203,7 +203,7 @@ export default function Home() {
               </div>
               
               {/* Scroll Indicator - Centered on full viewport on desktop, pushed to bottom on mobile */}
-              <div className="flex flex-col items-center mt-10 pb-4 lg:mt-0 lg:pb-0 lg:absolute lg:bottom-8 lg:left-[calc(50vw-19rem)] lg:-translate-x-1/2 animate-bounce">
+              <div className="flex flex-col items-center mt-16 pb-4 lg:mt-0 lg:pb-0 lg:absolute lg:bottom-16 lg:left-[calc(50vw-19rem)] lg:-translate-x-1/2 animate-bounce">
                 <span className="text-sm text-muted mb-2">My Thoughts</span>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted">
                   <line x1="12" y1="5" x2="12" y2="19"/>
