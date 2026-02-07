@@ -7,7 +7,8 @@ import DarkModeToggle from "@/components/DarkModeToggle";
 import projectsData from './data/projects/projects.json';
 import experienceData from './data/experience.json';
 import photographyData from './data/photography/photography.json';
-import blogData from './data/blog.json';
+import blogData from './data/blog/blog.json';
+import BlogModal from '@/components/BlogModal';
 
 type Section = 'home' | 'projects' | 'experience' | 'photography';
 
@@ -15,6 +16,7 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState<Section>('home');
   const [isHeadshotModalOpen, setIsHeadshotModalOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState<{ src: string; alt: string } | null>(null);
+  const [selectedBlogPost, setSelectedBlogPost] = useState<typeof blogData.posts[number] | null>(null);
 
   useEffect(() => {
     validateTheme();
@@ -81,8 +83,7 @@ export default function Home() {
       case 'projects':
         return (
           <div className="max-w-3xl w-full pt-8">
-            <h2 className="text-3xl font-bold text-foreground mb-2">{projectsData.title}</h2>
-            <p className="text-muted mb-6">{projectsData.description}</p>
+            <h2 className="text-3xl font-bold text-foreground mb-6">{projectsData.title}</h2>
             <div className="space-y-8 mt-8">
               {projectsData.projects.map((project) => (
                 <div key={project.title} className="border-l-2 border-border pl-6 pb-2">
@@ -120,8 +121,7 @@ export default function Home() {
       case 'experience':
         return (
           <div className="max-w-3xl w-full pt-8">
-            <h2 className="text-3xl font-bold text-foreground mb-2">{experienceData.title}</h2>
-            <p className="text-muted mb-6">{experienceData.description}</p>
+            <h2 className="text-3xl font-bold text-foreground mb-6">{experienceData.title}</h2>
             <Link 
               className="inline-flex items-center gap-2 border border-border px-4 py-2 text-sm font-medium text-foreground hover:border-foreground rounded-lg transition-all duration-200 mb-8" 
               target="_blank" 
@@ -169,8 +169,7 @@ export default function Home() {
       case 'photography':
         return (
           <div className="max-w-3xl w-full pt-8">
-            <h2 className="text-3xl font-bold text-foreground mb-2">{photographyData.title}</h2>
-            <p className="text-muted mb-6">Capturing moments from my travels around the world</p>
+            <h2 className="text-3xl font-bold text-foreground mb-6">{photographyData.title}</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-8">
               {photographyData.photos.map((photo, index) => (
                 <div key={index} className="group cursor-pointer" onClick={() => setSelectedPhoto(photo)}>
@@ -229,9 +228,6 @@ export default function Home() {
 
             {/* Blog Section */}
             <div className="max-w-5xl mx-auto pb-20 mt-[20vh] lg:mt-0">
-              <h2 className="text-3xl font-bold text-foreground mb-4 text-center">{blogData.title}</h2>
-              <p className="text-muted text-center mb-16">{blogData.description}</p>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
                 {blogData.posts.map((post, index) => (
                   <div 
@@ -241,6 +237,7 @@ export default function Home() {
                       backgroundColor: post.color,
                       transform: `rotate(${index % 2 === 0 ? '2deg' : '-2deg'})`,
                     }}
+                    onClick={() => setSelectedBlogPost(post)}
                   >
                     {/* Pin */}
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full shadow-lg flex items-center justify-center">
@@ -334,6 +331,12 @@ export default function Home() {
             </div>
           </div>
         )}
+
+        {/* Blog Modal */}
+        <BlogModal 
+          post={selectedBlogPost} 
+          onClose={() => setSelectedBlogPost(null)} 
+        />
 
         {/* Top Right Corner Buttons */}
         <div className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 flex items-center gap-2">
