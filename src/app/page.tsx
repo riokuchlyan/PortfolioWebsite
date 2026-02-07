@@ -194,16 +194,16 @@ export default function Home() {
       default:
         return (
           <div className="w-full">
-            {/* Intro Section - Full viewport on desktop, normal flow on mobile */}
-            <div className="lg:min-h-[calc(100vh-6rem)] lg:flex lg:flex-col lg:items-center lg:justify-center relative">
+            {/* Intro Section - Full viewport, paragraph centered, arrow at bottom */}
+            <div className="lg:min-h-screen flex flex-col lg:items-center lg:justify-center relative">
               <div className="max-w-3xl mx-auto px-4">
-                <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-foreground lg:text-center">
+                <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-foreground">
                   Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I continue to focus on building scalable, data-driven solutions for the financial sector.
                 </p>
               </div>
               
-              {/* Scroll Indicator - Pinned to bottom on desktop, inline on mobile */}
-              <div className="flex flex-col items-center mt-12 mb-12 lg:mt-0 lg:mb-0 lg:absolute lg:bottom-8 lg:left-1/2 lg:-translate-x-1/2 animate-bounce">
+              {/* Scroll Indicator - Centered on full viewport on desktop, pushed to bottom on mobile */}
+              <div className="flex flex-col items-center mt-10 pb-4 lg:mt-0 lg:pb-0 lg:absolute lg:bottom-8 lg:left-[calc(50vw-19rem)] lg:-translate-x-1/2 animate-bounce">
                 <span className="text-sm text-muted mb-2">My Thoughts</span>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted">
                   <line x1="12" y1="5" x2="12" y2="19"/>
@@ -213,7 +213,7 @@ export default function Home() {
             </div>
 
             {/* Blog Section */}
-            <div className="max-w-5xl mx-auto pb-20">
+            <div className="max-w-5xl mx-auto pb-20 mt-10 lg:mt-0">
               <h2 className="text-3xl font-bold text-foreground mb-4 text-center">{blogData.title}</h2>
               <p className="text-muted text-center mb-16">{blogData.description}</p>
               
