@@ -79,7 +79,7 @@ export default function BlogModal({ post, onClose }: BlogModalProps) {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="sticky top-4 float-right mr-4 mt-4 text-muted hover:text-foreground transition-colors bg-background/80 backdrop-blur-sm rounded-full p-2 z-10"
+          className="sticky top-4 float-left ml-4 mt-4 text-muted hover:text-foreground transition-colors bg-background/80 backdrop-blur-sm rounded-full p-2 z-10"
           aria-label="Close"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
