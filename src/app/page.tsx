@@ -192,7 +192,7 @@ export default function Home() {
             {/* Mobile: simple stacked layout */}
             <div className="lg:hidden">
               <div className="px-2">
-                <p className="text-base sm:text-lg leading-relaxed text-foreground">
+                <p className="text-sm sm:text-lg leading-relaxed text-foreground">
                   Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will continue to focus on building scalable, data-driven solutions for the financial sector.
                 </p>
               </div>
