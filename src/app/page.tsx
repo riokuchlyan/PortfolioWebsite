@@ -206,7 +206,7 @@ export default function Home() {
             </div>
 
             {/* Blog Section */}
-            <div className="max-w-5xl mx-auto pb-20 mt-[20vh] lg:mt-0">
+            <div className="max-w-5xl mx-auto pb-20 mt-[10vh] lg:mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
                 {blogData.posts.map((post, index) => (
                   <div 
@@ -366,7 +366,7 @@ export default function Home() {
               </div>
 
               {/* Mobile Nav */}
-              <nav className="flex flex-col gap-3 mb-12">
+              <nav className="flex flex-col gap-3 mb-6">
                 <button 
                   onClick={() => setActiveSection('home')} 
                   className={`text-2xl text-left transition-colors ${activeSection === 'home' ? 'text-accent font-semibold' : 'text-foreground'}`}
