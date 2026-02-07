@@ -213,7 +213,7 @@ export default function Home() {
             </div>
 
             {/* Blog Section */}
-            <div className="max-w-5xl mx-auto pb-20 mt-10 lg:mt-0">
+            <div className="max-w-5xl mx-auto pb-20 mt-[20vh] lg:mt-0">
               <h2 className="text-3xl font-bold text-foreground mb-4 text-center">{blogData.title}</h2>
               <p className="text-muted text-center mb-16">{blogData.description}</p>
               
