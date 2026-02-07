@@ -195,15 +195,30 @@ export default function Home() {
         return (
           <div className="w-full">
             {/* Intro Section - Full viewport, paragraph centered, arrow at bottom */}
-            <div className="min-h-[calc(100vh-28rem)] lg:min-h-screen flex flex-col lg:items-center lg:justify-center relative">
+            {/* Desktop: full viewport centered layout */}
+            <div className="hidden lg:flex lg:min-h-screen lg:flex-col lg:items-center lg:justify-center relative">
               <div className="max-w-3xl mx-auto px-4">
-                <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-foreground">
+                <p className="text-lg lg:text-xl leading-relaxed text-foreground">
                   Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will continue to focus on building scalable, data-driven solutions for the financial sector.
                 </p>
               </div>
-              
-              {/* Scroll Indicator - Centered on full viewport on desktop, pushed to bottom on mobile */}
-              <div className="flex flex-col items-center mt-auto pb-6 lg:mt-0 lg:pb-0 lg:absolute lg:bottom-16 lg:left-[calc(50vw-19rem)] lg:-translate-x-1/2 animate-bounce">
+              <div className="absolute bottom-16 left-[calc(50vw-19rem)] -translate-x-1/2 flex flex-col items-center animate-bounce">
+                <span className="text-sm text-muted mb-2">My Thoughts</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted">
+                  <line x1="12" y1="5" x2="12" y2="19"/>
+                  <polyline points="19 12 12 19 5 12"/>
+                </svg>
+              </div>
+            </div>
+
+            {/* Mobile: simple stacked layout */}
+            <div className="lg:hidden">
+              <div className="px-2">
+                <p className="text-base sm:text-lg leading-relaxed text-foreground">
+                  Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will continue to focus on building scalable, data-driven solutions for the financial sector.
+                </p>
+              </div>
+              <div className="flex flex-col items-center mt-12 animate-bounce">
                 <span className="text-sm text-muted mb-2">My Thoughts</span>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted">
                   <line x1="12" y1="5" x2="12" y2="19"/>
@@ -321,13 +336,13 @@ export default function Home() {
         )}
 
         {/* Top Right Corner Buttons */}
-        <div className="fixed top-6 right-6 z-50 flex items-center gap-3">
+        <div className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 flex items-center gap-2">
           <Link 
             href="/rio_kuchlyan_resume.pdf" 
             target="_blank"
-            className="group flex items-center gap-2 px-4 py-2.5 text-base font-semibold text-foreground hover:text-foreground bg-background/60 backdrop-blur-md border border-border/50 rounded-lg hover:border-foreground/30 transition-all duration-200"
+            className="group flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3.5 sm:py-2 text-xs sm:text-sm font-semibold text-foreground hover:text-foreground bg-background/60 backdrop-blur-md border border-border/50 rounded-lg hover:border-foreground/30 transition-all duration-200"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-4 sm:h-4">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
               <polyline points="14 2 14 8 20 8"/>
               <line x1="16" y1="13" x2="8" y2="13"/>

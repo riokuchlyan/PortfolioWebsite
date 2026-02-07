@@ -39,12 +39,12 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2.5 rounded-lg bg-background/60 backdrop-blur-md border border-border/50 hover:border-foreground/30 text-foreground hover:text-foreground transition-all duration-200"
+      className="p-1.5 sm:p-2.5 rounded-lg bg-background/60 backdrop-blur-md border border-border/50 hover:border-foreground/30 text-foreground hover:text-foreground transition-all duration-200"
       aria-label="Toggle dark mode"
       title="Toggle theme [S]"
     >
       {isDark ? (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="w-4 h-4 sm:w-[22px] sm:h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="12" cy="12" r="5"/>
           <line x1="12" y1="1" x2="12" y2="3"/>
           <line x1="12" y1="21" x2="12" y2="23"/>
@@ -56,7 +56,7 @@ export default function DarkModeToggle() {
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
         </svg>
       ) : (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="w-4 h-4 sm:w-[22px] sm:h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
       )}
