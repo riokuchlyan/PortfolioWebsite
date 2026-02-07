@@ -42,7 +42,7 @@ export default function OpenGraphImage() {
             maxWidth: 800,
           }}
         >
-          Computer Science Student & Developer
+          Computer Science & Business @ UNC Chapel Hill
         </div>
         <div
           style={{
@@ -51,7 +51,7 @@ export default function OpenGraphImage() {
             marginTop: 20,
           }}
         >
-          Portfolio & Projects
+          Developer • Business Analyst • Researcher
         </div>
       </div>
     ),
@@ -62,4 +62,4 @@ export default function OpenGraphImage() {
       ...size,
     }
   )
-} 
+}

@@ -1,0 +1,41 @@
+{
+  "title": "PHOTOGRAPHY",
+  "photos": [
+    {
+      "src": "/data/photography/colosseum.jpeg",
+      "alt": "Colosseum"
+    },
+    {
+      "src": "/data/photography/philly.jpeg",
+      "alt": "Philadelphia"
+    },
+    {
+      "src": "/data/photography/paris.jpeg",
+      "alt": "Paris"
+    },
+    {
+      "src": "/data/photography/acropolis.jpeg",
+      "alt": "Acropolis"
+    },
+    {
+      "src": "/data/photography/greece.jpeg",
+      "alt": "Greece"
+    },
+    {
+      "src": "/data/photography/vatican.jpeg",
+      "alt": "Vatican"
+    },
+    {
+      "src": "/data/photography/unc.jpeg",
+      "alt": "UNC"
+    },
+    {
+      "src": "/data/photography/scotland.jpeg",
+      "alt": "Scotland"
+    },
+    {
+      "src": "/data/photography/london.jpeg",
+      "alt": "London"
+    }
+  ]
+}

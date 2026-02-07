@@ -1,0 +1,51 @@
+{
+  "title": "EXPERIENCE",
+  "description": "My journey through education, work, and academic experiences",
+  "timelineItems": [
+    {
+      "id": 1,
+      "date": "Jun. 2026 - Aug. 2026",
+      "title": "Incoming Summer Business Analyst",
+      "organization": "Capital One",
+      "type": "work",
+      "icon": "💼",
+      "logo": "/data/experience/capital_one_logo.png"
+    },
+    {
+      "id": 2,
+      "date": "Apr. 2025 - Present",
+      "title": "Private Equity Intern",
+      "organization": "Star Course Holdings",
+      "type": "work",
+      "icon": "💼",
+      "logo": "/data/experience/star_course_holdings_logo.jpeg"
+    },
+    {
+      "id": 3,
+      "date": "Apr. 2025 - Aug. 2025",
+      "title": "Software Engineer Intern",
+      "organization": "Swing Phi",
+      "type": "work",
+      "icon": "💼",
+      "logo": "/data/experience/swing_phi_logo.png"
+    },
+    {
+      "id": 4,
+      "date": "Aug. 2024 - May 2028",
+      "title": "B.S. Business Administration & B.S. Computer Science",
+      "organization": "University of North Carolina at Chapel Hill | Kenan-Flagler Business School",
+      "type": "education",
+      "icon": "🎓",
+      "logo": "/data/experience/unc_logo.png"
+    },
+    {
+      "id": 5,
+      "date": "Aug. 2023 - Aug. 2024",
+      "title": "Student Representative",
+      "organization": "Hillsborough Township Board of Education",
+      "type": "academic",
+      "icon": "🏛️",
+      "logo": "/data/experience/hillsborough_boe_logo.png"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "title": "PROJECTS",
+  "description": "A collection of projects I've built, ranging from web applications to mobile apps and utilities",
+  "projects": [
+    {
+      "title": "VisuAlize",
+      "description": "Interactive data visualization platform for stock market analysis with real-time data processing",
+      "technologies": "React, FastAPI, Supabase",
+      "image": "/data/projects/visualize.png",
+      "link": "https://visualize-navy.vercel.app",
+      "type": "external"
+    },
+    {
+      "title": "DIY News",
+      "description": "Personalized news aggregation platform with email delivery and custom content curation",
+      "technologies": "Next.js, Supabase, Resend API",
+      "image": "/data/projects/diy_news.png",
+      "link": "https://www.diynews.xyz",
+      "type": "external"
+    },
+    {
+      "title": "Portfolio",
+      "description": "Personal portfolio website showcasing projects, experience, and photography",
+      "technologies": "Next.js, TypeScript, Tailwind CSS",
+      "image": "/data/projects/portfolio.png",
+      "link": "https://github.com/riokuchlyan/rios-portfolio",
+      "type": "external"
+    },
+    {
+      "title": "Password Manager",
+      "description": "Secure password storage application with encryption and local data management",
+      "technologies": "Python, Tkinter, Cryptography",
+      "image": "/data/projects/password_manager.png",
+      "link": "https://github.com/riokuchlyan/passwordManager",
+      "type": "external"
+    },
+    {
+      "title": "Battleship",
+      "description": "Classic battleship game implementation with AI opponent and interactive gameplay",
+      "technologies": "Python",
+      "image": "/data/projects/battleship.png",
+      "link": "https://replit.com/@riokuchlyan/Battleship",
+      "type": "external"
+    },
+    {
+      "title": "Clipboard Manager",
+      "description": "Desktop utility for managing clipboard history and quick text snippets",
+      "technologies": "Python, Tkinter",
+      "image": "/data/projects/clipboard_manager.png",
+      "link": "https://github.com/riokuchlyan/clipboardManager",
+      "type": "external"
+    },
+    {
+      "title": "Dog Adoption Website",
+      "description": "Web platform connecting potential adopters with rescue dogs, featuring search and filtering",
+      "technologies": "React, Node.js, MongoDB",
+      "image": "/data/projects/dog-adoption.png",
+      "link": "https://github.com/riokuchlyan/dog-adoption",
+      "type": "external"
+    }
+  ]
+}
