@@ -319,9 +319,9 @@ export default function Home() {
           <Link 
             href="/rio_kuchlyan_resume.pdf" 
             target="_blank"
-            className="group flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3.5 sm:py-2 text-xs sm:text-sm font-semibold text-foreground hover:text-foreground bg-background/60 backdrop-blur-md border border-border/50 rounded-lg hover:border-foreground/30 transition-all duration-200"
+            className="group flex items-center gap-1.5 px-2.5 py-1.5 sm:p-2.5 text-xs sm:text-sm font-semibold text-foreground hover:text-foreground bg-background/60 backdrop-blur-md border border-border/50 rounded-lg hover:border-foreground/30 transition-all duration-200"
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-4 sm:h-4">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-[22px] sm:h-[22px]">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
               <polyline points="14 2 14 8 20 8"/>
               <line x1="16" y1="13" x2="8" y2="13"/>
