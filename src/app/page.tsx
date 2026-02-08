@@ -248,9 +248,6 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="min-h-screen flex relative">
-        {/* Grid Background */}
-        <div className="fixed inset-0 grid-background"></div>
-
         {/* Headshot Modal */}
         {isHeadshotModalOpen && (
           <div 
