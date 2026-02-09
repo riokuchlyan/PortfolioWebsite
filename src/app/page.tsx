@@ -176,9 +176,24 @@ export default function Home() {
             {/* Desktop: full viewport centered layout */}
             <div className="hidden lg:flex lg:min-h-screen lg:flex-col lg:items-center lg:justify-center relative">
               <div className="max-w-3xl mx-auto px-4">
-                <p className="text-lg lg:text-xl leading-relaxed text-foreground">
-                  Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Strategy and Growth Intern at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will continue to focus on building scalable, data-driven solutions for the financial sector.
-                </p>
+                <ul className="text-lg lg:text-xl leading-relaxed text-foreground space-y-3 list-none">
+                  <li className="flex items-start">
+                    <span className="mr-3">-</span>
+                    <span>Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-3">-</span>
+                    <span>I have experience as a Strategy and Growth Intern at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-3">-</span>
+                    <span>Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will focus on business analytics and strategy.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-3">-</span>
+                    <span>In my free time, I enjoy world travel, new experiences, and photography.</span>
+                  </li>
+                </ul>
               </div>
               <div className="absolute bottom-16 left-[calc(50vw-19rem)] -translate-x-1/2 flex flex-col items-center animate-bounce">
                 <span className="text-sm text-muted mb-2">My Thoughts</span>
@@ -192,9 +207,24 @@ export default function Home() {
             {/* Mobile: simple stacked layout */}
             <div className="lg:hidden">
               <div className="px-2">
-                <p className="text-sm sm:text-lg leading-relaxed text-foreground">
-                  Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will continue to focus on building scalable, data-driven solutions for the financial sector.
-                </p>
+                <ul className="text-sm sm:text-lg leading-relaxed text-foreground space-y-3 list-none">
+                <li className="flex items-start">
+                    <span className="mr-3">-</span>
+                    <span>Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-3">-</span>
+                    <span>I have experience as a Strategy and Growth Intern at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-3">-</span>
+                    <span>Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will focus on business analytics and strategy.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-3">-</span>
+                    <span>In my free time, I enjoy world travel, new experiences, and photography.</span>
+                  </li>
+                </ul>
               </div>
               <div className="flex flex-col items-center mt-6 animate-bounce">
                 <span className="text-sm text-muted mb-2">My Thoughts</span>
