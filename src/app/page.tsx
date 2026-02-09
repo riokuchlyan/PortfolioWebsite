@@ -177,7 +177,21 @@ export default function Home() {
             <div className="hidden lg:flex lg:min-h-screen lg:flex-col lg:items-center lg:justify-center relative">
               <div className="max-w-3xl mx-auto px-4">
                 <p className="text-lg lg:text-xl leading-relaxed text-foreground">
-                  Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will continue to focus on building scalable, data-driven solutions for the financial sector.
+                <span className="block">
+                    - Hey! I&apos;m Rio.
+                  </span>
+                  <span className="block">
+                    - I&apos;m a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School.
+                  </span>
+                  <span className="block">
+                    - I have experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab.
+                  </span>
+                  <span className="block">
+                    - I&apos;m preparing to join Capital One as a Business Analyst Intern for Summer 2026.
+                  </span>
+                  <span className="block">
+                    - In my free time, I enjoy traveling, trying new foods, and learning new hobbies. 
+                  </span>
                 </p>
               </div>
               <div className="absolute bottom-16 left-[calc(50vw-19rem)] -translate-x-1/2 flex flex-col items-center animate-bounce">
@@ -193,7 +207,18 @@ export default function Home() {
             <div className="lg:hidden">
               <div className="px-2">
                 <p className="text-sm sm:text-lg leading-relaxed text-foreground">
-                  Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will continue to focus on building scalable, data-driven solutions for the financial sector.
+                  <span className="block">
+                    - Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School.
+                  </span>
+                  <span className="block">
+                    - I leverage technical skills to solve financial problems.
+                  </span>
+                  <span className="block">
+                    - Experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab.
+                  </span>
+                  <span className="block">
+                    - Preparing to join Capital One as a Business Analyst Intern for Summer 2026, focusing on scalable, data-driven solutions for the financial sector.
+                  </span>
                 </p>
               </div>
               <div className="flex flex-col items-center mt-6 animate-bounce">
