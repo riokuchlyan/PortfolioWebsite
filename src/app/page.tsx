@@ -177,7 +177,7 @@ export default function Home() {
             <div className="hidden lg:flex lg:min-h-screen lg:flex-col lg:items-center lg:justify-center relative">
               <div className="max-w-3xl mx-auto px-4">
                 <p className="text-lg lg:text-xl leading-relaxed text-foreground">
-                  Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Private Equity Analyst at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will continue to focus on building scalable, data-driven solutions for the financial sector.
+                  Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I leverage technical skills to solve financial problems. With experience as a Strategy and Growth Intern at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab, I build scalable, data-driven solutions. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will continue to focus on building scalable, data-driven solutions for the financial sector.
                 </p>
               </div>
               <div className="absolute bottom-16 left-[calc(50vw-19rem)] -translate-x-1/2 flex flex-col items-center animate-bounce">
