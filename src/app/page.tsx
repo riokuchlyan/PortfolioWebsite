@@ -7,11 +7,6 @@ import DarkModeToggle from "@/components/DarkModeToggle";
 import projectsData from './data/projects/projects.json';
 import experienceData from './data/experience.json';
 import photographyData from './data/photography/photography.json';
-import blogDataImport from './data/blog/blog.json';
-import BlogModal from '@/components/BlogModal';
-
-type BlogPost = { id: number; slug: string; title: string; excerpt: string; date: string; color: string };
-const blogData = blogDataImport as { posts: BlogPost[] };
 
 type Section = 'home' | 'projects' | 'experience' | 'photography';
 
@@ -19,7 +14,6 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState<Section>('home');
   const [isHeadshotModalOpen, setIsHeadshotModalOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState<{ src: string; alt: string } | null>(null);
-  const [selectedBlogPost, setSelectedBlogPost] = useState<typeof blogData.posts[number] | null>(null);
 
   useEffect(() => {
     validateTheme();
@@ -183,13 +177,6 @@ export default function Home() {
                   Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I have experience as a Strategy and Growth Intern at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will focus on business analytics and strategy. In my free time, I enjoy world travel, new experiences, and photography.
                 </p>
               </div>
-              <div className="absolute bottom-16 left-[calc(50vw-19rem)] -translate-x-1/2 flex flex-col items-center animate-bounce">
-                <span className="text-sm text-muted mb-2">My Thoughts</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted">
-                  <line x1="12" y1="5" x2="12" y2="19"/>
-                  <polyline points="19 12 12 19 5 12"/>
-                </svg>
-              </div>
             </div>
 
             {/* Mobile: simple stacked layout */}
@@ -198,45 +185,6 @@ export default function Home() {
                 <p className="text-sm sm:text-lg leading-relaxed text-foreground">
                   Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I have experience as a Strategy and Growth Intern at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will focus on business analytics and strategy. In my free time, I enjoy world travel, new experiences, and photography.
                 </p>
-              </div>
-              <div className="flex flex-col items-center mt-6 animate-bounce">
-                <span className="text-sm text-muted mb-2">My Thoughts</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted">
-                  <line x1="12" y1="5" x2="12" y2="19"/>
-                  <polyline points="19 12 12 19 5 12"/>
-                </svg>
-              </div>
-            </div>
-
-            {/* Blog Section */}
-            <div className="max-w-5xl mx-auto pb-20 mt-[10vh] lg:mt-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-                {blogData.posts.map((post, index) => (
-                  <div 
-                    key={post.id ?? index}
-                    className="sticky-note group cursor-pointer"
-                    style={{
-                      backgroundColor: post.color,
-                      transform: `rotate(${index % 2 === 0 ? '2deg' : '-2deg'})`,
-                    }}
-                    onClick={() => setSelectedBlogPost(post)}
-                  >
-                    {/* Pin */}
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full shadow-lg flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
-                    
-                    {/* Content */}
-                    <div className="p-6 pt-8">
-                      <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">{post.title}</h3>
-                      <p className="text-sm text-gray-700 mb-4 line-clamp-3">{post.excerpt}</p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs text-gray-600 font-medium">{post.date}</span>
-                        <span className="text-xs text-gray-500 group-hover:text-gray-700 transition-colors">Read →</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
@@ -310,12 +258,6 @@ export default function Home() {
             </div>
           </div>
         )}
-
-        {/* Blog Modal */}
-        <BlogModal 
-          post={selectedBlogPost} 
-          onClose={() => setSelectedBlogPost(null)} 
-        />
 
         {/* Top Right Corner Buttons */}
         <div className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 flex items-center gap-2">
