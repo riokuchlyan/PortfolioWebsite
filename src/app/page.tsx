@@ -7,8 +7,11 @@ import DarkModeToggle from "@/components/DarkModeToggle";
 import projectsData from './data/projects/projects.json';
 import experienceData from './data/experience.json';
 import photographyData from './data/photography/photography.json';
-import blogData from './data/blog/blog.json';
+import blogDataImport from './data/blog/blog.json';
 import BlogModal from '@/components/BlogModal';
+
+type BlogPost = { id: number; slug: string; title: string; excerpt: string; date: string; color: string };
+const blogData = blogDataImport as { posts: BlogPost[] };
 
 type Section = 'home' | 'projects' | 'experience' | 'photography';
 
@@ -210,7 +213,7 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
                 {blogData.posts.map((post, index) => (
                   <div 
-                    key={post.id}
+                    key={post.id ?? index}
                     className="sticky-note group cursor-pointer"
                     style={{
                       backgroundColor: post.color,
