@@ -19,7 +19,7 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-1.5 sm:p-2.5 rounded-lg bg-background/60 backdrop-blur-md border border-border/50 hover:border-foreground/30 text-foreground hover:text-foreground transition-all duration-200"
+      className="p-2 rounded-lg bg-background/60 backdrop-blur-md border border-border text-foreground hover:border-foreground/40 hover:bg-card transition-all duration-200 cursor-pointer"
       aria-label="Toggle dark mode"
       title="Toggle theme"
     >

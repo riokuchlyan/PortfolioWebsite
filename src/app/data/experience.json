@@ -14,7 +14,7 @@
     {
       "id": 2,
       "date": "Apr. 2025 - Jan. 2026",
-      "title": "Strategy and Growth Intern",
+      "title": "Private Equity Intern",
       "organization": "Star Course Holdings",
       "type": "work",
       "icon": "💼",
@@ -37,15 +37,6 @@
       "type": "education",
       "icon": "🎓",
       "logo": "/data/experience/unc_logo.png"
-    },
-    {
-      "id": 5,
-      "date": "Aug. 2023 - Aug. 2024",
-      "title": "Student Representative",
-      "organization": "Hillsborough Township Board of Education",
-      "type": "academic",
-      "icon": "🏛️",
-      "logo": "/data/experience/hillsborough_boe_logo.png"
     }
   ]
 }

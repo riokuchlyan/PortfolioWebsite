@@ -59,35 +59,49 @@ export default function Home() {
       case 'projects':
         return (
           <div className="max-w-3xl w-full pt-8">
-            <h2 className="text-3xl font-bold text-foreground mb-6">{projectsData.title}</h2>
-            <div className="space-y-8 mt-8">
-              {projectsData.projects.map((project) => (
-                <div key={project.title} className="border-l-2 border-border pl-6 pb-2">
-                  <div className="relative">
-                    <div className="absolute -left-[27px] top-1 w-3 h-3 rounded-full bg-foreground border-2 border-background"></div>
-                    <Link
-                      href={project.link}
-                      target={project.type === 'external' ? '_blank' : '_self'}
-                      rel={project.type === 'external' ? 'noopener noreferrer' : ''}
-                      className="group block"
-                    >
-                      <div className="flex gap-4 mb-2">
-                        <div className="relative w-16 h-16 flex-shrink-0 rounded border border-border overflow-hidden bg-card">
-                          <Image 
-                            src={project.image} 
-                            alt={project.title} 
-                            fill 
-                            className="object-cover group-hover:opacity-80 transition-opacity" 
-                          />
-                        </div>
-                        <div className="flex-1 space-y-1">
-                          <h3 className="text-base font-semibold group-hover:text-accent transition-colors">{project.title}</h3>
-                          <p className="text-sm text-foreground">{project.description}</p>
-                          <p className="text-xs text-muted">{project.technologies}</p>
-                        </div>
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground mb-6">{projectsData.title}</h2>
+            <div className="space-y-6 mt-8">
+              {projectsData.projects.map((project, idx) => (
+                <div key={project.title} className="stagger-item border-l border-border pl-6 pb-2 relative">
+                  <div className={`absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full border-2 ${idx === 0 ? 'bg-accent border-accent' : 'bg-background border-muted'}`}></div>
+                  <Link
+                    href={project.link}
+                    target={project.type === 'external' ? '_blank' : '_self'}
+                    rel={project.type === 'external' ? 'noopener noreferrer' : ''}
+                    className="group block rounded-lg -mx-3 px-3 py-3 transition-all duration-300 hover:bg-card/60 border border-transparent hover:border-border"
+                  >
+                    <div className="flex gap-4">
+                      <div className="relative w-16 h-16 flex-shrink-0 rounded-md border border-border overflow-hidden bg-card">
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
                       </div>
-                    </Link>
-                  </div>
+                      <div className="flex-1 space-y-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <h3 className="font-display text-base font-semibold group-hover:text-accent transition-colors">{project.title}</h3>
+                          <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="text-muted opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-accent transition-all duration-300"
+                          >
+                            <line x1="7" y1="17" x2="17" y2="7" />
+                            <polyline points="7 7 17 7 17 17" />
+                          </svg>
+                        </div>
+                        <p className="text-sm text-foreground leading-snug">{project.description}</p>
+                        <p className="text-xs text-muted font-mono">{project.technologies}</p>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -97,10 +111,10 @@ export default function Home() {
       case 'experience':
         return (
           <div className="max-w-3xl w-full pt-8">
-            <h2 className="text-3xl font-bold text-foreground mb-6">{experienceData.title}</h2>
-            <Link 
-              className="inline-flex items-center gap-2 border border-border px-4 py-2 text-sm font-medium text-foreground hover:border-foreground rounded-lg transition-all duration-200 mb-8" 
-              target="_blank" 
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground mb-6">{experienceData.title}</h2>
+            <Link
+              className="inline-flex items-center gap-2 border border-border px-4 py-2 text-sm font-medium text-foreground hover:border-foreground hover:bg-card rounded-lg transition-all duration-200 mb-8 group"
+              target="_blank"
               href="/rio_kuchlyan_resume.pdf"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -111,29 +125,31 @@ export default function Home() {
                 <polyline points="10 9 9 9 8 9"/>
               </svg>
               <span>View Resume</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
             </Link>
-            <div className="space-y-8 mt-8">
-              {experienceData.timelineItems.map((item) => (
-                <div key={item.id} className="border-l-2 border-border pl-6 pb-2">
-                  <div className="relative">
-                    <div className="absolute -left-[27px] top-1 w-3 h-3 rounded-full bg-foreground border-2 border-background"></div>
-                    <div className="flex gap-4">
-                      <div className="relative w-16 h-16 flex-shrink-0 rounded border border-border overflow-hidden bg-card">
-                        <Image 
-                          src={item.logo} 
-                          alt={item.organization} 
-                          fill 
-                          className="object-contain p-2" 
-                        />
+            <div className="space-y-6 mt-8">
+              {experienceData.timelineItems.map((item, idx) => (
+                <div key={item.id} className="stagger-item border-l border-border pl-6 pb-2 relative group">
+                  <div className={`absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full border-2 transition-colors ${idx === 0 ? 'bg-accent border-accent' : 'bg-background border-muted group-hover:border-foreground'}`}></div>
+                  <div className="flex gap-4 rounded-lg -mx-3 px-3 py-2 transition-colors duration-300 group-hover:bg-card/60">
+                    <div className="relative w-16 h-16 flex-shrink-0 rounded-md border border-border overflow-hidden bg-card">
+                      <Image
+                        src={item.logo}
+                        alt={item.organization}
+                        fill
+                        className="object-contain p-2"
+                      />
+                    </div>
+                    <div className="flex-1 space-y-1.5 min-w-0">
+                      <div className="flex items-start justify-between gap-4 flex-wrap">
+                        <h3 className="font-display text-base font-semibold">{item.title}</h3>
+                        <span className="text-xs text-muted font-mono whitespace-nowrap">{item.date}</span>
                       </div>
-                      <div className="flex-1 space-y-2">
-                        <div className="flex items-start justify-between gap-4 flex-wrap">
-                          <h3 className="text-base font-semibold">{item.title}</h3>
-                          <span className="text-xs text-muted font-mono whitespace-nowrap">{item.date}</span>
-                        </div>
-                        <p className="text-sm text-foreground">{item.organization}</p>
-                        <span className="inline-block text-xs text-muted uppercase tracking-wide">{item.type}</span>
-                      </div>
+                      <p className="text-sm text-foreground">{item.organization}</p>
+                      <span className="inline-block text-[10px] text-muted uppercase tracking-widest font-medium">{item.type}</span>
                     </div>
                   </div>
                 </div>
@@ -145,21 +161,28 @@ export default function Home() {
       case 'photography':
         return (
           <div className="max-w-3xl w-full pt-8">
-            <h2 className="text-3xl font-bold text-foreground mb-6">{photographyData.title}</h2>
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground mb-6">{photographyData.title}</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-8">
               {photographyData.photos.map((photo, index) => (
-                <div key={index} className="group cursor-pointer" onClick={() => setSelectedPhoto(photo)}>
-                  <div className="relative aspect-square overflow-hidden bg-card border border-border rounded">
-                    <Image 
-                      src={photo.src} 
-                      alt={photo.alt} 
-                      fill 
-                      className="object-cover group-hover:opacity-80 transition-opacity" 
-                      sizes="(max-width: 640px) 50vw, 33vw" 
-                      priority={index < 6} 
+                <div
+                  key={index}
+                  className="stagger-item group cursor-pointer"
+                  onClick={() => setSelectedPhoto(photo)}
+                >
+                  <div className="relative aspect-square overflow-hidden bg-card border border-border rounded-md">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      className="object-cover transition-transform duration-[600ms] ease-out group-hover:scale-110"
+                      sizes="(max-width: 640px) 50vw, 33vw"
+                      priority={index < 6}
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-x-0 bottom-0 p-2.5 translate-y-1 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                      <p className="text-[11px] font-medium text-white tracking-wide">{photo.alt}</p>
+                    </div>
                   </div>
-                  <p className="text-xs text-muted mt-1.5">{photo.alt}</p>
                 </div>
               ))}
             </div>
@@ -169,23 +192,26 @@ export default function Home() {
       default:
         return (
           <div className="w-full">
-            {/* Intro Section - Full viewport, paragraph centered, arrow at bottom */}
             {/* Desktop: full viewport centered layout */}
             <div className="hidden lg:flex lg:min-h-screen lg:flex-col lg:items-center lg:justify-center relative">
-              <div className="max-w-3xl mx-auto px-4">
-                <p className="text-lg lg:text-xl leading-relaxed text-foreground">
-                  Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I have experience as a Strategy and Growth Intern at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will focus on business analytics and strategy. In my free time, I enjoy world travel, new experiences, and photography.
+              <div className="max-w-3xl px-4 space-y-6">
+                <h2 className="stagger-item font-display text-2xl lg:text-3xl font-semibold tracking-tight text-foreground leading-tight">
+                  Building at the intersection of <span className="text-accent">technology</span> and <span className="text-accent">finance</span>.
+                </h2>
+                <p className="stagger-item text-base lg:text-lg leading-relaxed text-foreground/90">
+                  Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I have experience as a Private Equity Intern at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will focus on business analytics and strategy. In my free time, I enjoy world travel, new experiences, and photography.
                 </p>
               </div>
             </div>
 
             {/* Mobile: simple stacked layout */}
-            <div className="lg:hidden">
-              <div className="px-2">
-                <p className="text-sm sm:text-lg leading-relaxed text-foreground">
-                  Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I have experience as a Strategy and Growth Intern at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will focus on business analytics and strategy. In my free time, I enjoy world travel, new experiences, and photography.
-                </p>
-              </div>
+            <div className="lg:hidden space-y-5">
+              <h2 className="font-display text-xl font-semibold tracking-tight text-foreground leading-tight">
+                Building at the intersection of <span className="text-accent">technology</span> and <span className="text-accent">finance</span>.
+              </h2>
+              <p className="text-base leading-relaxed text-foreground/90">
+                Hello! I&apos;m Rio Kuchlyan, a Computer Science and Business double major at UNC-Chapel Hill&apos;s Kenan-Flagler Business School. I have experience as a Private Equity Intern at Star Course Holdings and a researcher at the Visual Computing and Augmented Intelligence Lab. Currently, I am preparing to join Capital One as a Business Analyst Intern for Summer 2026, where I will focus on business analytics and strategy. In my free time, I enjoy world travel, new experiences, and photography.
+              </p>
             </div>
           </div>
         );
@@ -231,7 +257,7 @@ export default function Home() {
         {/* Photography Modal */}
         {selectedPhoto && (
           <div 
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+            className="fixed inset-0 z-[200] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
             onClick={() => setSelectedPhoto(null)}
           >
             <div className="relative max-w-5xl max-h-[90vh] w-full">
@@ -264,7 +290,7 @@ export default function Home() {
           <Link 
             href="/rio_kuchlyan_resume.pdf" 
             target="_blank"
-            className="group flex items-center gap-1.5 px-2.5 py-1.5 sm:p-2.5 text-xs sm:text-sm font-semibold text-foreground hover:text-foreground bg-background/60 backdrop-blur-md border border-border/50 rounded-lg hover:border-foreground/30 transition-all duration-200"
+            className="group flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium font-sans text-foreground bg-background/60 backdrop-blur-md border border-border rounded-lg hover:border-foreground/40 hover:bg-card transition-all duration-200"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-[22px] sm:h-[22px]">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
@@ -286,53 +312,48 @@ export default function Home() {
               <div className="flex items-start mb-8">
                 <div className="flex flex-col gap-4">
                   <div className="flex items-start gap-4">
-                    <Image 
-                      src="/headshot.png" 
-                      alt="Rio Kuchlyan" 
-                      width={80} 
-                      height={80} 
-                      className="rounded-full flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
-                      priority
-                      onClick={() => setIsHeadshotModalOpen(true)}
-                    />
+                    <div className="relative flex-shrink-0 group cursor-pointer" onClick={() => setIsHeadshotModalOpen(true)}>
+                      <Image
+                        src="/headshot.png"
+                        alt="Rio Kuchlyan"
+                        width={80}
+                        height={80}
+                        className="rounded-full ring-1 ring-border group-hover:ring-accent/40 transition-all duration-300"
+                        priority
+                      />
+                    </div>
                     <div>
-                      <h1 className="text-3xl font-bold text-foreground mb-1">Rio</h1>
-                      <h1 className="text-3xl font-bold text-foreground">Kuchlyan</h1>
+                      <h1 className="font-display text-3xl font-semibold text-foreground mb-1">Rio</h1>
+                      <h1 className="font-display text-3xl font-semibold text-foreground">Kuchlyan</h1>
                     </div>
                   </div>
                   <div className="ml-0">
-                    <p className="text-base text-foreground">Computer Science & Business</p>
-                    <p className="text-base text-foreground">at UNC-Chapel Hill</p>
+                    <p className="text-sm text-muted leading-relaxed">Computer Science &amp; Business</p>
+                    <p className="text-sm text-muted leading-relaxed">at UNC-Chapel Hill</p>
                   </div>
                 </div>
               </div>
 
               {/* Mobile Nav */}
-              <nav className="flex flex-col gap-3 mb-6">
-                <button 
-                  onClick={() => setActiveSection('home')} 
-                  className={`text-2xl text-left transition-colors ${activeSection === 'home' ? 'text-accent font-semibold' : 'text-foreground'}`}
-                >
-                  Home
-                </button>
-                <button 
-                  onClick={() => setActiveSection('projects')} 
-                  className={`text-2xl text-left transition-colors ${activeSection === 'projects' ? 'text-accent font-semibold' : 'text-foreground'}`}
-                >
-                  Projects
-                </button>
-                <button 
-                  onClick={() => setActiveSection('experience')} 
-                  className={`text-2xl text-left transition-colors ${activeSection === 'experience' ? 'text-accent font-semibold' : 'text-foreground'}`}
-                >
-                  Experience
-                </button>
-                <button 
-                  onClick={() => setActiveSection('photography')} 
-                  className={`text-2xl text-left transition-colors ${activeSection === 'photography' ? 'text-accent font-semibold' : 'text-foreground'}`}
-                >
-                  Photography
-                </button>
+              <nav className="flex flex-col gap-1 mb-6">
+                {(['home', 'projects', 'experience', 'photography'] as const).map((section) => (
+                  <button
+                    key={section}
+                    onClick={() => setActiveSection(section)}
+                    className={`group relative flex items-center gap-3 text-2xl text-left transition-all duration-300 cursor-pointer py-1.5 font-display ${
+                      activeSection === section
+                        ? 'text-foreground font-semibold'
+                        : 'text-muted hover:text-foreground'
+                    }`}
+                  >
+                    <span
+                      className={`block h-px transition-all duration-300 ${
+                        activeSection === section ? 'w-6 bg-accent' : 'w-3 bg-muted group-hover:w-5 group-hover:bg-foreground'
+                      }`}
+                    ></span>
+                    <span className="capitalize">{section}</span>
+                  </button>
+                ))}
               </nav>
             </div>
 
@@ -371,54 +392,51 @@ export default function Home() {
             <div className="mb-16">
               <div className="flex items-start mb-6">
                 <div className="flex flex-col gap-4">
-                  <div className="flex items-start gap-4">
-                    <Image 
-                      src="/headshot.png" 
-                      alt="Rio Kuchlyan" 
-                      width={100} 
-                      height={100} 
-                      className="rounded-full flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
-                      priority
-                      onClick={() => setIsHeadshotModalOpen(true)}
-                    />
+                  <div className="flex items-start gap-4 stagger-item">
+                    <div className="relative flex-shrink-0 group cursor-pointer" onClick={() => setIsHeadshotModalOpen(true)}>
+                      <div className="absolute inset-0 rounded-full bg-accent/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <Image
+                        src="/headshot.png"
+                        alt="Rio Kuchlyan"
+                        width={100}
+                        height={100}
+                        className="relative rounded-full ring-1 ring-border group-hover:ring-accent/40 transition-all duration-300"
+                        priority
+                      />
+                    </div>
                     <div>
-                      <h1 className="text-4xl font-bold text-foreground mb-1">Rio</h1>
-                      <h1 className="text-4xl font-bold text-foreground">Kuchlyan</h1>
+                      <h1 className="font-display text-4xl font-semibold text-foreground mb-1">Rio</h1>
+                      <h1 className="font-display text-4xl font-semibold text-foreground">Kuchlyan</h1>
                     </div>
                   </div>
-                  <div className="ml-0">
-                    <p className="text-lg text-foreground">Computer Science & Business</p>
-                    <p className="text-lg text-foreground">at UNC-Chapel Hill</p>
+                  <div className="ml-0 stagger-item">
+                    <p className="text-sm text-muted leading-relaxed">Computer Science &amp; Business</p>
+                    <p className="text-sm text-muted leading-relaxed">at UNC-Chapel Hill</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <nav className="flex flex-col gap-3">
-              <button 
-                onClick={() => setActiveSection('home')} 
-                className={`text-2xl text-left transition-colors ${activeSection === 'home' ? 'text-accent font-semibold' : 'text-foreground'}`}
-              >
-                Home
-              </button>
-              <button 
-                onClick={() => setActiveSection('projects')} 
-                className={`text-2xl text-left transition-colors ${activeSection === 'projects' ? 'text-accent font-semibold' : 'text-foreground'}`}
-              >
-                Projects
-              </button>
-              <button 
-                onClick={() => setActiveSection('experience')} 
-                className={`text-2xl text-left transition-colors ${activeSection === 'experience' ? 'text-accent font-semibold' : 'text-foreground'}`}
-              >
-                Experience
-              </button>
-              <button 
-                onClick={() => setActiveSection('photography')} 
-                className={`text-2xl text-left transition-colors ${activeSection === 'photography' ? 'text-accent font-semibold' : 'text-foreground'}`}
-              >
-                Photography
-              </button>
+            <nav className="flex flex-col gap-1">
+              {(['home', 'projects', 'experience', 'photography'] as const).map((section, idx) => (
+                <button
+                  key={section}
+                  onClick={() => setActiveSection(section)}
+                  style={{ animationDelay: `${0.15 + idx * 0.05}s` }}
+                  className={`stagger-item group relative flex items-center gap-3 text-xl text-left transition-all duration-300 cursor-pointer py-1.5 ${
+                    activeSection === section
+                      ? 'text-foreground font-semibold font-display'
+                      : 'text-muted hover:text-foreground font-display'
+                  }`}
+                >
+                  <span
+                    className={`block h-px transition-all duration-300 ${
+                      activeSection === section ? 'w-6 bg-accent' : 'w-3 bg-muted group-hover:w-5 group-hover:bg-foreground'
+                    }`}
+                  ></span>
+                  <span className="capitalize">{section}</span>
+                </button>
+              ))}
             </nav>
           </div>
 

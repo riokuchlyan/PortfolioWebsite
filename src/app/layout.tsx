@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { IBM_Plex_Sans, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-const inter = Inter({
+const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  variable: "--font-display",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -76,7 +84,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/headshot.png" />
       </head>
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${ibmPlexSans.variable} ${cormorantGaramond.variable} antialiased`}
       >
         {children}
         <SpeedInsights />
