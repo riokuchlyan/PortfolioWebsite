@@ -1,6 +1,6 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
+  "name": "rio-kuchlyan-portfolio",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,20 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@vercel/speed-insights": "^1.2.0",
-    "next": "^16.1.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "next": "^16.2.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/node": "20.19.33",
-    "@types/react": "19.2.13",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "^15.3.3",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "5.9.3"
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^6.0.3"
   }
 }

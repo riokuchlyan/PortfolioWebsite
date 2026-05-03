@@ -1,0 +1,43 @@
+[
+  {
+    "role": "Summer Business Analyst",
+    "org": "Capital One",
+    "period": "Jun 2026 — Aug 2026",
+    "note": "",
+    "kind": "WORK",
+    "logo": "/assets/logos/capital_one.png",
+    "incoming": true
+  },
+  {
+    "role": "Co-Founder",
+    "org": "Vektra",
+    "period": "Mar 2026 — Present",
+    "note": "",
+    "kind": "WORK",
+    "logo": "/assets/logos/vektra.png"
+  },
+  {
+    "role": "Private Equity Intern",
+    "org": "Star Course Holdings",
+    "period": "Apr 2025 — Jan 2026",
+    "note": "",
+    "kind": "WORK",
+    "logo": "/assets/logos/star_course.jpeg"
+  },
+  {
+    "role": "Software Engineer Intern",
+    "org": "Swing Phi",
+    "period": "Apr 2025 — Aug 2025",
+    "note": "",
+    "kind": "WORK",
+    "logo": "/assets/logos/swing_phi.png"
+  },
+  {
+    "role": "UNC Chapel Hill · Kenan-Flagler Business School",
+    "org": "B.S. Business Administration & B.S. Computer Science",
+    "period": "Aug 2024 — May 2028",
+    "note": "",
+    "kind": "EDUCATION",
+    "logo": "/assets/logos/unc.png"
+  }
+]

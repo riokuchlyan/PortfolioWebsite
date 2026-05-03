@@ -1,0 +1,11 @@
+[
+  { "label": "Colosseum", "city": "Rome", "size": "lg", "src": "/assets/photos/colosseum.jpeg" },
+  { "label": "Acropolis", "city": "Athens", "size": "md", "src": "/assets/photos/acropolis.jpeg" },
+  { "label": "Tour Eiffel", "city": "Paris", "size": "sm", "src": "/assets/photos/paris.jpeg" },
+  { "label": "Oia", "city": "Greece", "size": "sm", "src": "/assets/photos/greece.jpeg" },
+  { "label": "Westminster", "city": "London", "size": "lg", "src": "/assets/photos/london.jpeg" },
+  { "label": "Vatican", "city": "Rome", "size": "md", "src": "/assets/photos/vatican.jpeg" },
+  { "label": "Dean Dome", "city": "Chapel Hill", "size": "md", "src": "/assets/photos/unc.jpeg" },
+  { "label": "City Hall", "city": "Philadelphia", "size": "lg", "src": "/assets/photos/philly.jpeg" },
+  { "label": "Brocken Spectre", "city": "Scotland", "size": "sm", "src": "/assets/photos/scotland.jpeg" }
+]

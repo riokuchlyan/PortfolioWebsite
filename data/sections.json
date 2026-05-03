@@ -1,0 +1,7 @@
+[
+  { "id": "index", "label": "Index", "n": "01" },
+  { "id": "experience", "label": "Experience", "n": "02" },
+  { "id": "work", "label": "Projects", "n": "03" },
+  { "id": "photography", "label": "Photography", "n": "04" },
+  { "id": "contact", "label": "Contact", "n": "05" }
+]
