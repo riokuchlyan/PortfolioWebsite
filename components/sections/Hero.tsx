@@ -24,9 +24,8 @@ export default function Hero() {
 
           <div className="hero-compact-foot mono caps tiny dim">
             <span>{profile.location}</span>
-            <span className="hero-compact-foot-sep">/</span>
-            <span>Scroll to begin ↓</span>
           </div>
+          <span className="hero-scroll-cue" aria-hidden="true">↓</span>
         </div>
       </div>
     </section>

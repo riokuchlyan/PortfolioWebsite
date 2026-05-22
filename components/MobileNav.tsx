@@ -21,7 +21,10 @@ export default function MobileNav({ open, active, onJump, onClose, dark, onToggl
       <div className="mobile-nav-inner">
         <div className="mobile-nav-eyebrow mono caps tiny dim">
           <span>Sections</span>
-          <span>05 / 05</span>
+          <span>
+            {String(SECTIONS.length).padStart(2, '0')} /{' '}
+            {String(SECTIONS.length).padStart(2, '0')}
+          </span>
         </div>
         <nav className="mobile-nav-list">
           {SECTIONS.map((s) => (

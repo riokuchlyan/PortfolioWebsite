@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 type Action = {
   label: string;
   href: string;
@@ -15,6 +17,8 @@ export default function SectionMast({
   caption?: string;
   action?: Action;
 }) {
+  const isInternal = action?.href.startsWith('/') && !action.href.startsWith('//');
+
   return (
     <header className="section-mast">
       <div className="section-mast-numeral" aria-hidden="true">
@@ -29,14 +33,20 @@ export default function SectionMast({
       </div>
       {action && (
         <div className="section-mast-action">
-          <a
-            href={action.href}
-            className="action-link mono caps tiny"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {action.label} <span>↗</span>
-          </a>
+          {isInternal && !action.download ? (
+            <Link href={action.href} className="action-link mono caps tiny">
+              {action.label} <span>↗</span>
+            </Link>
+          ) : (
+            <a
+              href={action.href}
+              className="action-link mono caps tiny"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {action.label} <span>↗</span>
+            </a>
+          )}
         </div>
       )}
     </header>

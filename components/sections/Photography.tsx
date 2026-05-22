@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import photos from '@/data/photography.json';
+import profile from '@/data/profile.json';
 import type { Photo } from '@/types';
 import SectionMast from '../SectionMast';
 
@@ -29,6 +31,17 @@ export default function Photography() {
               </figcaption>
             </figure>
           ))}
+          <Link
+            href="/photography"
+            className="photo photo-md photo-view-all"
+            aria-label="View all photos"
+          >
+            <span className="photo-view-all-eyebrow mono caps tiny">{profile.name}</span>
+            <span className="photo-view-all-label">View all</span>
+            <span className="photo-view-all-cta mono caps tiny">
+              Open gallery <span aria-hidden="true">↗</span>
+            </span>
+          </Link>
         </div>
       </div>
     </section>

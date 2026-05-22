@@ -40,7 +40,7 @@ export type ExperienceItem = {
 export type Photo = {
   label: string;
   city: string;
-  size: 'sm' | 'md' | 'lg';
+  size: 'sm' | 'md' | 'lg' | 'v' | 'vs';
   src: string;
 };
 

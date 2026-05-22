@@ -18,7 +18,26 @@ export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [dark, setDark] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
   const containerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    setDark(document.documentElement.dataset.theme === 'dark');
+    setHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    requestAnimationFrame(() => {
+      const el = document.getElementById(hash);
+      const root = containerRef.current;
+      if (el && root) {
+        root.scrollTo({ top: el.offsetTop - 16, behavior: 'auto' });
+        setActive(hash);
+      }
+    });
+  }, []);
 
   useEffect(() => {
     const root = containerRef.current;
@@ -29,7 +48,7 @@ export default function App() {
           if (e.isIntersecting) setActive(e.target.id);
         });
       },
-      { root, threshold: 0, rootMargin: '-40% 0px -55% 0px' }
+      { root, threshold: 0, rootMargin: '-40% 0px -55% 0px' },
     );
     SECTIONS.forEach((s) => {
       const el = document.getElementById(s.id);
@@ -45,8 +64,12 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    if (!hydrated) return;
     document.documentElement.dataset.theme = dark ? 'dark' : 'light';
-  }, [dark]);
+    try {
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    } catch {}
+  }, [dark, hydrated]);
 
   useEffect(() => {
     document.body.style.overflow = mobileNavOpen ? 'hidden' : '';
