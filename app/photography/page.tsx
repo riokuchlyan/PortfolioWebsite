@@ -1,8 +1,7 @@
-import fs from 'fs';
-import path from 'path';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import featuredPhotos from '@/data/photography.json';
+import galleryData from '@/data/gallery.json';
 import profile from '@/data/profile.json';
 import type { Photo } from '@/types';
 
@@ -28,31 +27,6 @@ const LANDSCAPE_FILES = new Set<string>([
   'stirling_castle.jpeg',
 ]);
 
-const PHOTO_CONTINENTS: Record<string, string> = {
-  // Asia
-  'seoul.jpeg': 'asia',
-  'busan.jpeg': 'asia',
-  // Europe
-  'london.jpeg': 'europe',
-  'paris.jpeg': 'europe',
-  'acropolis.jpeg': 'europe',
-  'vatican.jpeg': 'europe',
-  'colosseum.jpeg': 'europe',
-  'scotland.jpeg': 'europe',
-  'stirling.jpeg': 'europe',
-  'stirling_castle.jpeg': 'europe',
-  'santorini.jpeg': 'europe',
-  // North America
-  'chapel_hill.jpeg': 'north-america',
-  'philadelphia.jpeg': 'north-america',
-  'tennessee.jpeg': 'north-america',
-  'oak_island.jpeg': 'north-america',
-  'bellhaven.jpeg': 'north-america',
-  // Oceania
-  'sydney.jpeg': 'oceania',
-  'new_zealand.jpeg': 'oceania',
-};
-
 const PHOTO_LABELS: Record<string, string> = {
   'chapel_hill.jpeg': 'Chapel Hill — Dean Dome',
 };
@@ -69,20 +43,13 @@ function caption(filename: string): string {
 }
 
 export default function PhotographyPage() {
-  const photosDir = path.join(process.cwd(), 'public/assets/photos');
-  const allFiles = fs
-    .readdirSync(photosDir)
-    .filter((f) => /\.(jpe?g|png|webp|avif)$/i.test(f));
-
-  const featuredFilenames = FEATURED.map((p) => path.basename(p.src));
+  const featuredFilenames = FEATURED.map((p) => p.src.split('/').pop() || '');
   const featuredSet = new Set(featuredFilenames);
 
   const groups = CONTINENTS.map((continent) => {
-    const inContinent = allFiles.filter(
-      (f) => PHOTO_CONTINENTS[f] === continent.id,
-    );
-    const featured = featuredFilenames.filter((f) => inContinent.includes(f));
-    const rest = inContinent
+    const continentFiles = (galleryData as Record<string, string[]>)[continent.id] || [];
+    const featured = continentFiles.filter((f) => featuredSet.has(f));
+    const rest = continentFiles
       .filter((f) => !featuredSet.has(f))
       .sort((a, b) => a.localeCompare(b));
     return { ...continent, files: [...featured, ...rest] };
