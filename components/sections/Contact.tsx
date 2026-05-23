@@ -11,7 +11,6 @@ export default function Contact() {
           <div className="contact-main">
             <a className="contact-mail" href={`mailto:${profile.email}`}>
               {profile.email}
-              <span className="contact-arrow">↗</span>
             </a>
           </div>
           <aside className="contact-meta">
@@ -19,7 +18,7 @@ export default function Contact() {
               label="LinkedIn"
               value={
                 <a href={profile.linkedin} target="_blank" rel="noreferrer">
-                  /in/riokuchlyan ↗
+                  /in/riokuchlyan
                 </a>
               }
             />
@@ -27,7 +26,7 @@ export default function Contact() {
               label="GitHub"
               value={
                 <a href={profile.github} target="_blank" rel="noreferrer">
-                  @riokuchlyan ↗
+                  @riokuchlyan
                 </a>
               }
             />
@@ -35,7 +34,7 @@ export default function Contact() {
               label="Resume"
               value={
                 <a href={profile.resume} target="_blank" rel="noreferrer">
-                  View PDF ↗
+                  View PDF
                 </a>
               }
             />
