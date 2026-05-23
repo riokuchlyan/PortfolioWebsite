@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import profile from '@/data/profile.json';
 import experience from '@/data/experience.json';
 import type { ExperienceItem } from '@/types';
@@ -7,20 +8,21 @@ const EXPERIENCE = experience as ExperienceItem[];
 
 export default function Experience() {
   return (
-    <section id="experience" className="section" data-screen-label="02 Experience">
+    <section id="experience" className="section">
       <div className="section-inner">
-        <SectionMast
-          n="02"
-          title="Experience"
-          action={{ label: 'Resume', href: profile.resume }}
-        />
+        <SectionMast n="02" title="Experience" action={{ label: 'Resume', href: profile.resume }} />
         <ol className="exp-list">
           {EXPERIENCE.map((e, i) => (
-            <li key={i} className={`exp-card ${e.current ? 'is-current' : ''}`}>
+            <li key={i} className="exp-card">
               <div className="exp-card-rail">
                 <div className="exp-logo">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={e.logo} alt={e.org} loading="lazy" />
+                  <Image
+                    src={e.logo}
+                    alt={e.org}
+                    width={104}
+                    height={104}
+                    sizes="(max-width: 720px) 40px, 52px"
+                  />
                 </div>
               </div>
               <div className="exp-card-body">
@@ -28,7 +30,6 @@ export default function Experience() {
                   <span className="exp-period">{e.period}</span>
                   <span className="dim">·</span>
                   <span className="dim">{e.kind}</span>
-                  {e.incoming && <span className="exp-tag">Incoming</span>}
                 </div>
                 <h3 className="exp-role-title">{e.role}</h3>
                 <div className="exp-org">{e.org}</div>

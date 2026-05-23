@@ -1,8 +1,9 @@
+import Image from 'next/image';
 import profile from '@/data/profile.json';
 
 export default function Hero() {
   return (
-    <section id="index" className="section section-hero hero-split" data-screen-label="01 Index">
+    <section id="index" className="section section-hero hero-split">
       <div className="hero-inner">
         <div className="hero-compact">
           <div className="hero-compact-eyebrow mono caps tiny dim">
@@ -11,8 +12,14 @@ export default function Hero() {
 
           <h1 className="hero-compact-name">
             <span className="hero-compact-portrait" aria-hidden="true">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/headshot.png" alt="" />
+              <Image
+                src="/assets/headshot.png"
+                alt=""
+                width={208}
+                height={208}
+                priority
+                sizes="(max-width: 720px) 72px, 104px"
+              />
             </span>
             <span className="hero-compact-name-text">Rio&nbsp;Kuchlyan</span>
             <span className="period">.</span>

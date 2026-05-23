@@ -1,19 +1,14 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import sections from '@/data/sections.json';
 import type { Section } from '@/types';
 import Topbar from './Topbar';
 import MobileNav from './MobileNav';
-import Hero from './sections/Hero';
-import Experience from './sections/Experience';
-import Work from './sections/Work';
-import Photography from './sections/Photography';
-import Contact from './sections/Contact';
 
 const SECTIONS: Section[] = sections as Section[];
 
-export default function App() {
+export default function App({ children }: { children: ReactNode }) {
   const [active, setActive] = useState('index');
   const [scrolled, setScrolled] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -103,11 +98,7 @@ export default function App() {
         onToggleDark={() => setDark((v) => !v)}
       />
       <main className="main" ref={containerRef}>
-        <Hero />
-        <Experience />
-        <Work />
-        <Photography />
-        <Contact />
+        {children}
       </main>
     </div>
   );

@@ -4,7 +4,7 @@ import SectionMast from '../SectionMast';
 
 export default function Contact() {
   return (
-    <section id="contact" className="section section-contact" data-screen-label="05 Contact">
+    <section id="contact" className="section section-contact">
       <div className="section-inner">
         <SectionMast n="05" title="Contact" />
         <div className="contact-grid">

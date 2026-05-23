@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import featuredPhotos from '@/data/photography.json';
@@ -104,12 +105,12 @@ export default function PhotographyPage() {
                     key={filename}
                     className={`gallery-tile ${LANDSCAPE_FILES.has(filename) ? 'is-landscape' : 'is-portrait'}`}
                   >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src={`/assets/photos/${filename}`}
                       alt={caption(filename)}
                       className="gallery-img"
-                      loading="lazy"
+                      fill
+                      sizes="(max-width: 720px) 50vw, (max-width: 1180px) 33vw, 25vw"
                     />
                     <figcaption className="gallery-cap mono caps tiny">
                       {caption(filename)}

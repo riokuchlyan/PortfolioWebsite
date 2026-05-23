@@ -1,16 +1,8 @@
 import type { ReactNode } from 'react';
 
-export default function MetaRow({
-  label,
-  value,
-  accent,
-}: {
-  label: string;
-  value: ReactNode;
-  accent?: boolean;
-}) {
+export default function MetaRow({ label, value }: { label: string; value: ReactNode }) {
   return (
-    <div className={`meta-row ${accent ? 'is-accent' : ''}`}>
+    <div className="meta-row">
       <span className="mono caps tiny dim meta-label">{label}</span>
       <span className="meta-value">{value}</span>
     </div>

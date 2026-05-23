@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import photos from '@/data/photography.json';
 import profile from '@/data/profile.json';
@@ -8,19 +9,19 @@ const PHOTOS = photos as Photo[];
 
 export default function Photography() {
   return (
-    <section id="photography" className="section section-photography" data-screen-label="04 Photography">
+    <section id="photography" className="section section-photography">
       <div className="section-inner">
         <SectionMast n="04" title="Photography" />
         <div className="photo-mosaic">
           {PHOTOS.map((p, i) => (
             <figure key={i} className={`photo photo-${p.size}`}>
               <div className="photo-img-wrap">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={p.src}
                   alt={`${p.label} — ${p.city}`}
                   className="photo-img"
-                  loading="lazy"
+                  fill
+                  sizes="(max-width: 720px) 50vw, (max-width: 1200px) 33vw, 400px"
                 />
               </div>
               <figcaption className="photo-cap mono caps tiny">
