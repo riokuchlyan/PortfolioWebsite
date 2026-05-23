@@ -1,14 +1,12 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import sections from '@/data/sections.json';
 import type { Section } from '@/types';
 import Topbar from './Topbar';
 import MobileNav from './MobileNav';
 
 const SECTIONS: Section[] = sections as Section[];
-
-const useIsoLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
 export default function App({ children }: { children: ReactNode }) {
   const [active, setActive] = useState('index');
@@ -23,16 +21,17 @@ export default function App({ children }: { children: ReactNode }) {
     setHydrated(true);
   }, []);
 
-  useIsoLayoutEffect(() => {
+  useEffect(() => {
     const hash = window.location.hash.slice(1);
     if (!hash) return;
-    const el = document.getElementById(hash);
-    const root = containerRef.current;
-    if (el && root) {
-      root.scrollTo({ top: el.offsetTop - 16, behavior: 'auto' });
-      setActive(hash);
-      setScrolled(root.scrollTop > 120);
-    }
+    requestAnimationFrame(() => {
+      const el = document.getElementById(hash);
+      const root = containerRef.current;
+      if (el && root) {
+        root.scrollTo({ top: el.offsetTop - 16, behavior: 'auto' });
+        setActive(hash);
+      }
+    });
   }, []);
 
   useEffect(() => {

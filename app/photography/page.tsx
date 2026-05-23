@@ -59,7 +59,7 @@ export default function PhotographyPage() {
   return (
     <main className="gallery-page">
       <div className="gallery-topbar">
-        <Link href="/#photography" className="gallery-back mono caps tiny">
+        <Link href="/" className="gallery-back mono caps tiny">
           <span aria-hidden="true">←</span> Back to portfolio
         </Link>
       </div>
