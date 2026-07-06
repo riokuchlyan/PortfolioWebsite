@@ -1,61 +1,26 @@
 'use client';
 
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 import sections from '@/data/sections.json';
 import type { Section } from '@/types';
 import Topbar from './Topbar';
-import MobileNav from './MobileNav';
+import Featured from './Featured';
 
 const SECTIONS: Section[] = sections as Section[];
 
-export default function App({ children }: { children: ReactNode }) {
-  const [active, setActive] = useState('index');
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+type Props = {
+  home: ReactNode;
+  panels: Record<string, ReactNode>;
+};
+
+export default function App({ home, panels }: Props) {
+  const [open, setOpen] = useState<string | null>(null);
   const [dark, setDark] = useState(false);
   const [hydrated, setHydrated] = useState(false);
-  const containerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     setDark(document.documentElement.dataset.theme === 'dark');
     setHydrated(true);
-  }, []);
-
-  useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    if (!hash) return;
-    requestAnimationFrame(() => {
-      const el = document.getElementById(hash);
-      const root = containerRef.current;
-      if (el && root) {
-        root.scrollTo({ top: el.offsetTop - 16, behavior: 'auto' });
-        setActive(hash);
-      }
-    });
-  }, []);
-
-  useEffect(() => {
-    const root = containerRef.current;
-    if (!root) return;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) setActive(e.target.id);
-        });
-      },
-      { root, threshold: 0, rootMargin: '-40% 0px -55% 0px' },
-    );
-    SECTIONS.forEach((s) => {
-      const el = document.getElementById(s.id);
-      if (el) obs.observe(el);
-    });
-    const onScroll = () => setScrolled(root.scrollTop > 120);
-    root.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-    return () => {
-      obs.disconnect();
-      root.removeEventListener('scroll', onScroll);
-    };
   }, []);
 
   useEffect(() => {
@@ -66,40 +31,93 @@ export default function App({ children }: { children: ReactNode }) {
     } catch {}
   }, [dark, hydrated]);
 
-  useEffect(() => {
-    document.body.style.overflow = mobileNavOpen ? 'hidden' : '';
-  }, [mobileNavOpen]);
-
-  const onJump = (id: string) => {
-    const el = document.getElementById(id);
-    const root = containerRef.current;
-    if (el && root) {
-      root.scrollTo({ top: el.offsetTop - 16, behavior: 'smooth' });
+  const openPanel = useCallback((id: string | null) => {
+    setOpen(id);
+    if (typeof window === 'undefined') return;
+    if (id) {
+      window.history.pushState({ panel: id }, '', `#${id}`);
+    } else {
+      window.history.pushState(null, '', window.location.pathname);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    const fromHash = () => {
+      const hash = window.location.hash.slice(1);
+      setOpen(SECTIONS.some((s) => s.id === hash) ? hash : null);
+    };
+    fromHash();
+    window.addEventListener('popstate', fromHash);
+    return () => window.removeEventListener('popstate', fromHash);
+  }, []);
+
+  const closedByKeyboard = useRef(false);
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closedByKeyboard.current = true;
+        openPanel(null);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [openPanel]);
+
+  // move focus into the panel on open; on close only Escape returns it (a mouse
+  // close would otherwise paint a focus ring on the wordmark)
+  const mounted = useRef(false);
+  useEffect(() => {
+    if (!mounted.current) {
+      mounted.current = true;
+      return;
+    }
+    if (open) {
+      document.getElementById(open)?.focus({ preventScroll: true });
+    } else if (closedByKeyboard.current) {
+      closedByKeyboard.current = false;
+      document.querySelector<HTMLElement>('.wordmark')?.focus({ preventScroll: true });
+    }
+  }, [open]);
 
   return (
-    <div className="page">
+    <div className="stage">
       <Topbar
-        active={active}
-        onJump={onJump}
-        scrolled={scrolled}
-        dark={dark}
-        onToggleDark={() => setDark((v) => !v)}
-        mobileNavOpen={mobileNavOpen}
-        onToggleMobileNav={() => setMobileNavOpen((v) => !v)}
-      />
-      <MobileNav
-        open={mobileNavOpen}
-        active={active}
-        onJump={onJump}
-        onClose={() => setMobileNavOpen(false)}
+        active={open}
+        onSelect={(id) => openPanel(open === id ? null : id)}
+        onHome={() => openPanel(null)}
         dark={dark}
         onToggleDark={() => setDark((v) => !v)}
       />
-      <main className="main" ref={containerRef}>
-        {children}
+
+      <main className={`home${open ? ' is-hidden' : ''}`} inert={open !== null}>
+        <div className="featured-stage">
+          <Featured onSelect={(id) => openPanel(id)} />
+        </div>
+        {home}
       </main>
+
+      {SECTIONS.map((s) => (
+        <section
+          key={s.id}
+          id={s.id}
+          className={`panel${open === s.id ? ' is-open' : ''}`}
+          inert={open !== s.id}
+          aria-label={s.label}
+          tabIndex={-1}
+        >
+          <div className="panel-scroll">
+            <div className="panel-inner">
+              <header className="panel-head">
+                <span className="panel-n mono" aria-hidden="true">
+                  ({s.n})
+                </span>
+                <h2 className="panel-title">{s.label}</h2>
+              </header>
+              <div className="panel-body">{panels[s.id]}</div>
+            </div>
+          </div>
+        </section>
+      ))}
     </div>
   );
 }

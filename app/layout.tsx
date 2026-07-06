@@ -1,19 +1,21 @@
 import type { Metadata, Viewport } from 'next';
-import { Source_Serif_4, Inter_Tight, IBM_Plex_Mono } from 'next/font/google';
+import { Space_Grotesk, Instrument_Serif, IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 import profile from '@/data/profile.json';
 
-const serif = Source_Serif_4({
+const sans = Space_Grotesk({
   subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-serif',
-});
-
-const sans = Inter_Tight({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+  weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
   variable: '--font-sans',
+});
+
+const serif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: '400',
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-serif',
 });
 
 const mono = IBM_Plex_Mono({
@@ -60,22 +62,42 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#FFFFFF' },
+    { media: '(prefers-color-scheme: light)', color: '#F6F5F1' },
     { media: '(prefers-color-scheme: dark)', color: '#07090E' },
   ],
 };
 
 const THEME_INIT_SCRIPT = `(function(){try{var s=localStorage.getItem('theme');document.documentElement.dataset.theme=s==='dark'?'dark':'light';}catch(e){document.documentElement.dataset.theme='light';}})();`;
 
+const PERSON_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  url: 'https://riokuchlyan.com/',
+  email: `mailto:${profile.email}`,
+  image: 'https://riokuchlyan.com/assets/headshot.png',
+  jobTitle: 'Student',
+  affiliation: {
+    '@type': 'CollegeOrUniversity',
+    name: 'University of North Carolina at Chapel Hill — Kenan-Flagler Business School',
+  },
+  knowsLanguage: ['English', 'Hindi', 'Bengali', 'French'],
+  sameAs: [profile.linkedin, profile.github],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${serif.variable} ${sans.variable} ${mono.variable}`}
+      className={`${sans.variable} ${serif.variable} ${mono.variable}`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSONLD) }}
+        />
       </head>
       <body>{children}</body>
     </html>

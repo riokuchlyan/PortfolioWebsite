@@ -1,0 +1,22 @@
+[
+  {
+    "prefix": "Currently",
+    "text": "Business Analyst Intern @ Capital One",
+    "target": "experience"
+  },
+  {
+    "prefix": "Building",
+    "text": "Vektra — AI supply chain platform",
+    "target": "experience"
+  },
+  {
+    "prefix": "Latest",
+    "text": "VisuAlize — real-time equity charting",
+    "target": "projects"
+  },
+  {
+    "prefix": "Elsewhere",
+    "text": "Photography from around the world",
+    "target": "photography"
+  }
+]
