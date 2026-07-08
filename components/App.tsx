@@ -4,7 +4,6 @@ import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
 import sections from '@/data/sections.json';
 import type { Section } from '@/types';
 import Topbar from './Topbar';
-import Featured from './Featured';
 
 const SECTIONS: Section[] = sections as Section[];
 
@@ -90,9 +89,6 @@ export default function App({ home, panels }: Props) {
       />
 
       <main className={`home${open ? ' is-hidden' : ''}`} inert={open !== null}>
-        <div className="featured-stage">
-          <Featured onSelect={(id) => openPanel(id)} />
-        </div>
         {home}
       </main>
 

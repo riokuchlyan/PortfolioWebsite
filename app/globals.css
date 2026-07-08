@@ -13,7 +13,7 @@
   --accent: #1b3a6b;
   --line: rgba(16, 21, 31, 0.16);
   --line-soft: rgba(16, 21, 31, 0.08);
-  --mark-stroke: rgba(16, 21, 31, 0.2);
+  --mark-stroke: rgba(16, 21, 31, 0.12);
   --cast: rgba(27, 58, 107, 0.025);
   --grain: 0.03;
 
@@ -35,7 +35,7 @@
   --accent: #6b8fc4;
   --line: rgba(236, 231, 220, 0.12);
   --line-soft: rgba(236, 231, 220, 0.06);
-  --mark-stroke: rgba(236, 231, 220, 0.18);
+  --mark-stroke: rgba(236, 231, 220, 0.11);
   --cast: rgba(107, 143, 196, 0.07);
   --grain: 0.05;
 }
@@ -329,117 +329,6 @@ sup {
     opacity: 1;
     letter-spacing: 0.02em;
   }
-}
-
-/* rotating featured line, centered on the canvas */
-/* padding mirrors .home-inner so the featured line centers exactly on the
-   monogram */
-.featured-stage {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 120px var(--pad-x) 80px;
-  pointer-events: none;
-}
-
-.featured-wrap {
-  position: relative;
-  pointer-events: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* soft knockout so the monogram fades out behind the text — tight enough
-   that the R and K still read at the edges */
-.featured-wrap::before {
-  content: '';
-  position: absolute;
-  inset: -36px -64px;
-  z-index: -1;
-  background: radial-gradient(ellipse closest-side, var(--bg) 42%, transparent 72%);
-  pointer-events: none;
-}
-
-.featured {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(10px);
-  transition:
-    opacity 420ms var(--ease),
-    transform 420ms var(--ease);
-}
-
-.featured.is-visible {
-  opacity: 1;
-  transform: none;
-}
-
-.featured-prefix {
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-}
-
-.featured-text {
-  font-size: clamp(20px, 3vw, 30px);
-  font-weight: 300;
-  letter-spacing: 0.01em;
-  padding-bottom: 4px;
-}
-
-.featured-arrow {
-  display: inline-block;
-  color: var(--ink-faint);
-  transition:
-    transform 240ms var(--ease),
-    color 240ms ease;
-}
-
-.featured:hover .featured-arrow {
-  transform: translateX(5px);
-  color: var(--accent);
-}
-
-/* cycle position ticks */
-.featured-ticks {
-  display: flex;
-  gap: 8px;
-  margin-top: 30px;
-}
-
-.featured-tick {
-  position: relative;
-  width: 26px;
-  height: 14px;
-}
-
-.featured-tick::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 1px;
-  background: var(--line);
-  transition:
-    background-color 200ms ease,
-    transform 200ms ease;
-}
-
-.featured-tick:hover::after {
-  background: var(--ink-dim);
-}
-
-.featured-tick.is-active::after {
-  background: var(--accent);
-  transform: scaleY(2);
 }
 
 .home-foot {
@@ -965,11 +854,6 @@ sup {
 
   /* equal top/bottom padding = true vertical center on mobile */
   .home-inner {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
-  .featured-stage {
     padding-top: 120px;
     padding-bottom: 120px;
   }
