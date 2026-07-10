@@ -208,6 +208,15 @@ sup {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   white-space: nowrap;
+  transition: opacity 240ms var(--ease);
+}
+
+/* hidden on the about/home view — the panel title carries the name there.
+   snaps off instantly so it never lingers in the corner when returning home */
+.wordmark.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: none;
 }
 
 .nav {
@@ -221,13 +230,6 @@ sup {
   align-items: baseline;
   gap: 5px;
   color: var(--ink-dim);
-  transition: color 200ms ease;
-}
-
-.nav-n {
-  font-size: 9px;
-  color: var(--ink-faint);
-  transform: translateY(-0.5em);
   transition: color 200ms ease;
 }
 
@@ -247,16 +249,8 @@ sup {
   color: var(--ink);
 }
 
-.nav-item:hover .nav-n {
-  color: var(--accent);
-}
-
 .nav-item.is-active {
   color: var(--ink);
-}
-
-.nav-item.is-active .nav-n {
-  color: var(--accent);
 }
 
 .nav-item.is-active .nav-label {
@@ -284,31 +278,8 @@ sup {
   color: var(--ink);
 }
 
-/* --- home ---------------------------------------------------------------- */
+/* --- ghosted outline monogram (404 page) ---------------------------------- */
 
-.home {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  display: flex;
-  transition: opacity 300ms var(--ease);
-}
-
-.home.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.home-inner {
-  flex: 1;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 120px var(--pad-x) 80px;
-}
-
-/* ghosted outline monogram */
 .home-mark {
   font-size: clamp(180px, 34vw, 460px);
   font-weight: 700;
@@ -329,35 +300,6 @@ sup {
     opacity: 1;
     letter-spacing: 0.02em;
   }
-}
-
-.home-foot {
-  position: absolute;
-  left: var(--pad-x);
-  right: var(--pad-x);
-  bottom: 30px;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.home-coords {
-  letter-spacing: 0.08em;
-}
-
-.home-foot-links {
-  display: flex;
-  gap: 26px;
-}
-
-.home-foot-links a {
-  color: var(--ink-dim);
-  transition: color 200ms ease;
-}
-
-.home-foot-links a:hover {
-  color: var(--ink);
 }
 
 /* --- panels -------------------------------------------------------------- */
@@ -417,12 +359,6 @@ sup {
   margin-bottom: clamp(48px, 8vh, 72px);
 }
 
-.panel-n {
-  font-size: 12px;
-  color: var(--accent);
-  letter-spacing: 0.08em;
-}
-
 .panel-title {
   font-family: var(--serif);
   font-style: normal;
@@ -430,7 +366,6 @@ sup {
   font-size: clamp(46px, 7.5vw, 76px);
   line-height: 1;
   letter-spacing: 0.01em;
-  text-transform: lowercase;
 }
 
 .panel-foot-link {
@@ -474,6 +409,20 @@ sup {
 
 .about-loc {
   letter-spacing: 0.08em;
+}
+
+.about-links {
+  display: flex;
+  gap: 26px;
+}
+
+.about-links a {
+  color: var(--ink-dim);
+  transition: color 200ms ease;
+}
+
+.about-links a:hover {
+  color: var(--ink);
 }
 
 /* --- experience ---------------------------------------------------------- */
@@ -830,10 +779,6 @@ sup {
     flex: none;
   }
 
-  .nav-n {
-    display: none;
-  }
-
   .nav-label {
     font-size: 12.5px;
     letter-spacing: 0.03em;
@@ -852,24 +797,8 @@ sup {
     padding-bottom: 80px;
   }
 
-  /* equal top/bottom padding = true vertical center on mobile */
-  .home-inner {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
   .home-mark {
     font-size: clamp(140px, 44vw, 240px);
-  }
-
-  /* stay left/right on one line; wrap left-aligned only if space runs out */
-  .home-foot {
-    flex-wrap: wrap;
-    gap: 8px 16px;
-  }
-
-  .home-foot-links {
-    gap: 18px;
   }
 
   .about {

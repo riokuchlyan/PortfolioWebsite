@@ -1,7 +1,7 @@
 [
-  { "id": "about", "label": "About", "n": "01" },
-  { "id": "experience", "label": "Experience", "n": "02" },
-  { "id": "projects", "label": "Projects", "n": "03" },
-  { "id": "photography", "label": "Photography", "n": "04" },
-  { "id": "contact", "label": "Contact", "n": "05" }
+  { "id": "about", "label": "About", "title": "Rio Kuchlyan" },
+  { "id": "experience", "label": "Experience" },
+  { "id": "projects", "label": "Projects" },
+  { "id": "photography", "label": "Photography" },
+  { "id": "contact", "label": "Contact" }
 ]

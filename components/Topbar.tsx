@@ -7,18 +7,26 @@ const SECTIONS = sections as Section[];
 
 type Props = {
   active: string | null;
+  wordmarkHidden: boolean;
   onSelect: (id: string) => void;
   onHome: () => void;
   dark: boolean;
   onToggleDark: () => void;
 };
 
-export default function Topbar({ active, onSelect, onHome, dark, onToggleDark }: Props) {
+export default function Topbar({
+  active,
+  wordmarkHidden,
+  onSelect,
+  onHome,
+  dark,
+  onToggleDark,
+}: Props) {
   return (
     <header className="topbar">
       <a
         href="/"
-        className="wordmark"
+        className={`wordmark${wordmarkHidden ? ' is-hidden' : ''}`}
         onClick={(e) => {
           e.preventDefault();
           onHome();
@@ -38,9 +46,6 @@ export default function Topbar({ active, onSelect, onHome, dark, onToggleDark }:
                 onSelect(s.id);
               }}
             >
-              <sup className="nav-n mono" aria-hidden="true">
-                {s.n}
-              </sup>
               <span className="nav-label">{s.label}</span>
             </a>
           ))}

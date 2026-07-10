@@ -20,6 +20,17 @@ export default function About() {
           </p>
         ))}
         <p className="about-loc mono tiny dim">{profile.location}</p>
+        <div className="about-links mono tiny">
+          <a className="u-link" href={profile.linkedin} target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+          <a className="u-link" href={profile.github} target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a className="u-link" href={profile.resume} target="_blank" rel="noreferrer">
+            Resume
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -6,14 +6,14 @@ import type { Section } from '@/types';
 import Topbar from './Topbar';
 
 const SECTIONS: Section[] = sections as Section[];
+const HOME = 'about';
 
 type Props = {
-  home: ReactNode;
   panels: Record<string, ReactNode>;
 };
 
-export default function App({ home, panels }: Props) {
-  const [open, setOpen] = useState<string | null>(null);
+export default function App({ panels }: Props) {
+  const [open, setOpen] = useState<string>(HOME);
   const [dark, setDark] = useState(false);
   const [hydrated, setHydrated] = useState(false);
 
@@ -30,67 +30,58 @@ export default function App({ home, panels }: Props) {
     } catch {}
   }, [dark, hydrated]);
 
-  const openPanel = useCallback((id: string | null) => {
-    setOpen(id);
-    if (typeof window === 'undefined') return;
-    if (id) {
-      window.history.pushState({ panel: id }, '', `#${id}`);
-    } else {
-      window.history.pushState(null, '', window.location.pathname);
-    }
-  }, []);
+  const openPanel = useCallback(
+    (id: string) => {
+      if (id === open) return;
+      setOpen(id);
+      if (id === HOME) {
+        window.history.pushState(null, '', window.location.pathname);
+      } else {
+        window.history.pushState({ panel: id }, '', `#${id}`);
+      }
+    },
+    [open]
+  );
 
   useEffect(() => {
     const fromHash = () => {
       const hash = window.location.hash.slice(1);
-      setOpen(SECTIONS.some((s) => s.id === hash) ? hash : null);
+      setOpen(SECTIONS.some((s) => s.id === hash) ? hash : HOME);
     };
     fromHash();
     window.addEventListener('popstate', fromHash);
     return () => window.removeEventListener('popstate', fromHash);
   }, []);
 
-  const closedByKeyboard = useRef(false);
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        closedByKeyboard.current = true;
-        openPanel(null);
-      }
+      if (e.key === 'Escape') openPanel(HOME);
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [openPanel]);
 
-  // move focus into the panel on open; on close only Escape returns it (a mouse
-  // close would otherwise paint a focus ring on the wordmark)
+  // move focus into the panel on section change; skip initial mount so the
+  // landing view doesn't paint a focus ring
   const mounted = useRef(false);
   useEffect(() => {
     if (!mounted.current) {
       mounted.current = true;
       return;
     }
-    if (open) {
-      document.getElementById(open)?.focus({ preventScroll: true });
-    } else if (closedByKeyboard.current) {
-      closedByKeyboard.current = false;
-      document.querySelector<HTMLElement>('.wordmark')?.focus({ preventScroll: true });
-    }
+    document.getElementById(open)?.focus({ preventScroll: true });
   }, [open]);
 
   return (
     <div className="stage">
       <Topbar
         active={open}
-        onSelect={(id) => openPanel(open === id ? null : id)}
-        onHome={() => openPanel(null)}
+        wordmarkHidden={open === HOME}
+        onSelect={(id) => openPanel(open === id ? HOME : id)}
+        onHome={() => openPanel(HOME)}
         dark={dark}
         onToggleDark={() => setDark((v) => !v)}
       />
-
-      <main className={`home${open ? ' is-hidden' : ''}`} inert={open !== null}>
-        {home}
-      </main>
 
       {SECTIONS.map((s) => (
         <section
@@ -104,10 +95,7 @@ export default function App({ home, panels }: Props) {
           <div className="panel-scroll">
             <div className="panel-inner">
               <header className="panel-head">
-                <span className="panel-n mono" aria-hidden="true">
-                  ({s.n})
-                </span>
-                <h2 className="panel-title">{s.label}</h2>
+                <h2 className="panel-title">{s.title ?? s.label}</h2>
               </header>
               <div className="panel-body">{panels[s.id]}</div>
             </div>

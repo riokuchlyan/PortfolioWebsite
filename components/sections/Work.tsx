@@ -8,11 +8,11 @@ export default function Work() {
   return (
     <ol className="work-list">
       {PROJECTS.map((p) => (
-        <li key={p.n} className="work-row">
+        <li key={p.title} className="work-row">
           <a href={p.href} target="_blank" rel="noreferrer" className="work-row-link">
             <div className="work-row-body">
               <div className="work-card-meta mono tiny dim">
-                {p.n} / {p.type} / {p.year}
+                {p.type} / {p.year}
               </div>
               <h3 className="work-card-title">{p.title}</h3>
               <p className="work-card-blurb">{p.blurb}</p>

@@ -27,5 +27,5 @@ export type Photo = {
 export type Section = {
   id: string;
   label: string;
-  n: string;
+  title?: string;
 };
