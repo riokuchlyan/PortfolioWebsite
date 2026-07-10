@@ -1,29 +1,6 @@
 import type { Metadata, Viewport } from 'next';
-import { Space_Grotesk, Instrument_Serif, IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 import profile from '@/data/profile.json';
-
-const sans = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  display: 'swap',
-  variable: '--font-sans',
-});
-
-const serif = Instrument_Serif({
-  subsets: ['latin'],
-  weight: '400',
-  style: ['normal', 'italic'],
-  display: 'swap',
-  variable: '--font-serif',
-});
-
-const mono = IBM_Plex_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  display: 'swap',
-  variable: '--font-mono',
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://riokuchlyan.com'),
@@ -41,20 +18,21 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://riokuchlyan.com/',
-    title: `${profile.name} — Portfolio`,
+    siteName: profile.name,
+    title: profile.name,
     description: profile.seoDescription,
     images: [
       {
         url: '/assets/og-image.png',
         width: 1200,
         height: 630,
-        alt: `${profile.name} — Portfolio`,
+        alt: profile.name,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${profile.name} — Portfolio`,
+    title: profile.name,
     description: profile.seoDescription,
     images: ['/assets/og-image.png'],
   },
@@ -87,11 +65,7 @@ const PERSON_JSONLD = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${sans.variable} ${serif.variable} ${mono.variable}`}
-    >
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <script

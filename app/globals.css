@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------------
    Rio Kuchlyan — portfolio
-   Slate. Space Grotesk + Instrument Serif italics + mono micro-labels.
+   Slate. Helvetica + Georgia italics + mono micro-labels.
    Grain, ghost monogram, hairlines, animated underlines.
 --------------------------------------------------------------------------- */
 
@@ -17,9 +17,9 @@
   --cast: rgba(27, 58, 107, 0.025);
   --grain: 0.03;
 
-  --sans: var(--font-sans), 'Space Grotesk', -apple-system, sans-serif;
-  --serif: var(--font-serif), 'Instrument Serif', Georgia, serif;
-  --monof: var(--font-mono), 'IBM Plex Mono', monospace;
+  --sans: 'Helvetica Neue', Helvetica, Arial, -apple-system, sans-serif;
+  --serif: Georgia, 'Times New Roman', serif;
+  --monof: Menlo, Consolas, 'Courier New', monospace;
 
   --pad-x: clamp(24px, 5vw, 64px);
   --panel-w: 1040px;
