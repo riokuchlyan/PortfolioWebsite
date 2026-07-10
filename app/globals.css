@@ -756,6 +756,21 @@ sup {
     padding-bottom: 18px;
   }
 
+  /* the name stays in the corner on every view, including home */
+  .wordmark.is-hidden {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* corner name carries the identity — drop the big about title */
+  #about .panel-head {
+    display: none;
+  }
+
+  #about .panel-inner {
+    padding-top: 150px;
+  }
+
   .topbar-right {
     width: 100%;
   }
