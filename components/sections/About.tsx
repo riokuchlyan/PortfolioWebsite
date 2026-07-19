@@ -10,7 +10,7 @@ export default function About() {
           alt={profile.name}
           width={208}
           height={208}
-          sizes="(max-width: 720px) 88px, 112px"
+          sizes="(max-width: 720px) 76px, 112px"
         />
       </div>
       <div className="about-body">

@@ -756,23 +756,14 @@ sup {
     padding-bottom: 18px;
   }
 
-  /* the name stays in the corner on every view, including home */
+  /* home has no corner name — collapse the row so the nav sits at the top */
   .wordmark.is-hidden {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  /* corner name carries the identity — drop the big about title */
-  #about .panel-head {
     display: none;
-  }
-
-  #about .panel-inner {
-    padding-top: 150px;
   }
 
   .topbar-right {
     width: 100%;
+    gap: 12px;
   }
 
   /* one line, no wrap — numbers hidden, sized to fit a 375px screen */
@@ -800,11 +791,10 @@ sup {
     padding-bottom: 4px;
   }
 
-  /* toggle rides the wordmark row instead of the nav line */
+  /* toggle rides the nav line, same order as desktop */
   .theme-toggle {
-    position: absolute;
-    top: 22px;
-    right: var(--pad-x);
+    width: 24px;
+    height: 24px;
   }
 
   .panel-inner {
@@ -816,9 +806,23 @@ sup {
     font-size: clamp(140px, 44vw, 240px);
   }
 
+  /* same shape as desktop — small portrait beside the bio, just tighter */
   .about {
-    flex-direction: column;
-    gap: 28px;
+    gap: 20px;
+  }
+
+  .about-portrait {
+    width: 76px;
+  }
+
+  .about-body {
+    padding-top: 0;
+    gap: 18px;
+  }
+
+  .about-tag {
+    font-size: 15.5px;
+    line-height: 1.7;
   }
 
   .exp-logo {
@@ -847,7 +851,8 @@ sup {
 
 @media (max-width: 400px) {
   .nav-label {
-    font-size: 11.5px;
+    font-size: 11px;
+    letter-spacing: 0.02em;
   }
 }
 
