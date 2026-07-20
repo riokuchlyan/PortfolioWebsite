@@ -1,15 +1,11 @@
 import Image from 'next/image';
-import featuredPhotos from '@/data/photography.json';
 import galleryData from '@/data/gallery.json';
-import type { Photo } from '@/types';
-
-const FEATURED = featuredPhotos as Photo[];
 
 const CONTINENTS = [
-  { id: 'asia', label: 'Asia', n: '01' },
-  { id: 'europe', label: 'Europe', n: '02' },
-  { id: 'north-america', label: 'North America', n: '03' },
-  { id: 'oceania', label: 'Oceania', n: '04' },
+  { id: 'asia', label: 'Asia' },
+  { id: 'europe', label: 'Europe' },
+  { id: 'north-america', label: 'North America' },
+  { id: 'oceania', label: 'Oceania' },
 ] as const;
 
 const LANDSCAPE_FILES = new Set<string>([
@@ -23,34 +19,22 @@ const PHOTO_LABELS: Record<string, string> = {
   'chapel_hill.jpeg': 'Chapel Hill — Dean Dome',
 };
 
-function prettify(filename: string): string {
+function caption(filename: string): string {
+  if (PHOTO_LABELS[filename]) return PHOTO_LABELS[filename];
   const base = filename.replace(/\.(jpe?g|png|webp|avif)$/i, '');
   return base.replace(/[_-]+/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
-function caption(filename: string): string {
-  return PHOTO_LABELS[filename] ?? prettify(filename);
-}
-
-export default function Photography() {
-  const featuredSet = new Set(FEATURED.map((p) => p.src.split('/').pop() || ''));
-
-  const groups = CONTINENTS.map((continent) => {
-    const continentFiles = (galleryData as Record<string, string[]>)[continent.id] || [];
-    const featured = continentFiles.filter((f) => featuredSet.has(f));
-    const rest = continentFiles
-      .filter((f) => !featuredSet.has(f))
-      .sort((a, b) => a.localeCompare(b));
-    return { ...continent, files: [...featured, ...rest] };
-  }).filter((g) => g.files.length > 0);
+export default function Gallery() {
+  const files = galleryData as Record<string, string[]>;
 
   return (
     <div className="gallery">
-      {groups.map((g) => (
-        <section key={g.id} className="gallery-section">
-          <div className="gallery-label tiny dim">{g.label}</div>
+      {CONTINENTS.filter((c) => files[c.id]?.length).map((c) => (
+        <section key={c.id} className="gallery-section">
+          <div className="gallery-label">{c.label}</div>
           <div className="gallery-grid">
-            {g.files.map((filename) => (
+            {files[c.id].map((filename) => (
               <figure key={filename} className="gallery-tile">
                 <div
                   className={`gallery-frame ${LANDSCAPE_FILES.has(filename) ? 'is-landscape' : 'is-portrait'}`}
@@ -63,7 +47,7 @@ export default function Photography() {
                     sizes="(max-width: 720px) 50vw, (max-width: 1180px) 33vw, 25vw"
                   />
                 </div>
-                <figcaption className="gallery-cap tiny dim">{caption(filename)}</figcaption>
+                <figcaption className="gallery-cap">{caption(filename)}</figcaption>
               </figure>
             ))}
           </div>

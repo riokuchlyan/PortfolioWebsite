@@ -39,13 +39,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#F6F5F1' },
-    { media: '(prefers-color-scheme: dark)', color: '#07090E' },
-  ],
+  themeColor: '#FBFAF7',
 };
-
-const THEME_INIT_SCRIPT = `(function(){try{var s=localStorage.getItem('theme');document.documentElement.dataset.theme=s==='dark'?'dark':'light';}catch(e){document.documentElement.dataset.theme='light';}})();`;
 
 const PERSON_JSONLD = {
   '@context': 'https://schema.org',
@@ -53,7 +48,7 @@ const PERSON_JSONLD = {
   name: profile.name,
   url: 'https://riokuchlyan.com/',
   email: `mailto:${profile.email}`,
-  image: 'https://riokuchlyan.com/assets/headshot.png',
+  image: 'https://riokuchlyan.com/assets/headshot.jpeg',
   jobTitle: 'Student',
   affiliation: {
     '@type': 'CollegeOrUniversity',
@@ -65,9 +60,8 @@ const PERSON_JSONLD = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
-        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSONLD) }}
