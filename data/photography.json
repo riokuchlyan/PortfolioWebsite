@@ -1,8 +1,0 @@
-[
-  { "label": "Seoul", "city": "South Korea", "size": "v", "src": "/assets/photos/seoul.jpeg" },
-  { "label": "Westminster", "city": "London", "size": "v", "src": "/assets/photos/london.jpeg" },
-  { "label": "Opera House", "city": "Sydney", "size": "md", "src": "/assets/photos/sydney.jpeg" },
-  { "label": "Acropolis", "city": "Athens", "size": "md", "src": "/assets/photos/acropolis.jpeg" },
-  { "label": "City Hall", "city": "Philadelphia", "size": "md", "src": "/assets/photos/philadelphia.jpeg" },
-  { "label": "Brocken Spectre", "city": "Scotland", "size": "sm", "src": "/assets/photos/scotland.jpeg" }
-]
