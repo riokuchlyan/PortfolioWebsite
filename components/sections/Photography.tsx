@@ -48,7 +48,7 @@ export default function Photography() {
     <div className="gallery">
       {groups.map((g) => (
         <section key={g.id} className="gallery-section">
-          <div className="gallery-label mono tiny dim">{g.label}</div>
+          <div className="gallery-label tiny dim">{g.label}</div>
           <div className="gallery-grid">
             {g.files.map((filename) => (
               <figure key={filename} className="gallery-tile">

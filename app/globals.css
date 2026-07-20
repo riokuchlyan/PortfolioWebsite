@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------------
    Rio Kuchlyan — portfolio
-   Slate. Helvetica + Georgia italics + mono micro-labels.
+   Slate. Helvetica + Georgia, small uppercase labels.
    Grain, ghost monogram, hairlines, animated underlines.
 --------------------------------------------------------------------------- */
 
@@ -19,7 +19,6 @@
 
   --sans: 'Helvetica Neue', Helvetica, Arial, -apple-system, sans-serif;
   --serif: Georgia, 'Times New Roman', serif;
-  --monof: Menlo, Consolas, 'Courier New', monospace;
 
   --pad-x: clamp(24px, 5vw, 64px);
   --panel-w: 1040px;
@@ -124,12 +123,8 @@ sup {
 
 /* --- utilities ----------------------------------------------------------- */
 
-.mono {
-  font-family: var(--monof);
-}
-
 .tiny {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.06em;
 }
 
@@ -705,8 +700,7 @@ sup {
 }
 
 .contact-foot {
-  font-family: var(--monof);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   margin-top: 28px;
 }

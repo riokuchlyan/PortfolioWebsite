@@ -11,7 +11,7 @@ export default function Work() {
         <li key={p.title} className="work-row">
           <a href={p.href} target="_blank" rel="noreferrer" className="work-row-link">
             <div className="work-row-body">
-              <div className="work-card-meta mono tiny dim">
+              <div className="work-card-meta tiny dim">
                 {p.type} / {p.year}
               </div>
               <h3 className="work-card-title">{p.title}</h3>

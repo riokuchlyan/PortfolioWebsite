@@ -7,7 +7,7 @@ export default function NotFound() {
         404
       </div>
       <p className="notfound-text dim">This page doesn&apos;t exist.</p>
-      <Link href="/" className="resume-button mono tiny notfound-link">
+      <Link href="/" className="resume-button tiny notfound-link">
         Back home <span aria-hidden="true">←</span>
       </Link>
     </div>

@@ -25,7 +25,7 @@ function ExpRows({ items }: { items: ExperienceItem[] }) {
             <h3 className="exp-role">{e.role}</h3>
             <div className="exp-org dim">{e.org}</div>
           </div>
-          <div className="exp-period mono tiny dim">{e.period}</div>
+          <div className="exp-period tiny dim">{e.period}</div>
         </li>
       ))}
     </ol>
@@ -36,16 +36,16 @@ export default function Experience() {
   return (
     <div className="experience">
       <a
-        className="resume-button mono tiny"
+        className="resume-button tiny"
         href={profile.resume}
         target="_blank"
         rel="noreferrer"
       >
         View Resume <span aria-hidden="true">↗</span>
       </a>
-      <div className="exp-group-label mono tiny dim">Work</div>
+      <div className="exp-group-label tiny dim">Work</div>
       <ExpRows items={WORK} />
-      <div className="exp-group-label mono tiny dim">Education</div>
+      <div className="exp-group-label tiny dim">Education</div>
       <ExpRows items={EDUCATION} />
     </div>
   );
