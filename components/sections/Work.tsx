@@ -23,7 +23,7 @@ export default function Work() {
                 alt={p.title}
                 width={1200}
                 height={900}
-                sizes="(max-width: 720px) 100vw, 280px"
+                sizes="(max-width: 720px) 88px, 104px"
               />
             </div>
           </a>

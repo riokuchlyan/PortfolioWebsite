@@ -527,22 +527,19 @@ sup {
   border-bottom: 1px solid var(--line-soft);
 }
 
-.work-row:first-child .work-row-link {
-  padding-top: 0;
-}
-
+/* rows match the experience list — same padding, gap, and type scale */
 .work-row-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(24px, 5vw, 64px);
-  padding: 32px 0;
+  gap: clamp(18px, 3vw, 32px);
+  padding: 26px 0;
 }
 
 .work-row-body {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   min-width: 0;
 }
 
@@ -552,7 +549,7 @@ sup {
 }
 
 .work-card-title {
-  font-size: clamp(19px, 2.4vw, 24px);
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.01em;
   background-image: linear-gradient(currentColor, currentColor);
@@ -569,7 +566,7 @@ sup {
 }
 
 .work-card-blurb {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--ink-dim);
   line-height: 1.65;
   max-width: 46ch;
@@ -577,7 +574,7 @@ sup {
 
 .work-row-thumb {
   flex: none;
-  width: clamp(180px, 26vw, 280px);
+  width: 104px;
   aspect-ratio: 4 / 3;
   overflow: hidden;
 }
@@ -797,9 +794,18 @@ sup {
     height: 24px;
   }
 
+  /* content sits higher and the overlay scrollbar never shows */
+  .panel-scroll {
+    scrollbar-width: none;
+  }
+
+  .panel-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
   .panel-inner {
-    padding-top: 180px;
-    padding-bottom: 80px;
+    padding-top: 128px;
+    padding-bottom: 48px;
   }
 
   .home-mark {
@@ -825,27 +831,39 @@ sup {
     line-height: 1.7;
   }
 
+  .exp-row {
+    gap: 16px;
+    padding: 18px 0;
+  }
+
   .exp-logo {
     width: 36px;
     height: 36px;
   }
 
-  /* compact rows on mobile — small thumbnail beside the text */
+  .exp-role {
+    font-size: 15px;
+  }
+
+  .exp-org {
+    font-size: 12.5px;
+  }
+
   .work-row-link {
-    gap: 18px;
-    padding: 24px 0;
+    gap: 16px;
+    padding: 18px 0;
   }
 
   .work-row-thumb {
-    width: 108px;
+    width: 88px;
   }
 
   .work-card-title {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .work-card-blurb {
-    font-size: 13px;
+    font-size: 12.5px;
   }
 }
 
@@ -868,7 +886,7 @@ sup {
   .exp-period {
     width: 100%;
     text-align: left;
-    padding-left: calc(36px + 18px);
+    padding-left: calc(36px + 16px);
   }
 }
 
