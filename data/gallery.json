@@ -1,28 +1,7 @@
-{
-    "asia": [
-        "seoul.jpeg",
-        "busan.jpeg"
-    ],
-    "europe": [
-        "london.jpeg",
-        "paris.jpeg",
-        "acropolis.jpeg",
-        "vatican.jpeg",
-        "colosseum.jpeg",
-        "scotland.jpeg",
-        "stirling.jpeg",
-        "stirling_castle.jpeg",
-        "santorini.jpeg"
-    ],
-    "north-america": [
-        "chapel_hill.jpeg",
-        "philadelphia.jpeg",
-        "tennessee.jpeg",
-        "oak_island.jpeg",
-        "bellhaven.jpeg"
-    ],
-    "oceania": [
-        "sydney.jpeg",
-        "new_zealand.jpeg"
-    ]
-}
+[
+    "seoul.jpeg",
+    "acropolis.jpeg",
+    "scotland.jpeg",
+    "philadelphia.jpeg",
+    "sydney.jpeg"
+]
