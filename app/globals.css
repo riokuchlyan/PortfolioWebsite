@@ -12,7 +12,8 @@
 
   --serif: Georgia, 'Times New Roman', serif;
 
-  --pad-x: clamp(24px, 6vw, 64px);
+  --pad-x: clamp(26px, 6vw, 68px);
+  --frame-inset: clamp(10px, 1.6vw, 22px);
 }
 
 * {
@@ -26,13 +27,30 @@ html {
 }
 
 body {
-  background: var(--bg);
+  background-color: var(--bg);
+  /* raking light: a warm highlight off the upper right, a trace of ink
+     settling into the lower left, so the paper never reads flat */
+  background-image:
+    radial-gradient(112% 78% at 79% 8%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 56%),
+    radial-gradient(92% 76% at 4% 96%, rgba(27, 58, 107, 0.095), rgba(27, 58, 107, 0) 62%);
+  background-attachment: fixed;
   color: var(--ink);
   font-family: var(--serif);
   font-size: 17px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/* hairline frame held off the window edge — makes the page read as an object */
+body::after {
+  content: '';
+  position: fixed;
+  inset: var(--frame-inset);
+  z-index: 50;
+  border: 1px solid rgba(28, 28, 28, 0.14);
+  border-radius: 8px;
+  pointer-events: none;
 }
 
 a {
@@ -70,7 +88,7 @@ ul {
 
 .hero {
   min-height: 100svh;
-  max-width: 960px;
+  max-width: 1020px;
   margin: 0 auto;
   padding: clamp(28px, 6vh, 64px) var(--pad-x);
   display: flex;
@@ -91,17 +109,20 @@ ul {
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  /* sits in the light rather than pasted on top of it */
+  box-shadow: 0 22px 52px -24px rgba(20, 30, 50, 0.4);
 }
 
+/* set large and light — the name is the artwork on the page */
 .hero-title {
-  font-size: clamp(38px, 6vw, 52px);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  font-size: clamp(42px, 7.4vw, 68px);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -0.022em;
 }
 
 .hero-intro {
-  margin-top: 20px;
+  margin-top: 24px;
   font-size: clamp(18px, 2.4vw, 21px);
 }
 
@@ -197,11 +218,11 @@ ul {
 }
 
 .page-title {
-  margin: 28px 0 clamp(40px, 7vh, 64px);
-  font-size: clamp(38px, 6vw, 52px);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  margin: 26px 0 clamp(40px, 7vh, 64px);
+  font-size: clamp(42px, 7.4vw, 68px);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -0.022em;
 }
 
 /* --- photography gallery -------------------------------------------------- */
@@ -227,6 +248,7 @@ ul {
   position: relative;
   overflow: hidden;
   aspect-ratio: 3 / 4;
+  box-shadow: 0 18px 44px -26px rgba(20, 30, 50, 0.45);
 }
 
 .gallery-img {
@@ -256,8 +278,9 @@ ul {
 
 .notfound-mark {
   font-size: clamp(80px, 16vw, 140px);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 /* --- responsive ---------------------------------------------------------- */
@@ -283,7 +306,7 @@ ul {
   }
 
   .hero-title {
-    font-size: 34px;
+    font-size: 37px;
   }
 
   .hero-intro,
@@ -292,7 +315,7 @@ ul {
   }
 
   .hero-intro {
-    margin-top: 12px;
+    margin-top: 14px;
   }
 
   .hero-feed {
