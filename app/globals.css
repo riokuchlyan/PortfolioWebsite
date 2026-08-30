@@ -48,7 +48,7 @@ body::after {
   position: fixed;
   inset: var(--frame-inset);
   z-index: 50;
-  border: 1px solid rgba(28, 28, 28, 0.14);
+  border: 1px solid rgba(28, 28, 28, 0.26);
   border-radius: 8px;
   pointer-events: none;
 }
@@ -105,12 +105,17 @@ ul {
 
 .hero-photo {
   flex: none;
-  width: clamp(180px, 23vw, 240px);
+  width: clamp(190px, 24vw, 260px);
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  /* sits in the light rather than pasted on top of it */
-  box-shadow: 0 22px 52px -24px rgba(20, 30, 50, 0.4);
+  /* matted like a framed print — white mat inside a hairline, so the photo
+     belongs to the page instead of floating on top of it. box-sizing is
+     border-box, so the mat eats into the photo and never changes the layout */
+  padding: 11px;
+  background: #ffffff;
+  border: 1px solid rgba(28, 28, 28, 0.2);
+  box-shadow: 0 16px 36px -26px rgba(20, 30, 50, 0.3);
 }
 
 /* set large and light — the name is the artwork on the page */
@@ -185,16 +190,6 @@ ul {
 .btn:hover {
   background: var(--accent);
   color: var(--bg);
-}
-
-.btn-solid {
-  background: var(--accent);
-  color: var(--bg);
-}
-
-.btn-solid:hover {
-  background: #142c52;
-  border-color: #142c52;
 }
 
 /* --- inner pages (photography, 404) -------------------------------------- */
@@ -296,13 +291,14 @@ ul {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: flex-start;
-    gap: 24px;
+    gap: 20px;
   }
 
   /* small uncropped landscape above the name */
   .hero-photo {
-    width: 190px;
+    width: 192px;
     aspect-ratio: 3 / 2;
+    padding: 8px;
   }
 
   .hero-title {
