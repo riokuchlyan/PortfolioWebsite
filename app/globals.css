@@ -91,7 +91,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-footer { min-height: 44px; display: flex; justify-content: flex-end; align-items: center; border-top: 1px solid var(--line); font-size: 11px; color: var(--ink-dim); }
 
 /* Photography */
-.page { padding: 58px 0 90px; }
+.page { padding: 74px 0 90px; }
 .page-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 58px; }
 .page-heading .page-title { align-self: flex-start; }
 .page-title { font-family: var(--serif); font-size: clamp(54px, 7vw, 88px); font-weight: 400; line-height: 1.05; letter-spacing: -0.055em; }
@@ -174,7 +174,7 @@ body:has(.lightbox[open]) { overflow: hidden; }
   .preview-title > span { font-size: 14px; }
   .preview-caption { font-size: 11px; line-height: 1.5; }
   .site-footer { font-size: 10px; }
-  .page { padding: 30px 0 60px; }
+  .page { padding: 46px 0 60px; }
   .page-heading { margin-bottom: 36px; }
   .page-title { font-size: clamp(48px, 12vw, 68px); }
   .page-description { font-size: 17px; }
