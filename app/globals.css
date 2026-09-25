@@ -13,7 +13,6 @@
   --serif: Georgia, 'Times New Roman', serif;
 
   --pad-x: clamp(26px, 6vw, 68px);
-  --frame-inset: clamp(10px, 1.6vw, 22px);
 }
 
 * {
@@ -40,17 +39,6 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-}
-
-/* hairline frame held off the window edge — makes the page read as an object */
-body::after {
-  content: '';
-  position: fixed;
-  inset: var(--frame-inset);
-  z-index: 50;
-  border: 1px solid rgba(28, 28, 28, 0.26);
-  border-radius: 8px;
-  pointer-events: none;
 }
 
 a {
@@ -287,11 +275,6 @@ ul {
 }
 
 @media (max-width: 760px) {
-  /* the screen is tight enough without a frame drawn around it */
-  body::after {
-    display: none;
-  }
-
   .hero {
     flex-direction: column-reverse;
     justify-content: center;
