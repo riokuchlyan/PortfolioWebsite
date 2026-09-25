@@ -1,9 +1,23 @@
 {
-  "intro": "A computer science & business double major who:",
-  "recently": [
-    "interned at *Capital One* as a Business Analyst",
-    "founded *RIVR*, a business optimization platform",
-    "started learning *photography*, one country at a time"
+  "intro": "Computer Science and Business Undergraduate at",
+  "university": "UNC-Chapel Hill",
+  "experience": [
+    {
+      "organization": "Truist Securities",
+      "role": "Incoming Summer Analyst",
+      "description": "Corporate and Investment Bank"
+    },
+    {
+      "organization": "Capital One",
+      "role": "Business Analyst Intern",
+      "description": "Credit Analytics"
+    },
+    {
+      "organization": "RIVR",
+      "role": "Founder",
+      "description": "Business optimization platform"
+    }
   ],
-  "closing": "I’m currently studying at *UNC-Chapel Hill*."
+  "personal": "One country at a time.",
+  "lastUpdated": "2026-09-25"
 }

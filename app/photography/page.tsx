@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Gallery from '@/components/Gallery';
+import SiteHeader from '@/components/SiteHeader';
+import SiteFooter from '@/components/SiteFooter';
 
 export const metadata: Metadata = {
   title: 'Photography — Rio Kuchlyan',
@@ -9,12 +10,19 @@ export const metadata: Metadata = {
 
 export default function PhotographyPage() {
   return (
-    <main className="page">
-      <Link href="/" className="page-back">
-        &larr; Rio Kuchlyan
-      </Link>
-      <h1 className="page-title">Photography</h1>
-      <Gallery />
-    </main>
+    <div className="site-shell">
+      <SiteHeader active="photography" />
+      <main id="main" className="page">
+        <div className="page-heading">
+          <div>
+            <p className="eyebrow">Beyond the desk</p>
+            <h1 className="page-title">Photography</h1>
+          </div>
+          <p className="page-description">Learning Photography.<br />One country at a time.</p>
+        </div>
+        <Gallery />
+      </main>
+      <SiteFooter />
+    </div>
   );
 }
