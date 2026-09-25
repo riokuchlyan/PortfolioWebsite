@@ -11,10 +11,7 @@ export default function Page() {
       <SiteHeader active="about" />
       <main id="main" className="page home-page">
         <div className="page-heading">
-          <div>
-            <p className="eyebrow">About me</p>
-            <h1 className="page-title">{profile.name}</h1>
-          </div>
+          <h1 className="page-title">{profile.name}</h1>
           <p className="page-description">{home.intro} <span className="university">{home.university}</span></p>
         </div>
         <div className="home-content">

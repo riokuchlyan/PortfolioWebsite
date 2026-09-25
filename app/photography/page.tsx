@@ -14,10 +14,7 @@ export default function PhotographyPage() {
       <SiteHeader active="photography" />
       <main id="main" className="page">
         <div className="page-heading">
-          <div>
-            <p className="eyebrow">Beyond the desk</p>
-            <h1 className="page-title">Photography</h1>
-          </div>
+          <h1 className="page-title">Photography</h1>
           <p className="page-description">Learning Photography.<br />One country at a time.</p>
         </div>
         <Gallery />

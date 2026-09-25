@@ -93,7 +93,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 /* Photography */
 .page { padding: 58px 0 90px; }
 .page-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 58px; }
-.page-heading .eyebrow { color: var(--ink-dim); margin-bottom: 20px; }
+.page-heading .page-title { align-self: flex-start; }
 .page-title { font-family: var(--serif); font-size: clamp(54px, 7vw, 88px); font-weight: 400; line-height: 1.05; letter-spacing: -0.055em; }
 .page-description { max-width: 245px; font-family: var(--serif); font-size: 19px; line-height: 1.6; color: var(--ink-dim); }
 .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 42px 30px; align-items: start; }
