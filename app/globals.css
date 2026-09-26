@@ -197,8 +197,8 @@ body:has(.lightbox[open]) { overflow: hidden; }
   .home-content .hero-visual { transform: translateY(-24px); }
 }
 @media (min-width: 861px) {
-  .home-page .page-description { transform: translateY(-48px); }
-  .home-content .hero-visual { transform: none; margin-top: -72px; }
+  .home-page .page-description { width: 310px; text-align: center; transform: translateY(-48px); }
+  .home-content .hero-visual { transform: translateX(calc((100% - 310px) / 2)); margin-top: -72px; }
   .home-content .experience { max-width: 560px; }
   .home-content .experience-row { grid-template-columns: 180px minmax(0, 1fr); gap: 24px; }
 }
