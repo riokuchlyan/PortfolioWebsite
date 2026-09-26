@@ -64,8 +64,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .experience { max-width: 400px; }
 .experience-row { display: grid; grid-template-columns: 120px 1fr; gap: 18px; padding: 20px 0; border-top: 1px solid var(--line); }
 .experience-row dt { font-family: var(--serif); font-size: 20px; line-height: 1.4; letter-spacing: -0.025em; }
-.experience-row dd { font-size: 13px; padding-top: 3px; }
-.experience-detail { display: block; font-size: 12px; color: var(--ink-dim); margin-top: 3px; }
+.experience-row dd { font-size: 14px; padding-top: 3px; }
+.experience-detail { display: block; font-size: 13px; color: var(--ink-dim); margin-top: 3px; }
 .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 26px; margin-top: 36px; }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 27px; min-height: 48px; padding: 13px 21px; background: var(--accent); color: #fff; border: 1px solid var(--accent); font-family: var(--sans); font-size: 12px; transition: background-color 180ms ease, border-color 180ms ease; }
 .btn:hover { background: #142c3e; border-color: #142c3e; }
@@ -145,7 +145,7 @@ body:has(.lightbox[open]) { overflow: hidden; }
   .site-header { min-height: 88px; }
   .experience-row { grid-template-columns: 95px 1fr; gap: 12px; }
   .experience-row dt { font-size: 18px; }
-  .experience-row dd { font-size: 12px; }
+  .experience-row dd { font-size: 13px; }
   .hero-actions { gap: 18px; }
   .btn { padding: 12px 16px; gap: 18px; }
   .photography-preview { gap: 15px; }
@@ -164,7 +164,7 @@ body:has(.lightbox[open]) { overflow: hidden; }
   .experience { max-width: none; }
   .experience-row { grid-template-columns: 108px 1fr; padding: 18px 0; }
   .experience-row dt { font-size: 20px; }
-  .experience-detail { font-size: 11px; }
+  .experience-detail { font-size: 12px; }
   .hero-actions { gap: 23px; margin-top: 30px; }
   .hero-visual { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); width: 100%; max-width: 360px; margin: 0 auto; gap: 24px; align-items: end; padding: 0; }
   .photography-preview { flex-direction: column; align-items: stretch; gap: 15px; padding: 0; }
