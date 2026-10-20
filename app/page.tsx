@@ -16,7 +16,8 @@ export default function Page() {
         </div>
         <div className="home-content">
           <div className="home-experience">
-            <dl className="experience" aria-label="Selected experience">
+            <h2 id="experience-heading" className="eyebrow experience-heading">EXPERIENCE</h2>
+            <dl className="experience" aria-labelledby="experience-heading">
               {home.experience.map((item) => (
                 <div className="experience-row" key={item.organization}>
                   <dt>{item.organization}</dt>
@@ -55,7 +56,7 @@ export default function Page() {
                 className="hero-photo"
                 width={5760}
                 height={3840}
-                sizes="(max-width: 700px) 202px, (max-width: 860px) 220px, (max-width: 1000px) 240px, 260px"
+                sizes="(max-width: 700px) 220px, (max-width: 860px) 220px, (max-width: 1000px) 240px, 260px"
                 priority
               />
             </div>
