@@ -1,23 +1,15 @@
 {
   "intro": "Undergraduate at",
   "university": "UNC-Chapel Hill",
-  "experience": [
-    {
-      "organization": "Truist Securities",
-      "role": "Incoming Summer Analyst",
-      "description": "Corporate and Investment Bank"
-    },
-    {
-      "organization": "Capital One",
-      "role": "Business Analyst Intern",
-      "description": "Credit Analytics"
-    },
-    {
-      "organization": "RIVR",
-      "role": "Founder",
-      "description": "Optimizing Business Operations"
-    }
+  "paragraphs": [
+    "I love exploring, both within and beyond my career. With experience in banking, technology, and entrepreneurship, I'm eager to take on new challenges and learn along the way.",
+    "Away from the desk, I’m usually travelling somewhere new, with a camera in hand."
   ],
-  "personal": "One country at a time.",
-  "lastUpdated": "2026-10-19"
+  "actions": {
+    "label": "Connect with Rio",
+    "resume": "Resume",
+    "meeting": "Book a meeting",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  }
 }

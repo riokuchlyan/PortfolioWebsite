@@ -1,0 +1,26 @@
+{
+  "navigation": [
+    {
+      "id": "about",
+      "label": "About",
+      "href": "/"
+    },
+    {
+      "id": "work",
+      "label": "Experience",
+      "href": "/work"
+    },
+    {
+      "id": "photography",
+      "label": "Photography",
+      "href": "/photography"
+    }
+  ],
+  "navigationLabel": "Main navigation",
+  "skipLink": "Skip to content",
+  "notFound": {
+    "code": "404",
+    "message": "This page doesn’t exist.",
+    "linkLabel": "Back home"
+  }
+}

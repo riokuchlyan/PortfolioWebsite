@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import Gallery from '@/components/Gallery';
 import SiteHeader from '@/components/SiteHeader';
-import SiteFooter from '@/components/SiteFooter';
+import photography from '@/data/photography.json';
+import profile from '@/data/profile.json';
 
 export const metadata: Metadata = {
-  title: 'Photography — Rio Kuchlyan',
-  description: 'Photographs from around the world by Rio Kuchlyan.',
+  title: `${photography.title} — ${profile.name}`,
+  description: photography.seoDescription,
 };
 
 export default function PhotographyPage() {
@@ -14,12 +15,11 @@ export default function PhotographyPage() {
       <SiteHeader active="photography" />
       <main id="main" className="page">
         <div className="page-heading">
-          <h1 className="page-title">Photography</h1>
-          <p className="page-description">Learning Photography.<br />One country at a time.</p>
+          <h1 className="page-title">{photography.title}</h1>
+          <p className="page-description">{photography.descriptionLines.map((line, index) => <span key={index}>{index > 0 && <br />}{line}</span>)}</p>
         </div>
         <Gallery />
       </main>
-      <SiteFooter />
     </div>
   );
 }

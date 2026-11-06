@@ -3,7 +3,7 @@ import './globals.css';
 import profile from '@/data/profile.json';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://riokuchlyan.com'),
+  metadataBase: new URL(profile.website),
   title: profile.name,
   description: profile.seoDescription,
   authors: [{ name: profile.name }],
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    url: 'https://riokuchlyan.com/',
+    url: profile.website,
     siteName: profile.name,
     title: profile.name,
     description: profile.seoDescription,
     images: [
       {
-        url: '/assets/og-image.png',
+        url: profile.socialImage,
         width: 1200,
         height: 630,
         alt: profile.name,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: profile.name,
     description: profile.seoDescription,
-    images: ['/assets/og-image.png'],
+    images: [profile.socialImage],
   },
 };
 
@@ -46,15 +46,15 @@ const PERSON_JSONLD = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: profile.name,
-  url: 'https://riokuchlyan.com/',
+  url: profile.website,
   email: `mailto:${profile.email}`,
-  image: 'https://riokuchlyan.com/assets/headshot.jpeg',
-  jobTitle: 'Student',
+  image: new URL(profile.portrait.src, profile.website).href,
+  jobTitle: profile.jobTitle,
   affiliation: {
     '@type': 'CollegeOrUniversity',
-    name: 'University of North Carolina at Chapel Hill — Kenan-Flagler Business School',
+    name: profile.affiliation,
   },
-  knowsLanguage: ['English', 'Hindi', 'Bengali', 'French'],
+  knowsLanguage: profile.languages,
   sameAs: [profile.linkedin, profile.github],
 };
 

@@ -3,9 +3,12 @@
 import Image from 'next/image';
 import { useRef, useState } from 'react';
 import files from '@/data/gallery.json';
+import photography from '@/data/photography.json';
+
+const captions: Record<string, string> = photography.captions;
 
 function caption(filename: string): string {
-  return filename
+  return captions[filename] ?? filename
     .replace(/\.(jpe?g|png|webp|avif)$/i, '')
     .replace(/[_-]+/g, ' ')
     .replace(/\b\w/g, (c) => c.toUpperCase());
@@ -28,7 +31,7 @@ export default function Gallery() {
             <button
               type="button"
               className="gallery-frame"
-              aria-label={`Enlarge ${caption(filename)} photograph`}
+              aria-label={photography.labels.enlarge.replace('{caption}', caption(filename))}
               aria-haspopup="dialog"
               onClick={() => {
                 setActiveIndex(index);
@@ -70,7 +73,7 @@ export default function Gallery() {
           <div className="lightbox-toolbar">
             <h2 id="photo-title" className="lightbox-title" aria-live="polite">{caption(activeFile)}</h2>
             <button type="button" className="lightbox-close" onClick={() => dialog.current?.close()} autoFocus>
-              Close <span aria-hidden="true">×</span>
+              {photography.labels.close} <span aria-hidden="true">×</span>
             </button>
           </div>
           <div className="lightbox-image">
@@ -82,9 +85,9 @@ export default function Gallery() {
             />
           </div>
           <div className="lightbox-navigation">
-            <button type="button" onClick={() => movePhoto(-1)} aria-label="Previous photograph">← Previous</button>
+            <button type="button" onClick={() => movePhoto(-1)} aria-label={photography.labels.previousPhoto}>← {photography.labels.previous}</button>
             <span aria-live="polite">{activeIndex + 1} / {files.length}</span>
-            <button type="button" onClick={() => movePhoto(1)} aria-label="Next photograph">Next →</button>
+            <button type="button" onClick={() => movePhoto(1)} aria-label={photography.labels.nextPhoto}>{photography.labels.next} →</button>
           </div>
         </div>
       </dialog>

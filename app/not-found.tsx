@@ -1,14 +1,15 @@
 import Link from 'next/link';
+import site from '@/data/site.json';
 
 export default function NotFound() {
   return (
     <div className="notfound">
       <div className="notfound-mark" aria-hidden="true">
-        404
+        {site.notFound.code}
       </div>
-      <p className="dim">This page doesn&rsquo;t exist.</p>
+      <p className="dim">{site.notFound.message}</p>
       <Link href="/" className="btn">
-        Back home
+        {site.notFound.linkLabel}
       </Link>
     </div>
   );

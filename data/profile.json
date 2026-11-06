@@ -4,5 +4,22 @@
   "email": "riokuchlyan@gmail.com",
   "linkedin": "https://linkedin.com/in/riokuchlyan",
   "github": "https://github.com/riokuchlyan",
-  "resume": "/rio_kuchlyan_resume.pdf"
+  "resume": "/rio_kuchlyan_resume.pdf",
+  "website": "https://riokuchlyan.com",
+  "booking": "https://bookings.riokuchlyan.com",
+  "portrait": {
+    "src": "/assets/headshot.jpeg",
+    "alt": "Rio Kuchlyan",
+    "width": 5760,
+    "height": 3840
+  },
+  "socialImage": "/assets/og-image.png",
+  "jobTitle": "Student",
+  "affiliation": "University of North Carolina at Chapel Hill — Kenan-Flagler Business School",
+  "languages": [
+    "English",
+    "Hindi",
+    "Bengali",
+    "French"
+  ]
 }
