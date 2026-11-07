@@ -1,8 +1,7 @@
 {
   "title": "Experience",
   "descriptionLines": [
-    "Across banking, analytics,",
-    "and entrepreneurship."
+    "Banking, analytics, and entrepreneurship."
   ],
   "seoDescription": "Experience across banking, analytics, and entrepreneurship by Rio Kuchlyan.",
   "entries": [
@@ -26,10 +25,11 @@
       "organization": "RIVR",
       "role": "Founder",
       "description": "Optimizing Business Operations",
-      "logo": null
+      "logo": "/assets/rivr-logo.png",
+      "logoWidth": 64,
+      "logoHeight": 32
     }
   ],
-  "resumeLabel": "View my resume",
   "professionalLabel": "Professional",
   "education": {
     "label": "Education",

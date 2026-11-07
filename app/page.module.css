@@ -1,49 +1,36 @@
-.about { --profile-column-width: 300px; --portrait-width: 240px; min-height: calc(100svh - 108px); }
-.content { display: grid; grid-template-columns: minmax(0, 1fr) 260px; align-items: start; gap: clamp(64px, 8vw, 108px); }
-.portrait { width: 100%; max-width: var(--portrait-width); justify-self: end; overflow: hidden; padding: 4px; border: 2px solid var(--line); background: var(--bg); }
-.photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 44%; }
-.introduction { min-width: 0; padding-top: 6px; }
-.about .subtitle { max-width: none; white-space: nowrap; flex-shrink: 0; }
-.statement { max-width: 520px; font-family: var(--serif); font-size: 26px; font-weight: 400; line-height: 1.5; letter-spacing: -0.025em; text-wrap: pretty; }
-.personal { max-width: 440px; margin-top: 34px; color: var(--ink-dim); font-family: var(--serif); font-size: 19px; line-height: 1.7; }
-.actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 24px; margin-top: 34px; }
-.resume, .meeting { display: inline-flex; align-items: center; justify-content: space-between; min-height: 46px; gap: 20px; font-size: 12px; line-height: 1.5; }
-.resume { padding: 12px 20px; border: 1px solid var(--line); transition: background-color 180ms ease, border-color 180ms ease; }
-.resume:hover { background: #f0f0eb; border-color: var(--accent); }
-.meeting:hover { text-decoration: underline; text-underline-offset: 5px; }
-.resume span, .meeting span { display: inline-block; transition: transform 180ms ease; }
-.resume:hover span, .meeting:hover span { transform: translate(2px, -2px); }
-.socials { position: relative; display: flex; align-items: center; gap: 4px; padding-left: 14px; }
-.socials::before { content: ''; position: absolute; left: 0; top: 50%; width: 1px; height: 20px; background: var(--line); transform: translateY(-50%); }
-.social { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 46px; color: var(--ink-dim); transition: color 180ms ease; }
-.social:hover { color: var(--accent); }
-
-@media (min-width: 861px) {
-  .about .subtitle { width: var(--profile-column-width); align-self: center; text-align: center; }
-  .portrait { margin-top: -24px; margin-right: calc((var(--profile-column-width) - var(--portrait-width)) / 2); }
+.about {
+  max-width: 620px;
+  margin: 0 auto;
+  min-height: calc(100svh - 108px);
+  padding: clamp(70px, 10svh, 112px) 0 88px;
 }
 
-@media (max-width: 1000px) {
-  .content { grid-template-columns: minmax(0, 1fr) 240px; gap: 64px; }
-  .actions { column-gap: 20px; }
-  .socials { padding-left: 6px; }
-}
+.profile { display: flex; align-items: center; gap: 26px; }
+.identity { min-width: 0; }
+.name { font-family: var(--serif); font-size: var(--text-title); font-weight: 400; line-height: 1.15; letter-spacing: -0.04em; }
+.subtitle { margin-top: 6px; font-family: var(--serif); font-size: var(--text-subtitle); color: var(--ink-dim); line-height: 1.5; }
+.location { display: flex; align-items: center; gap: 6px; margin-top: 9px; color: var(--ink-dim); font-size: 12px; }
+.location svg { flex-shrink: 0; }
+
+.introduction { margin-top: 48px; font-family: var(--serif); }
+.statement { font-size: 22px; line-height: 1.65; letter-spacing: -0.02em; text-wrap: pretty; }
+.personal { margin-top: 28px; font-size: 19px; line-height: 1.7; color: var(--ink-dim); text-wrap: pretty; }
+.actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.socials { display: flex; align-items: center; gap: 2px; margin-left: 8px; }
+.social { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 46px; color: var(--ink-dim); border-radius: 50%; transition: color 180ms ease, background-color 180ms ease; }
+.social:hover { color: var(--ink); background: #eeede7; }
 
 @media (max-width: 860px) {
   .about { min-height: calc(100svh - 88px); }
-  .content { grid-template-columns: minmax(0, 1fr) 220px; gap: 40px; }
-  .statement { font-size: 25px; }
-  .socials { padding-left: 0; }
-  .socials::before { display: none; }
 }
 
-@media (max-width: 700px) {
-  .content { grid-template-columns: minmax(0, 1fr); gap: 36px; }
-  .portrait { width: 220px; justify-self: start; }
-  .photo { aspect-ratio: 3 / 2; }
-  .about .subtitle { font-size: clamp(14px, 3.6vw, 17px); }
-  .introduction { padding-top: 0; }
-  .statement { font-size: 25px; }
-  .personal { margin-top: 26px; font-size: 18px; }
-  .actions { margin-top: 28px; gap: 10px 20px; }
+@media (max-width: 600px) {
+  .about { padding-top: clamp(56px, 9svh, 88px); padding-bottom: 64px; }
+  .profile { gap: 18px; }
+  .location { font-size: 11px; }
+  .introduction { margin-top: 36px; }
+  .statement { font-size: 19px; }
+  .personal { margin-top: 24px; font-size: 17px; }
+  .actions { margin-top: 30px; }
+  .socials { margin-left: 0; }
 }

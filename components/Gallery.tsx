@@ -43,7 +43,7 @@ export default function Gallery() {
                 alt={caption(filename)}
                 className="gallery-img"
                 fill
-                sizes="(max-width: 360px) 87vw, (max-width: 700px) 43vw, (max-width: 1144px) 28vw, 320px"
+                sizes="(max-width: 360px) 87vw, (max-width: 700px) 43vw, (max-width: 1008px) 28vw, 277px"
                 priority={index < 3}
               />
               <span className="gallery-expand" aria-hidden="true">↗</span>

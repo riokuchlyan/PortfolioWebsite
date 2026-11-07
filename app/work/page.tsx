@@ -15,11 +15,11 @@ export default function WorkPage() {
   return (
     <div className="site-shell">
       <SiteHeader active="work" />
-      <main id="main" className={`page ${styles.work}`}>
-        <div className="page-heading">
-          <h1 className="page-title">{experience.title}</h1>
-          <p className="page-description">{experience.descriptionLines.map((line, index) => <span key={index}>{index > 0 && <br />}{line}</span>)}</p>
-        </div>
+      <main id="main" className={styles.work}>
+        <header className={styles.heading}>
+          <h1 className={styles.title}>{experience.title}</h1>
+          <p className={styles.intro}>{experience.descriptionLines.join(' ')}</p>
+        </header>
 
         <section className={styles.experience} aria-labelledby="professional-heading">
           <h2 id="professional-heading" className={styles.sectionHeading}>{experience.professionalLabel}</h2>
@@ -40,8 +40,8 @@ export default function WorkPage() {
                   <span className={styles.wordmark}>{item.organization}</span>
                 )}
               </div>
-              <h3 className={styles.organization} id={`work-${index}`}>{item.organization}</h3>
               <div className={styles.details}>
+                <h3 className={styles.organization} id={`work-${index}`}>{item.organization}</h3>
                 <p className={styles.role}>{item.role}</p>
                 {item.description && <p className={styles.description}>{item.description}</p>}
               </div>
@@ -64,23 +64,16 @@ export default function WorkPage() {
                   unoptimized
                 />
               </div>
-              <div>
-                <h3 className={styles.organization} id={`education-${index}`}>{item.organization}</h3>
-                <p className={styles.description}>{item.school}</p>
-              </div>
               <div className={styles.details}>
-                <p className={styles.role}>{item.degrees.join(' & ')}</p>
+                <h3 className={styles.organization} id={`education-${index}`}>{item.organization}</h3>
+                <p className={styles.role}>{item.school}</p>
+                <p className={styles.degrees}>{item.degrees.join(' & ')}</p>
                 <p className={styles.description}>{item.graduation}</p>
               </div>
             </article>
           ))}
         </section>
 
-        <div className={styles.closing}>
-          <a href={profile.resume} target="_blank" rel="noopener noreferrer">
-            {experience.resumeLabel} <span aria-hidden="true">↗</span>
-          </a>
-        </div>
       </main>
     </div>
   );

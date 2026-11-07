@@ -1,5 +1,6 @@
 {
   "name": "Rio Kuchlyan",
+  "location": "NYC Metropolitan Area",
   "seoDescription": "Computer Science & Business at UNC-Chapel Hill, Kenan-Flagler Business School.",
   "email": "riokuchlyan@gmail.com",
   "linkedin": "https://linkedin.com/in/riokuchlyan",
@@ -10,6 +11,9 @@
   "portrait": {
     "src": "/assets/headshot.jpeg",
     "alt": "Rio Kuchlyan",
+    "enlargeLabel": "Enlarge portrait",
+    "closeLabel": "Close portrait",
+    "dialogLabel": "Portrait of Rio Kuchlyan",
     "width": 5760,
     "height": 3840
   },

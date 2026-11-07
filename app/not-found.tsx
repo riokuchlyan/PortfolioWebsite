@@ -8,7 +8,7 @@ export default function NotFound() {
         {site.notFound.code}
       </div>
       <p className="dim">{site.notFound.message}</p>
-      <Link href="/" className="btn">
+      <Link href="/" className="action-button action-primary">
         {site.notFound.linkLabel}
       </Link>
     </div>
