@@ -1,20 +1,7 @@
 {
   "title": "Photography",
-  "descriptionLines": [
-    "Learning photography.",
-    "One country at a time."
-  ],
+  "description": "Learning photography. One country at a time.",
   "seoDescription": "Photographs from around the world by Rio Kuchlyan.",
-  "captions": {
-    "seoul.jpeg": "Seoul",
-    "busan.jpeg": "Busan",
-    "outer_banks.jpeg": "Outer Banks",
-    "philadelphia.jpeg": "Philadelphia",
-    "acropolis.jpeg": "Acropolis",
-    "scotland.jpeg": "Scotland",
-    "sydney.jpeg": "Sydney",
-    "new jersey.jpeg": "New Jersey"
-  },
   "labels": {
     "enlarge": "Enlarge {caption} photograph",
     "close": "Close",

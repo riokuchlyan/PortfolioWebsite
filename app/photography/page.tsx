@@ -16,7 +16,7 @@ export default function PhotographyPage() {
       <main id="main" className="page">
         <div className="page-heading">
           <h1 className="page-title">{photography.title}</h1>
-          <p className="page-description">{photography.descriptionLines.join(' ')}</p>
+          <p className="page-description">{photography.description}</p>
         </div>
         <Gallery />
       </main>

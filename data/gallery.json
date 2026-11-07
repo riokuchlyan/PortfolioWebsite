@@ -1,10 +1,10 @@
 [
-  "seoul.jpeg",
-  "busan.jpeg",
-  "outer_banks.jpeg",
-  "philadelphia.jpeg",
-  "acropolis.jpeg",
-  "scotland.jpeg",
-  "sydney.jpeg",
-  "new jersey.jpeg"
+  { "filename": "seoul.jpeg", "caption": "Seoul" },
+  { "filename": "busan.jpeg", "caption": "Busan" },
+  { "filename": "outer_banks.jpeg", "caption": "Outer Banks" },
+  { "filename": "philadelphia.jpeg", "caption": "Philadelphia" },
+  { "filename": "acropolis.jpeg", "caption": "Acropolis" },
+  { "filename": "scotland.jpeg", "caption": "Scotland" },
+  { "filename": "sydney.jpeg", "caption": "Sydney" },
+  { "filename": "new jersey.jpeg", "caption": "New Jersey" }
 ]

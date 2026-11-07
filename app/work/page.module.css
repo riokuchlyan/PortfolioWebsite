@@ -2,34 +2,37 @@
   max-width: 620px;
   min-height: calc(100svh - 108px);
   margin: 0 auto;
-  padding: var(--page-top-space) 0 80px;
+  padding: var(--page-top-space) 0 64px;
 }
 
-.heading { margin-bottom: 42px; }
-.title { font-family: var(--serif); font-size: var(--text-title); font-weight: 400; line-height: 1.15; letter-spacing: -0.04em; }
-.intro { margin-top: 12px; font-family: var(--serif); font-size: var(--text-subtitle); line-height: 1.5; color: var(--ink-dim); text-wrap: pretty; }
+.heading { margin-bottom: 32px; }
+.resumeLink { display: inline-flex; align-items: baseline; gap: 8px; margin-top: 12px; font-family: var(--serif); font-size: var(--text-subtitle); line-height: 1.5; color: var(--ink-dim); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; transition: color 180ms ease, text-decoration-color 180ms ease; }
+.resumeLink:hover { color: var(--ink); text-decoration-color: currentColor; }
+.resumeLink span { font-family: var(--sans); font-size: 12px; }
 .experience { display: grid; gap: 28px; }
-.sectionHeading { color: var(--ink-dim); font-size: 10px; font-weight: 500; line-height: 1.6; letter-spacing: 0.15em; text-transform: uppercase; }
 .row { display: grid; grid-template-columns: 84px minmax(0, 1fr); align-items: start; gap: 24px; }
 .logo { display: flex; align-items: center; justify-content: center; width: 84px; height: 40px; margin-top: 2px; }
 .logoImage { max-width: 100%; object-fit: contain; }
 .wordmark { font-family: var(--sans); font-size: 19px; font-weight: 700; line-height: 1; letter-spacing: -0.04em; }
 .details { min-width: 0; }
+.rowHeading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 2px 16px; }
 .organization { font-family: var(--serif); font-size: var(--text-item-title); font-weight: 400; letter-spacing: -0.025em; line-height: 1.4; }
+.label { flex-shrink: 0; font-size: 12px; line-height: 1.5; color: var(--ink-dim); white-space: nowrap; }
 .role { margin-top: 5px; font-size: 14px; line-height: 1.5; }
 .description { margin-top: 2px; font-size: 12px; color: var(--ink-dim); line-height: 1.6; }
-.education { display: grid; gap: 24px; margin-top: 34px; padding-top: 24px; border-top: 1px solid var(--line); }
-.degrees { margin-top: 10px; font-size: 12px; color: var(--ink-dim); line-height: 1.6; }
 
 @media (max-width: 860px) {
   .work { min-height: calc(100svh - 88px); }
 }
 
 @media (max-width: 600px) {
-  .work { padding-bottom: 64px; }
-  .heading { margin-bottom: 36px; }
+  .heading { margin-bottom: 28px; }
   .row { grid-template-columns: 64px minmax(0, 1fr); gap: 18px; }
   .logo { width: 64px; height: 34px; }
   .logoImage { max-height: 30px; }
   .role { font-size: 13px; }
+}
+
+@media (max-width: 360px) {
+  .rowHeading { flex-direction: column; align-items: flex-start; }
 }

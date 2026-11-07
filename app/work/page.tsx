@@ -17,12 +17,13 @@ export default function WorkPage() {
       <SiteHeader active="work" />
       <main id="main" className={styles.work}>
         <header className={styles.heading}>
-          <h1 className={styles.title}>{experience.title}</h1>
-          <p className={styles.intro}>{experience.descriptionLines.join(' ')}</p>
+          <h1 className="page-title">{experience.title}</h1>
+          <a href={profile.resume} target="_blank" rel="noopener noreferrer" className={styles.resumeLink}>
+            {experience.resumeLabel} <span aria-hidden="true">↗</span>
+          </a>
         </header>
 
-        <section className={styles.experience} aria-labelledby="professional-heading">
-          <h2 id="professional-heading" className={styles.sectionHeading}>{experience.professionalLabel}</h2>
+        <div className={styles.experience}>
           {experience.entries.map((item, index) => (
             <article className={styles.row} key={item.organization} aria-labelledby={`work-${index}`}>
               <div className={styles.logo} aria-hidden="true">
@@ -41,40 +42,18 @@ export default function WorkPage() {
                 )}
               </div>
               <div className={styles.details}>
-                <h3 className={styles.organization} id={`work-${index}`}>{item.organization}</h3>
-                <p className={styles.role}>{item.role}</p>
-                {item.description && <p className={styles.description}>{item.description}</p>}
-              </div>
-            </article>
-          ))}
-        </section>
-
-        <section className={styles.education} aria-labelledby="education-heading">
-          <h2 id="education-heading" className={styles.sectionHeading}>{experience.education.label}</h2>
-          {experience.education.entries.map((item, index) => (
-            <article className={styles.row} key={item.organization} aria-labelledby={`education-${index}`}>
-              <div className={styles.logo} aria-hidden="true">
-                <Image
-                  src={item.logo}
-                  alt=""
-                  width={item.logoWidth}
-                  height={item.logoHeight}
-                  className={styles.logoImage}
-                  style={{ width: item.logoWidth, height: item.logoHeight }}
-                  unoptimized
-                />
-              </div>
-              <div className={styles.details}>
-                <h3 className={styles.organization} id={`education-${index}`}>{item.organization}</h3>
-                <p className={styles.role}>{item.school}</p>
-                <div className={styles.degrees}>
-                  {item.degrees.map((degree) => <p key={degree}>{degree}</p>)}
+                <div className={styles.rowHeading}>
+                  <h2 className={styles.organization} id={`work-${index}`}>{item.organization}</h2>
+                  <span className={styles.label}>{item.label}</span>
+                </div>
+                <p className={styles.role}>{item.subtitle}</p>
+                <div className={styles.description}>
+                  {item.details.map((detail) => <p key={detail}>{detail}</p>)}
                 </div>
               </div>
             </article>
           ))}
-        </section>
-
+        </div>
       </main>
     </div>
   );

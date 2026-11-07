@@ -1,50 +1,46 @@
 {
   "title": "Experience",
-  "descriptionLines": [
-    "Banking, analytics, and entrepreneurship."
-  ],
+  "resumeLabel": "View resume",
   "seoDescription": "Experience across banking, analytics, and entrepreneurship by Rio Kuchlyan.",
   "entries": [
     {
       "organization": "Truist Securities",
-      "role": "Incoming Summer Analyst",
-      "description": "Corporate and Investment Bank",
+      "subtitle": "Incoming Summer Analyst",
+      "label": "Summer 2027",
+      "details": ["Corporate and Investment Bank"],
       "logo": "https://static.truist.com/content/dam/global-images/truist-logo-purple.svg",
       "logoWidth": 84,
       "logoHeight": 28
     },
     {
       "organization": "Capital One",
-      "role": "Business Analyst Intern",
-      "description": "Credit Analytics",
+      "subtitle": "Business Analyst Intern",
+      "label": "Summer 2026",
+      "details": ["Credit Analytics"],
       "logo": "https://upload.wikimedia.org/wikipedia/commons/9/98/Capital_One_logo.svg",
       "logoWidth": 76,
       "logoHeight": 32
     },
     {
       "organization": "RIVR",
-      "role": "Founder",
-      "description": "Optimizing Business Operations",
+      "subtitle": "Founder",
+      "label": "Present",
+      "details": ["Optimizing Business Operations"],
       "logo": "/assets/rivr-logo.png",
       "logoWidth": 64,
       "logoHeight": 32
+    },
+    {
+      "organization": "UNC-Chapel Hill",
+      "subtitle": "Kenan-Flagler Business School",
+      "label": "Education",
+      "details": [
+        "B.S. Business Administration",
+        "B.S. Computer Science"
+      ],
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/26/UNC_primary_mark_blue.svg",
+      "logoWidth": 44,
+      "logoHeight": 32
     }
-  ],
-  "professionalLabel": "Professional",
-  "education": {
-    "label": "Education",
-    "entries": [
-      {
-        "organization": "UNC-Chapel Hill",
-        "school": "Kenan-Flagler Business School",
-        "degrees": [
-          "B.S. Business Administration",
-          "B.S. Computer Science"
-        ],
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/2/26/UNC_primary_mark_blue.svg",
-        "logoWidth": 44,
-        "logoHeight": 32
-      }
-    ]
-  }
+  ]
 }
