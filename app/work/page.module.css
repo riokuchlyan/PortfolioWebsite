@@ -2,7 +2,7 @@
   max-width: 620px;
   min-height: calc(100svh - 108px);
   margin: 0 auto;
-  padding: clamp(70px, 10svh, 112px) 0 80px;
+  padding: var(--page-top-space) 0 80px;
 }
 
 .heading { margin-bottom: 42px; }
@@ -26,7 +26,7 @@
 }
 
 @media (max-width: 600px) {
-  .work { padding: clamp(56px, 9svh, 88px) 0 64px; }
+  .work { padding-bottom: 64px; }
   .heading { margin-bottom: 36px; }
   .row { grid-template-columns: 64px minmax(0, 1fr); gap: 18px; }
   .logo { width: 64px; height: 34px; }

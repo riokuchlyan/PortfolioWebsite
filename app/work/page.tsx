@@ -67,8 +67,9 @@ export default function WorkPage() {
               <div className={styles.details}>
                 <h3 className={styles.organization} id={`education-${index}`}>{item.organization}</h3>
                 <p className={styles.role}>{item.school}</p>
-                <p className={styles.degrees}>{item.degrees.join(' & ')}</p>
-                <p className={styles.description}>{item.graduation}</p>
+                <div className={styles.degrees}>
+                  {item.degrees.map((degree) => <p key={degree}>{degree}</p>)}
+                </div>
               </div>
             </article>
           ))}

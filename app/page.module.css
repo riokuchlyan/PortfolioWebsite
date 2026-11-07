@@ -2,7 +2,7 @@
   max-width: 620px;
   margin: 0 auto;
   min-height: calc(100svh - 108px);
-  padding: clamp(70px, 10svh, 112px) 0 88px;
+  padding: var(--page-top-space) 0 88px;
 }
 
 .profile { display: flex; align-items: center; gap: 26px; }
@@ -25,7 +25,7 @@
 }
 
 @media (max-width: 600px) {
-  .about { padding-top: clamp(56px, 9svh, 88px); padding-bottom: 64px; }
+  .about { padding-bottom: 64px; }
   .profile { gap: 18px; }
   .location { font-size: 11px; }
   .introduction { margin-top: 36px; }
@@ -33,4 +33,11 @@
   .personal { margin-top: 24px; font-size: 17px; }
   .actions { margin-top: 30px; }
   .socials { margin-left: 0; }
+}
+
+@media (max-width: 480px) {
+  .actions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 18px 12px; }
+  .actions > a { padding-inline: 14px; gap: 12px; white-space: nowrap; }
+  .socials { grid-column: 1 / -1; justify-content: center; gap: 12px; }
+  .social { height: 44px; border: 1px solid var(--line); }
 }

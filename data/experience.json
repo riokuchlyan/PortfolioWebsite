@@ -38,13 +38,12 @@
         "organization": "UNC-Chapel Hill",
         "school": "Kenan-Flagler Business School",
         "degrees": [
-          "B.S. Computer Science",
-          "B.S. Business Administration"
+          "B.S. Business Administration",
+          "B.S. Computer Science"
         ],
         "logo": "https://upload.wikimedia.org/wikipedia/commons/2/26/UNC_primary_mark_blue.svg",
         "logoWidth": 44,
-        "logoHeight": 32,
-        "graduation": "Class of 2028"
+        "logoHeight": 32
       }
     ]
   }
