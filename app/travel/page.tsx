@@ -18,7 +18,10 @@ export default function TravelPage() {
     <div className="site-shell">
       <SiteHeader active="travel" />
       <main id="main" className="page">
-        <h1 className={styles.hidden}>{travel.title}</h1>
+        <div className="page-heading">
+          <h1 className="page-title">{travel.title}</h1>
+          <p className="page-description">{travel.description}</p>
+        </div>
         <TravelGlobe />
         <div className={styles.continents}>
           {travel.continents.map((continent) => (

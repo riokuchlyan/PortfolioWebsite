@@ -14,7 +14,7 @@ All page copy and personal content live in `data/`. Edit the JSON files; no comp
 | `data/profile.json` | Name, location, contact and booking links, resume path, portrait path/alt text/dimensions, and profile metadata. |
 | `data/experience.json` | Page heading, resume link label, and entries in display order. Each entry has an organization, role/school subtitle, date/category label, supporting details, and logo. Use `null` for a logo to display a text wordmark. |
 | `data/photography.json` | Photography heading, description, and gallery control labels. |
-| `data/travel.json` | Visited places grouped by continent, map IDs, and markers for small places. |
+| `data/travel.json` | Travel heading/subtitle, SEO description, visited places grouped by continent, map IDs/markers, globe instructions, controls, and status messages. Visited-place names also appear in globe tooltips. |
 | `data/gallery.json` | Photo filenames and captions in display order. Images live in `public/assets/photos/`. |
 | `data/site.json` | Navigation labels/links and not-found page text. Keep navigation IDs unchanged so active tabs work. |
 

@@ -11,7 +11,7 @@ import styles from './TravelGlobe.module.css';
 type Country = Feature<Geometry, { name: string }>;
 type World = Topology<{ countries: GeometryCollection<{ name: string }> }>;
 const places = travel.continents.flatMap((continent) => continent.places);
-const visited = new Set(places.map((place) => place.id));
+const visited = new Map(places.map((place) => [place.id, place.name]));
 const graticule = geoGraticule10();
 const initialRotation: [number, number] = [-15, -20];
 const clampLatitude = (latitude: number) => Math.max(-80, Math.min(80, latitude));
@@ -47,6 +47,7 @@ export default function TravelGlobe() {
       grid: path(graticule) ?? '',
       outlines: countries.map((country) => ({
         country,
+        name: visited.get(String(country.id)) ?? country.properties.name,
         d: path(country) ?? '',
         isVisited: visited.has(String(country.id)),
       })),
@@ -119,15 +120,15 @@ export default function TravelGlobe() {
           </defs>
           <path d={sphere} className={styles.ocean} />
           <path d={grid} className={styles.grid} />
-          {outlines.map(({ country, d, isVisited }, index) => (
+          {outlines.map(({ country, name, d, isVisited }, index) => (
             <path
               key={`${country.id}-${index}`}
               d={d}
               className={isVisited ? styles.visited : styles.land}
-              onPointerEnter={() => { if (!drag.current) setHovered(country.properties.name); }}
+              onPointerEnter={() => { if (!drag.current) setHovered(name); }}
               onPointerLeave={() => setHovered('')}
             >
-              <title>{country.properties.name}{isVisited ? ' · Visited' : ''}</title>
+              <title>{name}{isVisited ? ` · ${travel.legend}` : ''}</title>
             </path>
           ))}
           <path d={sphere} fill="url(#globe-light)" pointerEvents="none" />
@@ -140,7 +141,7 @@ export default function TravelGlobe() {
               <circle key={place.id} cx={point[0]} cy={point[1]} r={3.5} className={styles.marker}
                 onPointerEnter={() => { if (!drag.current) setHovered(place.name); }}
                 onPointerLeave={() => setHovered('')}>
-                <title>{place.name} · Visited</title>
+                <title>{place.name} · {travel.legend}</title>
               </circle>
             );
           })}
@@ -150,9 +151,9 @@ export default function TravelGlobe() {
       <div className={styles.toolbar}>
         <span className={styles.legend}><span aria-hidden="true" />{travel.legend}</span>
         <div className={styles.controls}>
-          <button type="button" onClick={() => changeZoom(-0.2)} disabled={zoom <= 1} aria-label="Zoom out">−</button>
-          <button type="button" onClick={() => changeZoom(0.2)} disabled={zoom >= 2} aria-label="Zoom in">+</button>
-          <button type="button" className={styles.reset} onClick={resetView}>Reset</button>
+          <button type="button" onClick={() => changeZoom(-0.2)} disabled={zoom <= 1} aria-label={travel.controls.zoomOut}>−</button>
+          <button type="button" onClick={() => changeZoom(0.2)} disabled={zoom >= 2} aria-label={travel.controls.zoomIn}>+</button>
+          <button type="button" className={styles.reset} onClick={resetView}>{travel.controls.reset}</button>
         </div>
       </div>
       <p className={styles.hint}>{hovered || travel.hint}</p>
