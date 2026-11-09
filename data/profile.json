@@ -9,10 +9,10 @@
   "website": "https://riokuchlyan.com",
   "booking": "https://bookings.riokuchlyan.com",
   "portrait": {
-    "src": "/assets/headshot.jpeg",
+    "src": "/assets/headshot.webp",
     "alt": "Rio Kuchlyan",
-    "width": 5760,
-    "height": 3840
+    "width": 720,
+    "height": 480
   },
   "socialImage": "/assets/og-image.png",
   "jobTitle": "Student",

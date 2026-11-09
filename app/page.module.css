@@ -13,9 +13,17 @@
 .location { display: flex; align-items: center; gap: 6px; margin-top: 9px; color: var(--ink-dim); font-size: 12px; }
 .location svg { flex-shrink: 0; }
 
-.introduction { margin-top: 36px; font-family: var(--serif); font-size: 16px; line-height: 1.8; }
-.statement { text-wrap: pretty; }
-.personal { margin-top: 20px; color: var(--ink-dim); text-wrap: pretty; }
+.introduction { margin-top: 36px; font-family: var(--serif); font-size: 16px; line-height: 1.8; text-wrap: pretty; }
+.personal { margin-top: 20px; color: var(--ink-dim); }
+.textLink {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: #91a5ad;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  background-color: #dce5df;
+  border-radius: 2px;
+}
 .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .actions > a { flex: 0 0 auto; font-family: var(--serif); font-size: 15px; }
 .actions > a span { font-family: var(--sans); font-size: 12px; }

@@ -128,8 +128,8 @@ body:has(dialog[open]) { overflow: hidden; }
   .gallery-grid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 320px) {
-  .site-nav { gap: 20px; }
+@media (max-width: 400px) {
+  .site-nav { gap: 16px; font-size: 11px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

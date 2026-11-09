@@ -7,8 +7,10 @@
       "organization": "Truist Securities",
       "subtitle": "Incoming Summer Analyst",
       "label": "Summer 2027",
-      "details": ["Corporate and Investment Bank"],
-      "logo": "https://static.truist.com/content/dam/global-images/truist-logo-purple.svg",
+      "details": [
+        "Corporate and Investment Bank"
+      ],
+      "logo": "/assets/truist-securities-logo.svg",
       "logoWidth": 84,
       "logoHeight": 28
     },
@@ -16,8 +18,10 @@
       "organization": "Capital One",
       "subtitle": "Business Analyst Intern",
       "label": "Summer 2026",
-      "details": ["Credit Analytics"],
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/9/98/Capital_One_logo.svg",
+      "details": [
+        "Credit Analytics"
+      ],
+      "logo": "/assets/capital-one-logo.svg",
       "logoWidth": 76,
       "logoHeight": 32
     },
@@ -25,8 +29,10 @@
       "organization": "RIVR",
       "subtitle": "Founder",
       "label": "Present",
-      "details": ["Optimizing Business Operations"],
-      "logo": "/assets/rivr-logo.png",
+      "details": [
+        "Optimizing Business Operations"
+      ],
+      "logo": "/assets/rivr-logo.webp",
       "logoWidth": 64,
       "logoHeight": 32
     },
@@ -38,7 +44,7 @@
         "B.S. Business Administration",
         "B.S. Computer Science"
       ],
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/26/UNC_primary_mark_blue.svg",
+      "logo": "/assets/unc-chapel-hill-logo.svg",
       "logoWidth": 44,
       "logoHeight": 32
     }

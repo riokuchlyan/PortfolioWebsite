@@ -8,6 +8,7 @@ import photography from '@/data/photography.json';
 export default function Gallery() {
   const dialog = useRef<HTMLDialogElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
   const activePhoto = photos[activeIndex];
 
   function movePhoto(direction: number) {
@@ -26,6 +27,7 @@ export default function Gallery() {
               aria-haspopup="dialog"
               onClick={() => {
                 setActiveIndex(index);
+                setIsOpen(true);
                 dialog.current?.showModal();
               }}
             >
@@ -34,7 +36,7 @@ export default function Gallery() {
                 alt={caption}
                 className="gallery-img"
                 fill
-                sizes="(max-width: 360px) 87vw, (max-width: 700px) 43vw, 300px"
+                sizes="(max-width: 360px) calc(100vw - 48px), (max-width: 480px) calc(50vw - 32px), (max-width: 700px) calc(45vw - 8px), 300px"
                 priority={index < 2}
               />
               <span className="gallery-expand" aria-hidden="true">↗</span>
@@ -50,6 +52,7 @@ export default function Gallery() {
         ref={dialog}
         className="lightbox"
         aria-labelledby="photo-title"
+        onClose={() => setIsOpen(false)}
         onClick={(event) => {
           if (event.target === event.currentTarget) dialog.current?.close();
         }}
@@ -68,12 +71,12 @@ export default function Gallery() {
             </button>
           </div>
           <div className="lightbox-image">
-            <Image
+            {isOpen && <Image
               src={`/assets/photos/${activePhoto.filename}`}
               alt={activePhoto.caption}
               fill
-              sizes="(max-width: 600px) 85vw, 800px"
-            />
+              sizes="(max-width: 700px) calc(100vw - 56px), (max-width: 1140px) calc(100vw - 88px), 1052px"
+            />}
           </div>
           <div className="lightbox-navigation">
             <button type="button" onClick={() => movePhoto(-1)} aria-label={photography.labels.previousPhoto}>← {photography.labels.previous}</button>

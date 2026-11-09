@@ -2,8 +2,27 @@
   "intro": "Undergraduate at",
   "university": "UNC-Chapel Hill",
   "paragraphs": [
-    "I love exploring. Whether I’m at my desk or traveling to a new country, I’m always curious to learn new perspectives. With experience across banking, technology, and entrepreneurship, I enjoy implementing my interdisciplinary skills in unique situations. I’m driven not by my accomplishments, but rather by my intense desire to grow through challenges.",
-    "Away from the desk, I’m usually exploring new hobbies, golfing, or traveling somewhere new with a camera in hand."
+    [
+      "I love exploring. Whether I’m at my desk or ",
+      {
+        "text": "traveling",
+        "href": "/travel"
+      },
+      " to a new country, I’m always curious to learn new perspectives. With ",
+      {
+        "text": "experience",
+        "href": "/experience"
+      },
+      " across banking, technology, and entrepreneurship, I enjoy implementing my interdisciplinary skills in unique situations. I’m driven not by my accomplishments, but rather by my intense desire to grow through challenges."
+    ],
+    [
+      "Away from the desk, I’m usually exploring new hobbies, golfing, or traveling somewhere new with a ",
+      {
+        "text": "camera",
+        "href": "/photography"
+      },
+      " in hand."
+    ]
   ],
   "actions": {
     "label": "Connect with Rio",

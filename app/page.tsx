@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/SiteHeader';
 import home from '@/data/home.json';
 import profile from '@/data/profile.json';
@@ -16,7 +17,7 @@ export default function Page() {
               alt={profile.portrait.alt}
               width={profile.portrait.width}
               height={profile.portrait.height}
-              sizes="(max-width: 600px) 80px, 104px"
+              unoptimized
               priority
             />
           </div>
@@ -34,7 +35,11 @@ export default function Page() {
         </header>
         <div className={styles.introduction}>
           {home.paragraphs.map((paragraph, index) => (
-            <p key={index} className={index === 0 ? styles.statement : styles.personal}>{paragraph}</p>
+            <p key={index} className={index > 0 ? styles.personal : undefined}>
+              {paragraph.map((part, partIndex) => typeof part === 'string' ? part : (
+                <Link key={partIndex} href={part.href} className={styles.textLink}>{part.text}</Link>
+              ))}
+            </p>
           ))}
         </div>
         <div className={styles.actions} aria-label={home.actions.label}>

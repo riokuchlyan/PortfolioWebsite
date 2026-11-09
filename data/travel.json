@@ -1,0 +1,105 @@
+{
+  "title": "Travel",
+  "seoDescription": "Places I’ve visited around the world, by Rio Kuchlyan.",
+  "globeLabel": "Interactive globe of places visited. Drag or use the arrow keys to rotate; use plus and minus to zoom.",
+  "hint": "Drag to spin · + / − to zoom",
+  "legend": "Visited",
+  "loading": "Loading globe…",
+  "error": "The globe couldn’t load. Refresh the page to try again.",
+  "continents": [
+    {
+      "name": "Asia",
+      "places": [
+        {
+          "name": "China",
+          "id": "156"
+        },
+        {
+          "name": "Hong Kong",
+          "id": "344",
+          "marker": [
+            114.17,
+            22.32
+          ]
+        },
+        {
+          "name": "India",
+          "id": "356"
+        },
+        {
+          "name": "South Korea",
+          "id": "410"
+        },
+        {
+          "name": "United Arab Emirates",
+          "id": "784"
+        }
+      ]
+    },
+    {
+      "name": "Europe",
+      "places": [
+        {
+          "name": "France",
+          "id": "250"
+        },
+        {
+          "name": "Greece",
+          "id": "300"
+        },
+        {
+          "name": "Ireland",
+          "id": "372"
+        },
+        {
+          "name": "Italy",
+          "id": "380"
+        },
+        {
+          "name": "United Kingdom",
+          "id": "826",
+          "detail": "England & Scotland"
+        },
+        {
+          "name": "Vatican City",
+          "id": "336",
+          "marker": [
+            12.45,
+            41.9
+          ]
+        }
+      ]
+    },
+    {
+      "name": "North America",
+      "places": [
+        {
+          "name": "Canada",
+          "id": "124"
+        },
+        {
+          "name": "Mexico",
+          "id": "484"
+        },
+        {
+          "name": "United States of America",
+          "id": "840"
+        }
+      ]
+    },
+    {
+      "name": "Oceania",
+      "places": [
+        {
+          "name": "Australia",
+          "id": "036"
+        },
+        {
+          "name": "New Zealand",
+          "id": "554"
+        }
+      ]
+    }
+  ],
+  "mapSrc": "/maps/countries-431e77ff2f.json"
+}

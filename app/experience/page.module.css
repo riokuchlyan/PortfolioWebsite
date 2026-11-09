@@ -12,7 +12,7 @@
 .experience { display: grid; gap: 28px; }
 .row { display: grid; grid-template-columns: 84px minmax(0, 1fr); align-items: start; gap: 24px; }
 .logo { display: flex; align-items: center; justify-content: center; width: 84px; height: 40px; margin-top: 2px; }
-.logoImage { max-width: 100%; object-fit: contain; }
+.logoImage { object-fit: contain; }
 .wordmark { font-family: var(--sans); font-size: 19px; font-weight: 700; line-height: 1; letter-spacing: -0.04em; }
 .details { min-width: 0; }
 .rowHeading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 2px 16px; }

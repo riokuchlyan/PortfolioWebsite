@@ -1,10 +1,34 @@
 [
-  { "filename": "seoul.jpeg", "caption": "Seoul" },
-  { "filename": "busan.jpeg", "caption": "Busan" },
-  { "filename": "outer_banks.jpeg", "caption": "Outer Banks" },
-  { "filename": "philadelphia.jpeg", "caption": "Philadelphia" },
-  { "filename": "acropolis.jpeg", "caption": "Acropolis" },
-  { "filename": "scotland.jpeg", "caption": "Scotland" },
-  { "filename": "sydney.jpeg", "caption": "Sydney" },
-  { "filename": "new jersey.jpeg", "caption": "New Jersey" }
+  {
+    "filename": "seoul.webp",
+    "caption": "Seoul"
+  },
+  {
+    "filename": "busan.webp",
+    "caption": "Busan"
+  },
+  {
+    "filename": "outer_banks.webp",
+    "caption": "Outer Banks"
+  },
+  {
+    "filename": "philadelphia.webp",
+    "caption": "Philadelphia"
+  },
+  {
+    "filename": "acropolis.webp",
+    "caption": "Acropolis"
+  },
+  {
+    "filename": "scotland.webp",
+    "caption": "Scotland"
+  },
+  {
+    "filename": "sydney.webp",
+    "caption": "Sydney"
+  },
+  {
+    "filename": "new jersey.webp",
+    "caption": "New Jersey"
+  }
 ]

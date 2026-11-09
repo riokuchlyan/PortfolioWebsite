@@ -11,6 +11,11 @@
       "href": "/experience"
     },
     {
+      "id": "travel",
+      "label": "Travel",
+      "href": "/travel"
+    },
+    {
       "id": "photography",
       "label": "Photography",
       "href": "/photography"
@@ -20,7 +25,7 @@
   "skipLink": "Skip to content",
   "notFound": {
     "code": "404",
-    "message": "This page doesn’t exist.",
+    "message": "This page doesn\u2019t exist.",
     "linkLabel": "Back home"
   }
 }
