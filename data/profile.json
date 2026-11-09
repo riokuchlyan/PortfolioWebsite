@@ -11,9 +11,6 @@
   "portrait": {
     "src": "/assets/headshot.jpeg",
     "alt": "Rio Kuchlyan",
-    "enlargeLabel": "Enlarge portrait",
-    "closeLabel": "Close portrait",
-    "dialogLabel": "Portrait of Rio Kuchlyan",
     "width": 5760,
     "height": 3840
   },

@@ -1,4 +1,4 @@
-.work {
+.page {
   max-width: 620px;
   min-height: calc(100svh - 108px);
   margin: 0 auto;
@@ -22,7 +22,7 @@
 .description { margin-top: 2px; font-size: 12px; color: var(--ink-dim); line-height: 1.6; }
 
 @media (max-width: 860px) {
-  .work { min-height: calc(100svh - 88px); }
+  .page { min-height: calc(100svh - 88px); }
 }
 
 @media (max-width: 600px) {

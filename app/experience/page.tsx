@@ -8,14 +8,14 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: `${experience.title} — ${profile.name}`,
   description: experience.seoDescription,
-  alternates: { canonical: '/work' },
+  alternates: { canonical: '/experience' },
 };
 
-export default function WorkPage() {
+export default function ExperiencePage() {
   return (
     <div className="site-shell">
-      <SiteHeader active="work" />
-      <main id="main" className={styles.work}>
+      <SiteHeader active="experience" />
+      <main id="main" className={styles.page}>
         <header className={styles.heading}>
           <h1 className="page-title">{experience.title}</h1>
           <a href={profile.resume} target="_blank" rel="noopener noreferrer" className={styles.resumeLink}>
@@ -25,7 +25,7 @@ export default function WorkPage() {
 
         <div className={styles.experience}>
           {experience.entries.map((item, index) => (
-            <article className={styles.row} key={item.organization} aria-labelledby={`work-${index}`}>
+            <article className={styles.row} key={item.organization} aria-labelledby={`experience-${index}`}>
               <div className={styles.logo} aria-hidden="true">
                 {item.logo ? (
                   <Image
@@ -43,7 +43,7 @@ export default function WorkPage() {
               </div>
               <div className={styles.details}>
                 <div className={styles.rowHeading}>
-                  <h2 className={styles.organization} id={`work-${index}`}>{item.organization}</h2>
+                  <h2 className={styles.organization} id={`experience-${index}`}>{item.organization}</h2>
                   <span className={styles.label}>{item.label}</span>
                 </div>
                 <p className={styles.role}>{item.subtitle}</p>

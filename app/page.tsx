@@ -1,4 +1,4 @@
-import Portrait from '@/components/Portrait';
+import Image from 'next/image';
 import SiteHeader from '@/components/SiteHeader';
 import home from '@/data/home.json';
 import profile from '@/data/profile.json';
@@ -10,9 +10,18 @@ export default function Page() {
       <SiteHeader active="about" />
       <main id="main" className={styles.about}>
         <header className={styles.profile}>
-          <Portrait />
+          <div className={styles.portrait}>
+            <Image
+              src={profile.portrait.src}
+              alt={profile.portrait.alt}
+              width={profile.portrait.width}
+              height={profile.portrait.height}
+              sizes="(max-width: 600px) 80px, 104px"
+              priority
+            />
+          </div>
           <div className={styles.identity}>
-            <h1 className={styles.name}>{profile.name}</h1>
+            <h1 className="page-title">{profile.name}</h1>
             <p className={styles.subtitle}>{home.intro} {home.university}</p>
             <p className={styles.location}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import site from '@/data/site.json';
 
-export default function SiteHeader({ active }: { active: 'about' | 'work' | 'photography' }) {
+export default function SiteHeader({ active }: { active: 'about' | 'experience' | 'photography' }) {
   return (
     <header className="site-header">
       <a href="#main" className="skip-link">{site.skipLink}</a>
